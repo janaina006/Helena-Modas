@@ -1,6 +1,8 @@
 <?php
-class Correios
+class Correios extends Produtos
 {
+
+
 
 	public
 		$frete = array(), $error,
@@ -31,10 +33,10 @@ class Correios
 
 		//peso em kilogramas
 		$this->peso 		= $peso;
-		$this->comprimento      = '35'; //em cm
-		$this->altura 		= '35'; //em cm
-		$this->largura     	= '35'; //em cm
-		$this->diametro 	= '90'; //em cm
+		$this->comprimento      = '30'; //em cm
+		$this->altura 		= '30'; //em cm
+		$this->largura     	= '20'; //em cm
+		$this->diametro 	= '0'; //em cm
 		
 
 	}

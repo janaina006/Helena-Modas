@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-16 13:27:09
+/* Smarty version 4.1.1, created on 2023-02-05 23:23:51
   from 'C:\wamp\www\loja\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63c57add1c16d1_56796462',
+  'unifunc' => 'content_63e064b76f1457_24496308',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70e1d804ea3e53221dba9b5a4027cb26a7d50ac7' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\index.tpl',
-      1 => 1673886336,
+      1 => 1675650230,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63c57add1c16d1_56796462 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e064b76f1457_24496308 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="pt"> 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -32,6 +32,11 @@ function content_63c57add1c16d1_56796462 (Smarty_Internal_Template $_smarty_tpl)
         <title><?php echo $_smarty_tpl->tpl_vars['TITULO_SITE']->value;?>
 </title>
         <!-- Favicon-->
+        <!-- <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/script.js"><?php echo '</script'; ?>
+>       -->
+
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -41,20 +46,230 @@ function content_63c57add1c16d1_56796462 (Smarty_Internal_Template $_smarty_tpl)
         <!-- layout da página de contatos -->
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/contatos/contatos.css" rel="styesheet" />
-        <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
-/tema/view/style.sass" rel="styesheet" />
         <!-- layout da da barra de navegação -->
         <link href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
 /tema/css/nav.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <?php echo '</script'; ?>
->
+        
 
 
        <style>
         .nav-a:hover{
             color:#AB4DB5;
         }
+        .form{
+            display: flex;
+            justify-content: space-around;
+        }
+        .form form{
+            margin-left: 25px;
+        }
+
+     
+        .carrinho h6{
+            display: none;
+
+        }
+
+        
+        .search{
+        position: center;
+        width: 100%;
+        height: 20%;
+        margin-top: 1%;
+        margin-bottom: 2px;
+        background-color: rgb(255, 255, 255);
+        font-size: 70%;
+}
+
+        .user{
+        
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+        }
+
+    
+
+     
+
+
+
+        @media (max-width:800px){
+           
+            .menu
+             {
+                display: none;
+
+            }
+
+            .one,
+            .two,
+            .three{
+                background-color: #fff;
+                height: 5px;
+                width: 100%;
+                margin: 6px auto;
+
+                transition-duration: 0.3s;
+
+            }
+
+            .menu-toggle{
+                width: 40px;
+                height: 30px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+
+            .menu-section.on{
+                position: absolute;
+                top:0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+                
+
+
+                background-color: #DFD5FB;
+
+                z-index: 10;
+                display: block;
+                justify-content: center;
+                align-items: center;
+
+                
+
+            }
+            .menu-section.on .search{
+                display: none;
+            }
+
+
+            .menu-section.on
+             .carrinho
+           {
+                display: none;
+
+           }
+
+
+           .menu-section.on .menu{
+            display: block;
+          
+
+           }
+           .menu-section.on .log{
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+           }
+           .menu-section.on .nav-list {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-65%, -50%);
+            flex-direction: column;
+            line-height: 5rem;
+            text-align: center;
+
+           }
+          
+
+          
+        
+
+            .menu-section.on .menu-toggle{
+                position:absolute;
+                left: 5px;
+                top: 5px;
+
+
+            }
+
+            .menu-section.on .menu-toggle .one{
+                transform: rotate(45deg) translate(7px, 7px);
+                
+            }
+            .menu-section.on .menu-toggle .two{
+                opacity: 0;
+            }
+            .menu-section.on .menu-toggle .three{
+                transform: rotate(-45deg) translate(8px, -9px);
+
+            }
+
+       
+
+           
+
+            
+        
+
+           
+
+
+
+
+
+
+        }
+     
+
+
+        
+       
+        
+
+        @media (max-width:500px){
+            .footer{
+                flex-direction: column;
+               
+               
+                
+
+            }
+            .footer ul {
+
+                padding: 20px;
+
+                }
+           
+
+           
+
+         
+          
+        }
+
+ 
+
+       
+
+        
+
+
+
+
+
+        
+
+       
+
+
+
+       
+
+        
+         
 
 
 
@@ -65,23 +280,37 @@ function content_63c57add1c16d1_56796462 (Smarty_Internal_Template $_smarty_tpl)
     
 
     <body>
+       
+
 
         <header class="header">
-            <nav class="nav1">
+            <div class="menu-section">
             
+            <nav class="nav1">
+                    <div class="menu-toggle ">
+                          <div class="one"></div>
+                          <div class="two"></div>
+                          <div class="three"></div>
+                      </div>
+                
+               
+                
+            
+                <div class="menu">
              
-                <div class="user"></div>
+                <div class="log">
                     <?php if ($_smarty_tpl->tpl_vars['LOGADO']->value == true) {?>
                     Olá  <?php echo $_smarty_tpl->tpl_vars['USER']->value;?>
  
-                    <div>
+                    
                         <span class="material-symbols-outlined"><a href="<?php echo $_smarty_tpl->tpl_vars['PAG_LOGOFF']->value;?>
 ">
                          logout </a>
                          </span>
-                        </div>
+                        
                    <?php }?> 
-                   <br> 
+                  
+                 </div>
                    
 
                 
@@ -97,26 +326,40 @@ function content_63c57add1c16d1_56796462 (Smarty_Internal_Template $_smarty_tpl)
 
             </ul>
 
+        </div>
 
-            <form class="cart d-flex" method="get" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
+            <div class="form">
+                
+                
+                
+                
+                <form class="carrinho" method="get" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
 ">
-                <button class="btn" type="submit">
-                    <i class="bi-cart-fill me-1" > </i>
-                   Carrinho
-                </button>
-            </form>
-
-            
+                    <button class="btn" type="submit">
+                        <i style="font-size: 150%" class="bi-cart-fill me-1" > </i>
+                        <h6>Carrinho</h6>
+                    </button>
+                </form>
             <form class="search" method="POST">
                 <input style="color:black;"  name="txt_buscar" type="text" placeholder="Digite para buscar" required class="input">
                 <button type="submit" class="button">
                 </button>
             </form>
 
+           
+            </div>
+
+
+           
+
             
 
              </nav>
-         </header>
+
+             
+            </div>
+            </header>
+
          
  
 
@@ -139,6 +382,9 @@ ob_start();?>
 echo $_block_plugin1(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
 array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+
+
+             
         
 
 
@@ -152,32 +398,34 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
         
         <!-- Footer-->
         <footer class="footer py-5 ">
-         
-            <div class="ul1">
-               <ul >
-                <li><b>Contato</b></li>
-                <li>Desenvolvedora: Janaina Araujo</li>
-                <li>Contato: 35 97217065</li>
-               </ul>
-            </div>
-    
+            
             <div class="ul2">
-            <ul >
-            <li><b>ENCONTRE-NOS EM</b></li>
-            <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
-            <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
-            </ul>
+                <ul >
+                    <li><b>ENCONTRE-NOS EM</b></li>
+                    <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
+                </ul>
             </div>
+            
+               <div class="ul1">
+                  <ul >
+                   <li><b>Contato</b></li>
+                   <li>Desenvolvedora: Janaina Araujo</li>
+                   <li>Contato: 35 97217065</li>
+                  </ul>
+               </div>
         </footer>
         <!-- Bootstrap core JS-->
         <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
-        <!-- Core theme JS-->
         <?php echo '<script'; ?>
- src="js/scripts.js" ><?php echo '</script'; ?>
->
+ src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/menu.js"><?php echo '</script'; ?>
+>      
+
+        <!-- Core theme JS-->
     </body>
 </html>
 <?php }

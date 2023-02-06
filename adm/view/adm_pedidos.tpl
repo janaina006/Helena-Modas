@@ -1,25 +1,54 @@
-<h4 class="text-center"> Gerenciar Pedidos </h4>
-<hr>
+<style>
 
-<section class="row" id="pesquisa">
+    .searchh{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .table{
+    
+    background-color:#DFD5FB;
+    }
+
+    .table- {
+  letter-spacing: 1px;
+  margin-left: 0.2rem;
+  padding-top: 18px;
+  padding-left: 0.2rem;
+
+
+}
+</style>
+
+
+<h4 class="text-center"> Gerenciar Pedidos </h4>
+
+
+<hr>
+<div class="searchh">
+
+
+<section class="row " id="pesquisa">
 
     <!---  faz  uma busca entre datas --->
     <label> Buscar entre datas</label>
     <form name="buscardata" method="post" action="">
      
-        <div class="col-md-3">            
+        <div class="col-md-6">            
             <input type="date" name="data_ini" class="form-control" required>
 
         </div> 
 
-        <div class="col-md-3"> 
+        <div class="col-md-6"> 
 
             <input type="date" name="data_fim" class="form-control" required>
 
         </div> 
+        <br>
 
 
-        <div class="col-md-3"> 
+        <div class="col-md-6"> 
 
             <button class="btn btn-success"> Buscar </button>
 
@@ -39,44 +68,46 @@
 
 <br>
 
-<section class="row">
+<section class="row ">
 
 
     <!--- faz  uma busca  por texto ---> 
     <label> Buscar por Referencia</label>
     <form name="buscarrefcod" method="post" action="">  
 
-        <div class="col-md-3">
+        <div class="col-md-9">
 
             <input type="text" name="txt_ref" class="form-control" required>   
         </div>
+        <br>
         <div class="col-md-3">
 
             <button class="btn btn-success"> Buscar </button>   
         </div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
+        
 
     </form>
 
 
 </section>
 
+</div>
+
 <hr>
 
-<section class="row" id="pedidos">
+<section class="table-" id="pedidos">
     
       
     <center>
-    <table class="table table-bordered " style="width: 90%">
+    <table class="table" style="width: 90%">
         
-        <tr class="text-success bg-success">
-            <td>Cliente</td>
-            <td>Data</td>
-            <td>Hora</td>
-            <td>Ref</td>
+        <tr class="">
+            <td><b>Cliente</b></td>
+            <td><b>Data</b></td>
+            <td><b>Hora</b></td>
+            <td><b>Ref</b></td>
            
-            <td>Status</td>
+            <td><b>Status</b></td>
             <td></td>
             <td></td>
         </tr>
@@ -112,7 +143,9 @@
               
            <form name="deletar" method="post" action="">
                      <input type="hidden" name="cod_pedido" id="cod_pedido" value="{$P.ped_cod}">
-                     <button class="btn btn-danger" name="ped_apagar" value="ped_apagar"><i class="glyphicon glyphicon-remove"></i> </button>
+                     <button class="btn btn-danger btn-sm"> <span class="material-symbols-outlined">
+                        close
+                        </span> </button>
            </form> 
         
         </td>

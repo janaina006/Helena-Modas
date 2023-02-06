@@ -8,7 +8,9 @@ Class Pedidos extends Conexao{
     }
 
     function PedidoGravar($cliente, $cod, $ref, $freteValor=null,
-     $freteTipo=null){
+     $frete=null){
+        
+        
 
         $retorno = FALSE;
         $query  = "INSERT INTO ".$this->prefix."pedido";   
@@ -24,7 +26,7 @@ Class Pedidos extends Conexao{
             ':cod' => $cod,
             ':ref' => $ref,
             ':frete_valor'=>$freteValor,
-            ':frete_tipo' =>$freteTipo, 
+            ':frete_tipo' =>$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)',
             ':ped_pag_status' =>'Aguardando Pagamento'  
         );
 
@@ -81,6 +83,8 @@ Class Pedidos extends Conexao{
               'cli_nome'  => $lista['cli_nome'],
               'cli_sobrenome'  => $lista['cli_sobrenome'],
           );
+
+          
       
       
           $i++;

@@ -150,12 +150,16 @@
                     <tr>
 
                         <td class=""> <b> Total :</b> R$ {$TOTAL}</td><p>
+                          
                     
-                            <td class=""> <b>Frete :</b> R$ {$FRETE}</td>
-    
-                            <td class=""> <b>Total com Frete :</b> R$ {$TOTAL_FRETE}</td>
-    
+                            <!-- <td class=""> <b>Frete :</b> R$ {$FRETE}</td> -->
+                            
+                            <td class=""> <b>Tipo Frete :</b> {$TIPOFRETE}</td>
 
+                            
+                            <!-- <td class=""> <b>Total com Frete :</b> R$ {$TOTAL_FRETE}</td> -->
+
+                         
                         
 
                     </tr>  

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-16 03:41:14
+/* Smarty version 4.1.1, created on 2023-02-02 19:28:07
   from 'C:\wamp\www\loja\view\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63c4f18a9fdb55_41736739',
+  'unifunc' => 'content_63dc38f75e6ce1_57640922',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e0c12ffbe6218f4a7a39ce3176d92708863251a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\home.tpl',
-      1 => 1673850959,
+      1 => 1675376882,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63c4f18a9fdb55_41736739 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63dc38f75e6ce1_57640922 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,20 +36,29 @@ function content_63c4f18a9fdb55_41736739 (Smarty_Internal_Template $_smarty_tpl)
 *{
     padding: 0px;
     margin: 0;
-    box-sizing: border-box;
+    
 }
 
+
+
 .container-{
-    width: 50%;
-    position: absolute;
+    width: 65%;
+    
     transform: translateX(-50%, -50%);
     top:20%;
-    left: 25%;
     overflow: hidden;
     transition: 2s;
+    margin: auto;
+    
    
 
 }
+
+
+
+
+
+
 
 .wrapper{
     width: 100%;
@@ -135,17 +144,7 @@ img{
   border-radius: 10px;
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+
 
 .button-85:after {
   text-decoration:none;
@@ -164,13 +163,69 @@ img{
     color:#fff;
 }
 
+.categorias{
+    list-style: none;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
+    grid-gap: 20px;
+    margin: auto;
+    
+}
+
+
+@media (max-width:1480px){
+    .categorias{
+        grid-template-columns: 300px 300px 300px 300px;
+        
+        
+
+}
+
+.container-{
+        width: 60%;
+            }
+        }
+@media (max-width:1200px){
+    .categorias{
+        grid-template-columns: 250px 250px 250px ;
+        
+
+}
+
+.container-{
+        width: 90%;
+            }
+
+
+        }
+@media (max-width:767px){
+    .categorias{
+        grid-template-columns: 150px 150px ;
+
+}
+
+    .container-{
+        width: 90%;
+            }
+ }
+
+
+
+
+
+
     </style>
 
 </head>
 <body>
 
-    <header class="banner py-5">
-        <div class="slider">
+   
+        <div class="slider  py-5">
     
             <div class="container-">
 
@@ -181,59 +236,44 @@ img{
                     <img src="media\images\banner4" alt="">
                 </div>
                </div>
-    
-    
-    
-    
-    
-    
+
+     
         </div>
+       
+        <h3 class="text-center">Compre por Categoria</h3>
+
+               <br>
+               <div class="categorias ">
+           
+                   <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
+$_smarty_tpl->tpl_vars['C']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
+$_smarty_tpl->tpl_vars['C']->do_else = false;
+?>
+                   <a class="button-85" role="button" href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
+"><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
+</a>
+           
+                   <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+               </div>
         
         
-    </header>
+   
+
+
     
-        <?php echo '<script'; ?>
- src=".tema\js\script.js" ><?php echo '</script'; ?>
->
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </html>
 
   
   
 
 
-    <h3 class="text-center">Compre por Categoria</h3>
-
-    <br>
-    <div class="categorias">
-
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'C');
-$_smarty_tpl->tpl_vars['C']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['C']->value) {
-$_smarty_tpl->tpl_vars['C']->do_else = false;
-?>
-        <a class="button-85" role="button" href="<?php echo $_smarty_tpl->tpl_vars['C']->value['cate_link'];?>
-"><?php echo $_smarty_tpl->tpl_vars['C']->value['cate_nome'];?>
-</a>
-
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    </div>
+  
 
 
 

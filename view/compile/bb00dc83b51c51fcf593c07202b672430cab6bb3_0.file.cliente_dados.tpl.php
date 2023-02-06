@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-11 14:30:17
+/* Smarty version 4.1.1, created on 2023-01-25 20:12:00
   from 'C:\wamp\www\loja\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63bef2293ec689_45944950',
+  'unifunc' => 'content_63d1b7400be6d2_13603391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bb00dc83b51c51fcf593c07202b672430cab6bb3' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\cliente_dados.tpl',
-      1 => 1673392113,
+      1 => 1673495741,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63bef2293ec689_45944950 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d1b7400be6d2_13603391 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 .background{
@@ -183,13 +183,7 @@ function content_63bef2293ec689_45944950 (Smarty_Internal_Template $_smarty_tpl)
         
       
         
-        <div class="col-md-3">
-            <label>Fone:</label>
-            <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_FONE']->value;?>
-" name="cli_fone" class="form-control" required>
-            
-            
-        </div>
+     
         
       
         

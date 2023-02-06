@@ -1,10 +1,11 @@
 <?php
-
+ session_start();
 require_once '../lib/autoload.php';
 
         //instancio a classe correios
         $destino = $_GET['cepcliente'];
         $peso    = $_GET['pesofrete'];
+        
 
 	// chamando a classe Correios
         $frete = new Correios($destino, $peso);
@@ -23,8 +24,9 @@ require_once '../lib/autoload.php';
 		echo  '<span class="radio text-danger text-left" > ';
         
         
-                      
+                       
                         foreach ($calc as $frete):
+                         
 
 
                         if($frete['erro'] != 0):
@@ -36,8 +38,17 @@ require_once '../lib/autoload.php';
 
                         else:
 
-                              echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].' : ' .$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)</b>';
+                          echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].''.$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)</br>';
+                          echo '<value="'.'" > '.$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)'. '</br>';
 
+                         $_SESSION['frete_tipo'] = $frete['tipo'];
+                          
+                         
+
+
+                          
+                          
+                          
 
                         endif;
 
@@ -46,6 +57,19 @@ require_once '../lib/autoload.php';
             echo '</span><br>';
       
 	  endif;
+ 
+
+   
+
+    
+
+
+ 
+
+
+
+  
+
         
 	
         /**

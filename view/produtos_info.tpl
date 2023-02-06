@@ -116,89 +116,46 @@
 
     }
 
-    .body{
+
+
+ 
+
+    .body-foto{
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: center;
-      padding: 30px 10px;
-      /* transition: background 0.4s ease-in; */
+      height: 100vh;
+
     }
 
-    input[type=radio]{
-      display: none;
-    }
-    img{
+ 
+
+    #mainPhoto{
       width: 100%;
-      height: 100%;
+      height: 500%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .imgCarousel{
+      width: 100px;
+      height: 100px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+    .img{
       border-radius: 10px;
-      /* object-fit: cover; */
-
-    }
-
-    .cardd{
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      margin: auto;
       cursor: pointer;
-      /* transition: transform 0.4s ease; */
-
     }
 
-    .containerr{
-      width: 100%;
-      height: 100%;
-      max-width: 600px;
-      max-height: 600px;
-      display: flex;
-      /* transform-style: preserve-3d; */
-      justify-content: center;
-      flex-direction: column;
-      align-items:center;
 
 
-    }
-    .cardss{
-      position: relative;
-      width:100%;
-      height: 100%;
-      margin-bottom: 20px;
 
-    }
-/* 
-    #item-1:checked ~ .cards #song-3,
-    #item-2checked ~ .cards #song-1,
-    #item-3checked ~ .cards #song-2{
-      transform: translate(-40%) scale(0.8);
-      opacity:0.4;
-      z-index: 0;
-    }
-    #item-1:checked ~ .cards #song-2,
-    #item-2checked ~ .cards #song-3,
-    #item-3checked ~ .cards #song-1{
-      transform: translate(40%) scale(0.8);
-      opacity:0.4;
-      z-index: 0;
-    }
-    #item-1:checked ~ .cards #song-1,
-    #item-2checked ~ .cards #song-2,
-    #item-3checked ~ .cards #song-3{
-      transform: translate(0) scale(1);
-      opacity:1;
-      z-index: 1;
-    }
-    #item-1:checked ~ .cards #song-1 img,
-    #item-2checked ~ .cards #song-2 img,
-    #item-3checked ~ .cards #song-3 img{
-      box-shadow: 0px 0px 5px 0px ;
-    } */
 
-    html,body{
-      width: 100%;
-      height: 100%;
-    }
     
 
 
@@ -212,25 +169,26 @@
        <div class="container px-4 px-lg-3 my-1 ">
            <div class="row gx-4 gx-lg-5 align-items-center ">
                <div class="col-md-6 body">
+              
+                <section class="wrapper">
+                  <img src="{$P.pro_img_g}" id="mainPhoto">
+                  <div class="image-wrapper scroll-container">
+                    {foreach from=$IMAGES item=I}
+                
+                    
+                    <img src="{$I.img_nome}" class="imgCarousel">
+                    {/foreach}
+                     <img src="{$P.pro_img_g}" class="imgCarousel">
 
-                <div class="containerr">
+                    {/foreach}
 
-                  <input type="radio" name="slider" id="item-1" checked>
-                  <input type="radio" name="slider" id="item-2">
-                  <input type="radio" name="slider" id="item-3">
-                  <div class="cardss">
-                    <label class="cardd" for="item-1" id="song-1">
-                      <img src="{$P.pro_img_g}" alt="">
-                    </label>
-                    <label class="cardd" for="item-1" id="song-1">
-                      {foreach from=$IMAGES item=I}
-                     
-                      <img src="{$I.img_nome}" alt="">
-                      {/foreach}
-
-                    </label>
                   </div>
-                </div>
+
+
+
+                  </section>
+               
+
                 
            
 
@@ -263,7 +221,11 @@
            </div>
        </div>
    </section>
-   {/foreach}
+
+   
+   
+   
+  
    
 
 
@@ -280,7 +242,7 @@
     </ul>
     <ul>
         <li>comprimento: {$P.pro_comprimento}</li>
-        <li>Fabricante {$P.pro_fabricante}</li>
+        <li>Fabricante: {$P.pro_fabricante}</li>
         <li>Estoque: {$P.pro_estoque}</li>
     </ul>
 </div>
@@ -312,6 +274,19 @@
     
 </div>   
 <br>
+<script>
+  let images = Array.from(document.getElementsByClassName('imgCarousel'))
+  let mainPhoto = document.getElementById("mainPhoto")
+  
+  function updateImage(event){
+    let image = event.target
+    mainPhoto.src = image.src
+  }
+  
+  images.forEach(function(image) {
+    image.addEventListener("click", updateImage)
+  });
+</script>
 </body>
 </html>
 

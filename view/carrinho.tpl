@@ -131,7 +131,7 @@
                           <div class="p-5">
                             <div class="d-flex justify-content-between align-items-center mb-5">
 
-                              <h6 class="mb-0 text-muted">3 items</h6>
+                              <h6 class="mb-0 text-muted">{$TOTAL_ITENS} items </h6>
                               <div class="">
                                 <form name="limpar" method="post" action="{$PAG_CARRINHO_ALTERAR}">
                                     <input type="hidden" name="acao" value="limpar">
@@ -142,6 +142,7 @@
                               
                               
                             </div>
+                            <h7  style="font-size: 13px;" >OBS: Você pode aumentar a quantidade do produto desejado adicionando novamente ele ao carrinho!</h7>
                             <hr class="my-4">
                             <center>
                               <table class=" " style="width: 100%">
@@ -164,6 +165,19 @@
                                       <td>  {$P.pro_valor} </td>
                                       <td> {$P.pro_qtd}  </td>
                                       <td>  {$P.pro_subTotal} </td>
+                                      <td> 
+                                        <form name="carrinho_dell" method="post" action="{$PAG_CARRINHO_ALTERAR}">
+                                          
+                                            <input type="hidden" name="pro_id" value="{$P.pro_id}">    
+                                            <input type="hidden" name="acao" value="del">    
+                                            
+                                            <button class="btn btn-danger btn-sm"> <span class="material-symbols-outlined">
+                                              close
+                                              </span> </button>
+                                            
+                                        </form>
+                                    </td>
+                                    
                                   </tr>
                                   
                                   {/foreach}
@@ -208,6 +222,7 @@
                                  <input type="hidden" name="peso_frete" id="peso_frete" value="{$PESO}" class="form-control " readonly>
                                  <input type="text" name="cep_frete" class="form-control" id="cep_frete" value="" placeholder="Digite seu cep" >
                                  <input type="hidden" name="frete_valor" id="frete_valor" value="0">
+                                 <input type="hidden" name="frete_tipo" id="frete_tipo" value="0">
                               </div>
                               <br>
                               <div class="col-md-4">

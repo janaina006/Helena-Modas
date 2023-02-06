@@ -19,9 +19,9 @@ Class ProdutosImages extends Conexao{
 		while($lista = $this->ListarDados()):
 		$this->itens[$i] = array(
 			 'img_id' => $lista['img_id'],
-	         'img_nome' => Rotas::ImageLink($lista['img_nome'], 150, 150) ,  
+	         'img_nome' => Rotas::ImageLink($lista['img_nome'], 500, 500) ,  
 	         'img_pro_id'  => $lista['img_pro_id'] ,  
-             'img_link' => Rotas::ImageLink($lista['img_nome'], 500, 500) ,
+             'img_link' => Rotas::ImageLink($lista['img_nome'], 10, 10) ,
              'img_arquivo' => $lista['img_nome'], 
  
 	   

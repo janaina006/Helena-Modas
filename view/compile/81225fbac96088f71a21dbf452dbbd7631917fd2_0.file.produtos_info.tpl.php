@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-16 22:08:17
+/* Smarty version 4.1.1, created on 2023-02-02 14:45:14
   from 'C:\wamp\www\loja\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63c5f5014da632_85629085',
+  'unifunc' => 'content_63dbf6aab00632_42493908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '81225fbac96088f71a21dbf452dbbd7631917fd2' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos_info.tpl',
-      1 => 1673917696,
+      1 => 1675272673,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63c5f5014da632_85629085 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63dbf6aab00632_42493908 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,89 +139,46 @@ function content_63c5f5014da632_85629085 (Smarty_Internal_Template $_smarty_tpl)
 
     }
 
-    .body{
+
+
+ 
+
+    .body-foto{
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: center;
-      padding: 30px 10px;
-      /* transition: background 0.4s ease-in; */
+      height: 100vh;
+
     }
 
-    input[type=radio]{
-      display: none;
-    }
-    img{
+ 
+
+    #mainPhoto{
       width: 100%;
-      height: 100%;
+      height: 500%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .imgCarousel{
+      width: 100px;
+      height: 100px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+    .img{
       border-radius: 10px;
-      /* object-fit: cover; */
-
-    }
-
-    .cardd{
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      margin: auto;
       cursor: pointer;
-      /* transition: transform 0.4s ease; */
-
     }
 
-    .containerr{
-      width: 100%;
-      height: 100%;
-      max-width: 600px;
-      max-height: 600px;
-      display: flex;
-      /* transform-style: preserve-3d; */
-      justify-content: center;
-      flex-direction: column;
-      align-items:center;
 
 
-    }
-    .cardss{
-      position: relative;
-      width:100%;
-      height: 100%;
-      margin-bottom: 20px;
 
-    }
-/* 
-    #item-1:checked ~ .cards #song-3,
-    #item-2checked ~ .cards #song-1,
-    #item-3checked ~ .cards #song-2{
-      transform: translate(-40%) scale(0.8);
-      opacity:0.4;
-      z-index: 0;
-    }
-    #item-1:checked ~ .cards #song-2,
-    #item-2checked ~ .cards #song-3,
-    #item-3checked ~ .cards #song-1{
-      transform: translate(40%) scale(0.8);
-      opacity:0.4;
-      z-index: 0;
-    }
-    #item-1:checked ~ .cards #song-1,
-    #item-2checked ~ .cards #song-2,
-    #item-3checked ~ .cards #song-3{
-      transform: translate(0) scale(1);
-      opacity:1;
-      z-index: 1;
-    }
-    #item-1:checked ~ .cards #song-1 img,
-    #item-2checked ~ .cards #song-2 img,
-    #item-3checked ~ .cards #song-3 img{
-      box-shadow: 0px 0px 5px 0px ;
-    } */
 
-    html,body{
-      width: 100%;
-      height: 100%;
-    }
     
 
 
@@ -240,34 +197,38 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
        <div class="container px-4 px-lg-3 my-1 ">
            <div class="row gx-4 gx-lg-5 align-items-center ">
                <div class="col-md-6 body">
-
-                <div class="containerr">
-
-                  <input type="radio" name="slider" id="item-1" checked>
-                  <input type="radio" name="slider" id="item-2">
-                  <input type="radio" name="slider" id="item-3">
-                  <div class="cardss">
-                    <label class="cardd" for="item-1" id="song-1">
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img_g'];?>
-" alt="">
-                    </label>
-                    <label class="cardd" for="item-1" id="song-1">
-                      <?php
+              
+                <section class="wrapper">
+                  <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img_g'];?>
+" id="mainPhoto">
+                  <div class="image-wrapper scroll-container">
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['IMAGES']->value, 'I');
 $_smarty_tpl->tpl_vars['I']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['I']->value) {
 $_smarty_tpl->tpl_vars['I']->do_else = false;
 ?>
-                     
-                      <img src="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
-" alt="">
-                      <?php
+                
+                    
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['I']->value['img_nome'];?>
+" class="imgCarousel">
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                     <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img_g'];?>
+" class="imgCarousel">
+
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
-                    </label>
                   </div>
-                </div>
+
+
+
+                  </section>
+               
+
                 
            
 
@@ -305,9 +266,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
            </div>
        </div>
    </section>
-   <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+   
+   
+   
+  
    
 
 
@@ -328,7 +291,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <ul>
         <li>comprimento: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_comprimento'];?>
 </li>
-        <li>Fabricante <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_fabricante'];?>
+        <li>Fabricante: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_fabricante'];?>
 </li>
         <li>Estoque: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_estoque'];?>
 </li>
@@ -362,6 +325,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
 </div>   
 <br>
+<?php echo '<script'; ?>
+>
+  let images = Array.from(document.getElementsByClassName('imgCarousel'))
+  let mainPhoto = document.getElementById("mainPhoto")
+  
+  function updateImage(event){
+    let image = event.target
+    mainPhoto.src = image.src
+  }
+  
+  images.forEach(function(image) {
+    image.addEventListener("click", updateImage)
+  });
+<?php echo '</script'; ?>
+>
 </body>
 </html>
 

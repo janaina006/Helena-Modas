@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-16 02:34:08
+/* Smarty version 4.1.1, created on 2023-02-01 20:31:58
   from 'C:\wamp\www\loja\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63c4e1d0a744f4_90435182',
+  'unifunc' => 'content_63daf66e5076e8_58425558',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba4594c388acc2fe279b9c6fb804dcdccd74edc4' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos.tpl',
-      1 => 1673847247,
+      1 => 1675294312,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63c4e1d0a744f4_90435182 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63daf66e5076e8_58425558 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<hr>
+
 
 
 
@@ -89,5 +89,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php echo $_smarty_tpl->tpl_vars['PAGINAS']->value;?>
 
         </center>
-    </section><?php }
+    </section>
+    <br>
+    <br><?php }
 }

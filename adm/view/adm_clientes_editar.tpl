@@ -60,13 +60,7 @@
         </div>
         
       
-        
-        <div class="col-md-3">
-            <label>Fone:</label>
-            <input type="number" value="{$CLI_FONE}" name="cli_fone" class="form-control" required>
-            
-            
-        </div>
+    
         
       
         

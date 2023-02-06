@@ -93,7 +93,9 @@ class Conexao extends Config{
      }
 
      protected function Paginacao($paginas=array()){
+        
 		$pag = '<ul class="pagination">';
+        
 		$pag .= '<li class="page-item"><a class="text-color page-link" href="?p=1">Anterior</a></li>';
 
 		foreach($paginas as $p):

@@ -1,36 +1,33 @@
-.header{
-        margin: 0;
-        padding: 0;
-}
+
 
 .user{
-    padding-right: 46px;
-    padding-top: 16px;
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 
 }
 
-.cart{
-    padding-left: 510px;
-}
+
+        body{
+            overflow: hidden;
+        }
+
+
 
 .nav1{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background: #DFD5FB;
-        height: 14vh;
+        background-color: #DFD5FB;
+        height: 100%;
         
 }
 
-.search{
-        position: relative;
-        width: 15%;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        font-size: 70%;
-}
+
+
+
+
+
 
 
 .search:before{
@@ -96,15 +93,7 @@
   
 }
   
-.nav1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #DFD5FB;
-    height: 14vh;
-   
-    
-}
+
 
 
 
@@ -135,12 +124,21 @@
     justify-content: space-around;
     letter-spacing: 1px;
     display: flex;
+
     
     
     
     
 
 }
+
+.footer ul {
+
+    list-style:none;
+
+
+    }
+
 
 .ul2{
     padding-right: 100px;
@@ -157,11 +155,7 @@
     
 }
 
-.footer ul li{
 
-    display: flex;
-
-}
 
 
 
@@ -191,7 +185,7 @@
     justify-content: space-around;
     text-decoration: none;
     color: #fff;
-    left:504px;
+    left:500px;
 }
 
 .text-color{
@@ -207,7 +201,8 @@
     justify-content: space-around;
     align-items: center;
     background: #DFD5FB;
-    height: 15vh;
+    height: 100%;
+    width: 100%;
     
     
 }

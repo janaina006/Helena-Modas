@@ -125,7 +125,7 @@
                  <hr>
                  <label>Imagem Principal</label>
                  <!--- campos para adicionar a imagem---->
-                 <input type="file" name="pro_img" class="form-control btn btn-success" id="pro_img" >
+                 <input type="file" name="pro_img" class="form-control btn btn-default" id="pro_img">
                  <!--pega o nome da imagem atual -->
                  <input type="hidden" name="pro_img_atual" id="pro_img_atual" value="{$PRO.1.pro_img_atual}">
                  <!----pega o caminho completo da imagem atual -->
@@ -179,7 +179,7 @@
 
             <div class="col-md-4">
                 <br>
-                <button class="btn btn-success btn-block btn-lg" name="btn_gravar"> Gravar </button>
+                <button class="btn btn-success btn-block btn-lg" name="btn_gravar"> Editar </button>
             </div>
 
             <div class="col-md-4 text-right">
@@ -188,10 +188,12 @@
 
     
         <input type="hidden" name="pro_id" value="{$PRO.1.pro_id}">
-        
-        
 
-    
+
+
+        
+        
+    </form>
     
     
     
@@ -211,28 +213,46 @@
 
 
             </div>
-            
-            <div class="col-md-4">
-                <br>
-                <button class="btn btn-danger btn-block btn-lg" name="btn_apagar"> Apagar produto </button>
-            </div>
 
             <div class="col-md-4 text-right">
-               
+                <!--- botão que abre a opção de apagar -->
+                <br>
+                <button class="btn btn-danger " name="btn_apagar" data-toggle="collapse" data-target="#btnapagar" ><i class="glyphicon glyphicon-remove"></i> Apagar Produto</button> 
+
             </div>
 
-    
-        <input type="hidden" name="pro_id_apagar" value="{$PRO.1.pro_id}">
-        </form>
+
+            <div class="col-md-12 text-center collapse alert alert-danger" id="btnapagar">
+
+                <br>
+            
+
+                <form name="frm_apagar" method="post" action="">
+                    <label>Apagar este produto?</label>
+
+                    <input type="radio" name="confirmar" value="SIM" required>
+                    <!---botao que apagar o produto de uma vez -->
+                    <button class="btn btn-danger " name="btn_apagar"><i class="glyphicon glyphicon-remove"></i> OK </button> 
+
+
+
+
+                    <input type="hidden" name="pro_id_apagar" value="{$PRO.1.pro_id}">
+                    <input type="hidden" name="pro_apagar" value="SIM">
+                    
+                       <!----pega o caminho completo da imagem atual -->
+                 <input type="hidden" name="pro_img_arquivo" id="pro_img_arquivo" value="{$PRO.1.pro_img_arquivo}">
+
+                </form>
+
+            </div>
+
+
         </section>
         
-        
+
 <br>
 <br>
 <br>
 <br>
  
-
-
-
-

@@ -1,5 +1,5 @@
 
-<hr>
+
 
 
 
@@ -52,3 +52,5 @@
             {$PAGINAS}
         </center>
     </section>
+    <br>
+    <br>

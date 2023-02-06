@@ -35,14 +35,26 @@ class Carrinho{
 			$i++;
 
 			
+			
+			
+
+			
+
+			
 		}
 
+		
+
+
+		
 		if(count($this->itens) > 0){
 			return $this->itens;
 		}else{
 			echo '<h4 class="alert alert-danger"> Não há produtos no carrinho </h4>';
 
 		}
+	
+
 
 	}
 
@@ -54,6 +66,14 @@ class Carrinho{
 	function GetPeso(){
 		return $this->total_peso;
 	}
+	
+	function GetTotal_Itens(){
+		$number_of_items = count($this->itens);
+		return $number_of_items;
+		
+		
+	}
+
 
 	function CarrinhoADD($id){
 		$produtos = new Produtos();
@@ -64,10 +84,14 @@ class Carrinho{
             $VALOR_US = $pro['pro_valor_us'];
             $VALOR  = $pro['pro_valor'];
             $PESO  = $pro['pro_peso'];
+            $ESTOQUE  = $pro['pro_estoque'];
             $QTD   = 1;
             $IMG   = $pro['pro_img_p'];
             $LINK  = Rotas::pag_ProdutosInfo().'/'.$ID.'/'.$pro['pro_slug'];
             $ACAO  = $_POST['acao'];
+
+			
+
 		}
 
 		switch ($ACAO) {
@@ -81,8 +105,36 @@ class Carrinho{
 					    $_SESSION['PRO'][$ID]['QTD']   = $QTD;
 					    $_SESSION['PRO'][$ID]['IMG']   = $IMG;
 					    $_SESSION['PRO'][$ID]['LINK']  = $LINK;  
+					    $_SESSION['PRO'][$ID]['ESTOQUE']  = $ESTOQUE;  
 					}else{
-						 $_SESSION['PRO'][$ID]['QTD']   += $QTD;
+
+						foreach ($_SESSION['PRO'] as $lista) {
+							$i = 1;
+
+
+							$this->itens[$i] = array(
+
+								'pro_qtd'   => $lista['QTD'],
+								
+								);
+							$i++;
+				
+							$QTD_CARRINHO = $lista['QTD'];
+				
+							
+
+						if ($QTD_CARRINHO >= $ESTOQUE) {
+							echo '<h4 class="alert alert-danger"> Você atingiu a quantidade máxima disponível para esse produto! </h4>';
+							Rotas::Redirecionar(2, Rotas::pag_Produtos());
+							exit();
+
+							
+
+						} else {
+							$_SESSION['PRO'][$ID]['QTD']   += $QTD;
+						}
+
+						}
 					}
 
 					echo '<h4 class="alert alert-success"> Produto Inserido! </h4>';

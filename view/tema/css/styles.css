@@ -94,6 +94,8 @@ body {
 
 
 
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -638,6 +640,7 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
+  
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -3936,14 +3939,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
 }
 
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
- 
-}
+
 
 .nav-link {
   display: block;
@@ -4512,6 +4508,7 @@ textarea.form-control-lg {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
+
 
 .card {
   position: relative;

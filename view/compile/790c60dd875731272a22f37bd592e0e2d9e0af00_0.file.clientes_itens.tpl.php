@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-11 22:58:02
+/* Smarty version 4.1.1, created on 2023-01-26 13:31:18
   from 'C:\wamp\www\loja\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63bf692a1d5bd6_74730522',
+  'unifunc' => 'content_63d2aad6d39337_14639594',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '790c60dd875731272a22f37bd592e0e2d9e0af00' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\clientes_itens.tpl',
-      1 => 1673488677,
+      1 => 1674750667,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63bf692a1d5bd6_74730522 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d2aad6d39337_14639594 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
     .table{
@@ -123,6 +123,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                         <tr>
                     
                                             <td class=""> <b>Frete:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']);?>
+</td><p>
+                                                
+                                            <td class=""> <b>Tipo Frete:</b> <?php echo ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_tipo']);?>
 </td><p>
                     
                                             <td class=""> <b>Total:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['TOTAL']->value);?>

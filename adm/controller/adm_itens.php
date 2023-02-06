@@ -7,6 +7,11 @@ if(!isset($_POST['cod_pedido'])){
     exit();
 }
 
+foreach($_SESSION['CLI'] as $campo => $valor){
+    $smarty->assign(strtoupper($campo), $valor);
+
+}
+
 $itens = new Itens();
 $pedido = filter_var($_POST['cod_pedido'], FILTER_SANITIZE_STRING);
 

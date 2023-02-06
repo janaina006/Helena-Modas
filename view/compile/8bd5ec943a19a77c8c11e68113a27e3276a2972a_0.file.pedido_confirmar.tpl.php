@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-11 23:02:08
+/* Smarty version 4.1.1, created on 2023-01-26 23:39:56
   from 'C:\wamp\www\loja\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63bf6a20096c61_44288779',
+  'unifunc' => 'content_63d3397c3d0de9_87725185',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8bd5ec943a19a77c8c11e68113a27e3276a2972a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_confirmar.tpl',
-      1 => 1673488925,
+      1 => 1674787190,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63bf6a20096c61_44288779 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63d3397c3d0de9_87725185 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
     .table{
@@ -187,14 +187,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                         <td class=""> <b> Total :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td><p>
+                          
                     
-                            <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+                            <!-- <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+</td> -->
+                            
+                            <td class=""> <b>Tipo Frete :</b> <?php echo $_smarty_tpl->tpl_vars['TIPOFRETE']->value;?>
 </td>
-    
-                            <td class=""> <b>Total com Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
-</td>
-    
 
+                            
+                            <!-- <td class=""> <b>Total com Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
+</td> -->
+
+                         
                         
 
                     </tr>  

@@ -13,20 +13,29 @@
 *{
     padding: 0px;
     margin: 0;
-    box-sizing: border-box;
+    
 }
 
+
+
 .container-{
-    width: 50%;
-    position: absolute;
+    width: 65%;
+    
     transform: translateX(-50%, -50%);
     top:20%;
-    left: 25%;
     overflow: hidden;
     transition: 2s;
+    margin: auto;
+    
    
 
 }
+
+
+
+
+
+
 
 .wrapper{
     width: 100%;
@@ -112,17 +121,7 @@ img{
   border-radius: 10px;
 }
 
-@keyframes glowing-button-85 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+
 
 .button-85:after {
   text-decoration:none;
@@ -141,13 +140,69 @@ img{
     color:#fff;
 }
 
+.categorias{
+    list-style: none;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
+    grid-gap: 20px;
+    margin: auto;
+    
+}
+
+
+@media (max-width:1480px){
+    .categorias{
+        grid-template-columns: 300px 300px 300px 300px;
+        
+        
+
+}
+
+.container-{
+        width: 60%;
+            }
+        }
+@media (max-width:1200px){
+    .categorias{
+        grid-template-columns: 250px 250px 250px ;
+        
+
+}
+
+.container-{
+        width: 90%;
+            }
+
+
+        }
+@media (max-width:767px){
+    .categorias{
+        grid-template-columns: 150px 150px ;
+
+}
+
+    .container-{
+        width: 90%;
+            }
+ }
+
+
+
+
+
+
     </style>
 
 </head>
 <body>
 
-    <header class="banner py-5">
-        <div class="slider">
+   
+        <div class="slider  py-5">
     
             <div class="container-">
 
@@ -158,48 +213,35 @@ img{
                     <img src="media\images\banner4" alt="">
                 </div>
                </div>
-    
-    
-    
-    
-    
-    
+
+     
         </div>
+       
+        <h3 class="text-center">Compre por Categoria</h3>
+
+               <br>
+               <div class="categorias ">
+           
+                   {foreach from=$CATEGORIAS item=C}
+                   <a class="button-85" role="button" href="{$C.cate_link}">{$C.cate_nome}</a>
+           
+                   {/foreach}
+               </div>
         
         
-    </header>
+   
+
+
     
-        <script src=".tema\js\script.js" ></script>
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </html>
 
   
   
 
 
-    <h3 class="text-center">Compre por Categoria</h3>
-
-    <br>
-    <div class="categorias">
-
-        {foreach from=$CATEGORIAS item=C}
-        <a class="button-85" role="button" href="{$C.cate_link}">{$C.cate_nome}</a>
-
-        {/foreach}
-    </div>
+  
 
 
 

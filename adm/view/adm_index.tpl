@@ -15,101 +15,106 @@
         <link href="{$GET_TEMA}/tema/css/styles.css" rel="stylesheet" />
         <!-- layout da página de contatos -->
         <link href="{$GET_TEMA}/tema/contatos/contatos.css" rel="stylesheet" />
+        <link href="{$GET_TEMA}/tema/css/nav.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+        <style>
+            .nav-a:hover{
+                color:#AB4DB5;
+            }
+    
+    
+    
+        
+           </style> 
+
 
     </head>
     
 
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Painel Administrativo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{$GET_SITE_ADM}">Início</a></li>
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{$PAG_ADM_PRODUTOS}">Todos</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            {foreach from=$CATEGORIAS item=C}
-                            <li><a class="dropdown-item" href="{$C.cate_link_adm}">{$C.cate_nome}</a></li>
-                            {/foreach}
+        <header class="header">
+            <nav class="nav1">
+
+                    <a class="navbar-brand" href="{$GET_SITE_ADM}">Painel Administrativo</a>
 
 
-                        </ul>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{$PAG_ADM_PRODUTOS}">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{$PAG_ADM_CLIENTE}">Clientes</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{$PAG_ADM_PEDIDOS}">Pedidos</a></li>
 
-                            </ul>
-                        </li>
-                     
-                    </ul>
-                    <div class="d-flex text-right">
+                <ul class="nav-list">
+                
+
+                    <li><a class="nav-a" href="{$PAG_ADM_PEDIDOS}">Pedidos</a></li>
+                    <li><a class="nav-a" href="{$PAG_ADM_CLIENTE}">Clientes</a></li>
+                    <li><a class="nav-a" href="{$PAG_SENHA}">Alterar Senha</a></li>
+                    <li><a class="nav-a" href="{$PAG_ADM_PRODUTOS}">Produtos</a></li>
+                    <li><a class="nav-a" href="{$PAG_CATEGORIAS}">Categorias</a></li>
+    
+                </ul>
+
+            
+                <div class="d-flex text-right">
                          
                             
-                            {if $LOGADO == true}
-                             Olá  {$USER} <a href="{$PAG_LOGOFF}" class="btn btn-outline-dark"><i class="glyphicon glyphicon-log-out"></i> Sair </a> 
-                             <a href="{$PAG_SENHA}" class="btn btn_warning"><i class="glyphicon glyphicon-asterisk">
-                             </i>Alterar Senha</a><br><br>
-                             <h5>Ultimo Login:{$DATA} ás 1HORA
-                             </p></h5>
-                            {/if}
-               
-                        </div>
-                        
-        
-
-
-                
+                    {if $LOGADO == true}
+                     Olá  {$USER} <span class="material-symbols-outlined"><a href="{$PAG_LOGOFF}">
+                        logout </a>
+                        </span>
+                    
+                    {/if}
+       
                 </div>
-              
-            </div>
-        </nav>
-        <!-- Header-->
-   
+
+            
+
+             </nav>
+
+            
+
+         </header>
 
 
         {php}
 
         Rotas::get_Pagina();
         //var_dump(Rotas::$pag);
+
+        
+
+
         {/php}
 
 
-        <h4 class="text-center text-danger"> Olá Administrador <b>{$USER}</b>, seja bem vindo! O que deseja fazer agora?</h4> 
-        <section class="row">
-            
-            <div class="text-center">
-                
-                <a href="{$PAG_CATEGORIAS}" class="btn btn-success"><i class="glyphicon glyphicon-home"></i> Categorias</a>
-                
-                <a href="{$PAG_ADM_PRODUTOS}" class="btn btn-success"><i class="glyphicon glyphicon-barcode"></i> Produtos</a>
-                
-                <a href="{$PAG_ADM_CLIENTE}" class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> Clientes </a>
-                <a href="{$PAG_ADM_PEDIDOS}" class="btn btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Pedidos </a>
-                <a href="{$PAG_SENHA}" class="btn btn-warning"> Alterar Senha </a>
-                <a href="{$PAG_LOGOFF}" class="btn btn-danger"><i class="glyphicon glyphicon-log-out"></i> Sair </a>
-             
-                
-            </div>
-            
-        </section>
+
         
 
   
 
 
-        <!-- Section-->
-        
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+         <!-- Footer-->
+         <footer class="footer py-5 ">
+         
+            <div class="ul1">
+               <ul >
+                <li><b>Contato</b></li>
+                <li>Desenvolvedora: Janaina Araujo</li>
+                <li>Contato: 35 97217065</li>
+               </ul>
+            </div>
+    
+            <div class="ul2">
+            <ul >
+            <li><b>ENCONTRE-NOS EM</b></li>
+            <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
+            </ul>
+            </div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js" ></script>
     </body>
 </html>
