@@ -17,6 +17,7 @@ if(isset($_SESSION['PRO'])) {
     $smarty->assign('PAG_CONFIRMAR', Rotas::pag_PedidoConfirmar());
     $smarty->assign('PESO', number_format($carrinho->GetPeso(),3,'.',''));
     $smarty->assign('TOTAL_ITENS', $carrinho->GetTotal_Itens());
+$smarty->assign('PRO_INFO', Rotas::pag_ProdutosInfo());
     
 
 

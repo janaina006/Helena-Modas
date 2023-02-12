@@ -34,6 +34,123 @@
     
     </script>
     <style>
+
+      .x{
+        display: none;
+      }
+
+@media (max-width:990px){
+  .frete{
+   margin-top: -100px;
+  }
+}
+
+@media (max-width:769px){
+  .table{
+    font-size: 13px;
+  }
+
+  .nome{
+    display: none;
+  }
+
+  .td{
+    display: none;
+
+  }
+
+  .b {
+  width: 30px;
+  height: 25px;
+  padding: 0;
+}
+
+.tex{
+    font-size: 15px;
+
+  }
+
+  .im{
+    width: 70px;
+   height: 65px;
+  }
+
+
+
+}
+
+@media (max-width:550px){
+
+  .x{
+    display: block;
+  }
+  .q{
+    display: none;
+  }
+
+  .b {
+  width: 32px;
+  height: 20px;
+  padding: 0;
+}
+
+.tex{
+    font-size: 14px;
+
+  }
+
+  .im{
+    width: 70px;
+   height: 65px;
+  }
+
+  
+
+  
+
+}
+@media (max-width:400px){
+
+  .x{
+    display: block;
+  }
+  .q{
+    display: none;
+  }
+
+  .b {
+  width: 20px;
+  height: 22px;
+  padding-right: 25px;
+}
+
+.table{
+    font-size: 12px;
+  }
+
+  .tex{
+    font-size: 12px;
+
+  }
+
+  .im{
+    width: 60px;
+   height: 55px;
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
       .button-85 {
   text-decoration:none;
   padding: 0.5em 2em;
@@ -121,7 +238,7 @@
         <section class="h-100 h-custom" style="background-color: #d2c9ff;">
           
           <div class="container py-5 h-100">
-              <h4 class="nav1 text-center card-title"> Carrinho > Confirmar Pedido > Finalizar Pedido > Realizar Pagamento </h4>
+              <h4 class="tex nav1 text-center card-title"> Carrinho > Confirmar Pedido > Finalizar Pedido > Realizar Pagamento </h4>
               <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
                   <div class="card card-registration card-registration-2" style="border-radius: 15px;">
@@ -142,16 +259,17 @@
                               
                               
                             </div>
-                            <h7  style="font-size: 13px;" >OBS: Você pode aumentar a quantidade do produto desejado adicionando novamente ele ao carrinho!</h7>
+                            <h7  class="obs" style="font-size: 13px;" >OBS: Você pode aumentar a quantidade do produto desejado adicionando novamente ele ao carrinho!</h7>
                             <hr class="my-4">
                             <center>
-                              <table class=" " style="width: 100%">
+                              <table class="table " style="width: 100%">
                                   
                                   <tr class="">
-                                      <td></td>
+                                      <td class="td"></td>
                                       <td><b>Item</b></td>
-                                          <td><b>Valor Uni</b></td>
-                                          <td><b>Quantidade</b></td>
+                                          <td><b>Valor</b></td>
+                                          <td class="q"><b>Quantidade</b></td>
+                                          <td class="x"><b>X</b></td>
                                           <td><b>Total</b></td>
                                       </tr>
                                      
@@ -160,8 +278,10 @@
                                   {foreach from=$PRO item=P}
                                   <tr>
                                       
-                                      <td> <img src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
-                                      <td>  {$P.pro_nome} </td>
+                                      <td>  <a class="card-title" href="{$PRO_INFO}/{$P.pro_id}">
+                                        <!-- Product image-->
+                                        <img class="im card-img-top" src="{$P.pro_img}" alt="..." /></td>
+                                      <td class="nome">  {$P.pro_nome} </td>
                                       <td>  {$P.pro_valor} </td>
                                       <td> {$P.pro_qtd}  </td>
                                       <td>  {$P.pro_subTotal} </td>
@@ -171,7 +291,7 @@
                                             <input type="hidden" name="pro_id" value="{$P.pro_id}">    
                                             <input type="hidden" name="acao" value="del">    
                                             
-                                            <button class="btn btn-danger btn-sm"> <span class="material-symbols-outlined">
+                                            <button  class="b btn btn-danger btn-sm"> <span class="material-symbols-outlined">
                                               close
                                               </span> </button>
                                             
@@ -206,7 +326,7 @@
                             </form>
                           </div>
                         </div>
-                        <div class="col-lg-4 bg-grey">
+                        <div class="frete col-lg-4 bg-grey">
                           <div class="p-5">
                             <h3 class="">Selecionar Frete</h3>
                             <hr class="my-4">

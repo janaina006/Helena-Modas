@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-26 23:02:57
+/* Smarty version 4.1.1, created on 2023-02-12 11:42:57
   from 'C:\wamp\www\loja\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63d330d120d2e3_42401266',
+  'unifunc' => 'content_63e8faf1301ba8_61070489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7970cddb31b9309acab5d9710a1ba2b124cfd22f' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\carrinho.tpl',
-      1 => 1674784327,
+      1 => 1676212970,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d330d120d2e3_42401266 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e8faf1301ba8_61070489 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://code.jquery.com/jquery-1.9.1.js"><?php echo '</script'; ?>
 >
@@ -63,6 +63,123 @@ echo '<script'; ?>
     <?php echo '</script'; ?>
 >
     <style>
+
+      .x{
+        display: none;
+      }
+
+@media (max-width:990px){
+  .frete{
+   margin-top: -100px;
+  }
+}
+
+@media (max-width:769px){
+  .table{
+    font-size: 13px;
+  }
+
+  .nome{
+    display: none;
+  }
+
+  .td{
+    display: none;
+
+  }
+
+  .b {
+  width: 30px;
+  height: 25px;
+  padding: 0;
+}
+
+.tex{
+    font-size: 15px;
+
+  }
+
+  .im{
+    width: 70px;
+   height: 65px;
+  }
+
+
+
+}
+
+@media (max-width:550px){
+
+  .x{
+    display: block;
+  }
+  .q{
+    display: none;
+  }
+
+  .b {
+  width: 32px;
+  height: 20px;
+  padding: 0;
+}
+
+.tex{
+    font-size: 14px;
+
+  }
+
+  .im{
+    width: 70px;
+   height: 65px;
+  }
+
+  
+
+  
+
+}
+@media (max-width:400px){
+
+  .x{
+    display: block;
+  }
+  .q{
+    display: none;
+  }
+
+  .b {
+  width: 20px;
+  height: 22px;
+  padding-right: 25px;
+}
+
+.table{
+    font-size: 12px;
+  }
+
+  .tex{
+    font-size: 12px;
+
+  }
+
+  .im{
+    width: 60px;
+   height: 55px;
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
       .button-85 {
   text-decoration:none;
   padding: 0.5em 2em;
@@ -150,7 +267,7 @@ echo '<script'; ?>
         <section class="h-100 h-custom" style="background-color: #d2c9ff;">
           
           <div class="container py-5 h-100">
-              <h4 class="nav1 text-center card-title"> Carrinho > Confirmar Pedido > Finalizar Pedido > Realizar Pagamento </h4>
+              <h4 class="tex nav1 text-center card-title"> Carrinho > Confirmar Pedido > Finalizar Pedido > Realizar Pagamento </h4>
               <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12">
                   <div class="card card-registration card-registration-2" style="border-radius: 15px;">
@@ -173,16 +290,17 @@ echo '<script'; ?>
                               
                               
                             </div>
-                            <h7  style="font-size: 13px;" >OBS: Você pode aumentar a quantidade do produto desejado adicionando novamente ele ao carrinho!</h7>
+                            <h7  class="obs" style="font-size: 13px;" >OBS: Você pode aumentar a quantidade do produto desejado adicionando novamente ele ao carrinho!</h7>
                             <hr class="my-4">
                             <center>
-                              <table class=" " style="width: 100%">
+                              <table class="table " style="width: 100%">
                                   
                                   <tr class="">
-                                      <td></td>
+                                      <td class="td"></td>
                                       <td><b>Item</b></td>
-                                          <td><b>Valor Uni</b></td>
-                                          <td><b>Quantidade</b></td>
+                                          <td><b>Valor</b></td>
+                                          <td class="q"><b>Quantidade</b></td>
+                                          <td class="x"><b>X</b></td>
                                           <td><b>Total</b></td>
                                       </tr>
                                      
@@ -196,10 +314,13 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
                                   <tr>
                                       
-                                      <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
-"> </td>
-                                      <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+                                      <td>  <a class="card-title" href="<?php echo $_smarty_tpl->tpl_vars['PRO_INFO']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
+">
+                                        <!-- Product image-->
+                                        <img class="im card-img-top" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+" alt="..." /></td>
+                                      <td class="nome">  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
  </td>
                                       <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
  </td>
@@ -215,7 +336,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ">    
                                             <input type="hidden" name="acao" value="del">    
                                             
-                                            <button class="btn btn-danger btn-sm"> <span class="material-symbols-outlined">
+                                            <button  class="b btn btn-danger btn-sm"> <span class="material-symbols-outlined">
                                               close
                                               </span> </button>
                                             
@@ -253,7 +374,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </form>
                           </div>
                         </div>
-                        <div class="col-lg-4 bg-grey">
+                        <div class="frete col-lg-4 bg-grey">
                           <div class="p-5">
                             <h3 class="">Selecionar Frete</h3>
                             <hr class="my-4">
