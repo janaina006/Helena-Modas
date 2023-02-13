@@ -6,24 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background: linear-gradient(
-            50deg,
-            #C1B3FB,
-            #AB4DB5,
-            #9949E7,
-            #8868DD,
-            #C1B3FB,
-            #AB4DB5,
-            #9949E7,
-            #8868DD
-            
-        );
-        }
+       
 
-        div{
-            margin-top: 10%;
-            margin-bottom: 15%;
+        section{
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 490px;
+    background-color: lightgray;
+       
+   
         }
 
         div h1{
@@ -36,12 +28,13 @@
     </style>
 </head>
 <body>
-    <hr>
+    <section>
     <div class="text-center">
+        
         <h1 >404</h1>
         <p> Página não encontrada</p>
 
     </div>
-    <hr>
+</section>
 </body>
 </html>

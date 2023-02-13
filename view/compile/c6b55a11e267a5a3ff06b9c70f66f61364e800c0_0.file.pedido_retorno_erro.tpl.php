@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-12 00:38:05
+/* Smarty version 4.1.1, created on 2023-02-12 15:09:25
   from 'C:\wamp\www\loja\view\pedido_retorno_erro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63bf809dc2be01_82958584',
+  'unifunc' => 'content_63e92b5564fb37_30993455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6b55a11e267a5a3ff06b9c70f66f61364e800c0' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_retorno_erro.tpl',
-      1 => 1673494684,
+      1 => 1676225364,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,92 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63bf809dc2be01_82958584 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e92b5564fb37_30993455 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+
+@media (max-width:900px){
+
+  .erro{
+    font-size: 15px;
+  }
+
+  .t{
+    font-size: 19px;
+
+  }
+
+  .bo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+}
+
+@media (max-width:768px){
+  p{
+    text-align: center;
+  }
+  .erro{
+    margin: 6%;
+  }
+
+}
+@media (max-width:600px){
+  p{
+    font-size: 13px;
+
+  }
+
+}
+@media (max-width:530px){
+   .erro{
+    font-size: 13px;
+    margin: 5%;
+
+  }
+
+  .t{
+    font-size: 16px;
+
+  }
+
+  .bo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+}
+@media (max-width:420px){
+   .erro{
+    font-size: 11px;
+    margin: 5%;
+  }
+
+  .t{
+    font-size: 15px;
+
+  }
+
+  .bo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  
+
+}
 
 
 </style>
 
 <div class="erro">
   <br>  
-<h3 class="text-center text-danger"> Ocorreu um problema no pagamento, ou foi cancelado</h3>
+<h3 class="text-center text-danger t"> Ocorreu um problema no pagamento, ou foi cancelado</h3>
 <br>
 <section  class="row">
     
@@ -54,9 +131,12 @@ function content_63bf809dc2be01_82958584 (Smarty_Internal_Template $_smarty_tpl)
          
         <form class="row" name="pagamento" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>
 ">
-            <input type="hidden" name="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['REF']->value;?>
+          <input type="hidden" name="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['REF']->value;?>
 ">  
+          <div class="bo">
+
             <button class="btn btn-success "> Fazer Pagamento Agora</button>
+          </div> 
                 
             
             

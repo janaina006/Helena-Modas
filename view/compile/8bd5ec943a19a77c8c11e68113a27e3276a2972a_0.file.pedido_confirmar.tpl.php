@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-26 23:39:56
+/* Smarty version 4.1.1, created on 2023-02-12 21:37:44
   from 'C:\wamp\www\loja\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63d3397c3d0de9_87725185',
+  'unifunc' => 'content_63e98658a92883_33371696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8bd5ec943a19a77c8c11e68113a27e3276a2972a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_confirmar.tpl',
-      1 => 1674787190,
+      1 => 1676248662,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,52 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d3397c3d0de9_87725185 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e98658a92883_33371696 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+
+@media (max-width:700px){
+
+  .table{
+    font-size: 13px;
+  }
+
+  .t3{
+    font-size: 13px;
+    
+  }
+
+}
+@media (max-width:500px){
+
+  .table{
+    font-size: 10px;
+  }
+
+  .t3{
+    font-size: 10px;
+    
+  }
+
+  .im{
+    width: 50%;
+  height: auto;
+  }
+
+}
 
     .table{
     
     background-color:#DFD5FB;
     }
+
+    .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
     .button-85 {
   text-decoration:none;
@@ -110,7 +149,7 @@ function content_63d3397c3d0de9_87725185 (Smarty_Internal_Template $_smarty_tpl)
 }
     </style>
 <br>
- <h4 class="container nav1 text-center card-title">Confirmar Pedido</h4>
+ <h4 style="height: 35px;" class=" nav1 text-center card-title">Confirmar Pedido</h4>
 
 <!-- botoes e opções de cima -->
 
@@ -119,7 +158,7 @@ function content_63d3397c3d0de9_87725185 (Smarty_Internal_Template $_smarty_tpl)
 <!--  table listagem de itens -->
 <section class="" >
         
-    <div class="container h-100">
+    <div class=" h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
          
@@ -130,12 +169,12 @@ function content_63d3397c3d0de9_87725185 (Smarty_Internal_Template $_smarty_tpl)
                
   
                 <center>
-                    <table class=" " style="width: 100%">
+                    <table class="t3 " style="width: 100%">
                         
                         <tr class="">
                             <td></td>
                             <td><b>Item</b></td>
-                                <td><b>Valor Uni</b></td>
+                                <td><b>Valor</b></td>
                                 <td><b>Quantidade</b></td>
                                 <td><b>Total</b></td>
                             </tr>
@@ -150,7 +189,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
                         <tr>
                             
-                            <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+                            <td> <img class="im" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 "> </td>
                             <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
@@ -182,15 +221,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                 
                     
             <center>
-                <table class="table " style="width: 85%">
+                <table class="table " style="text-align: center;">
                     <tr>
 
                         <td class=""> <b> Total :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td><p>
                           
                     
-                            <!-- <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
-</td> -->
+                            <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+</td>
                             
                             <td class=""> <b>Tipo Frete :</b> <?php echo $_smarty_tpl->tpl_vars['TIPOFRETE']->value;?>
 </td>
@@ -211,10 +250,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <br>
                     
                     <div class="col-md-4 ">
-
-                        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
+                      <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
 ">
-                         <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+                        <div class="c">
+
+                          <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+                        </div>
+                        
                      </form>
     
                 </div>

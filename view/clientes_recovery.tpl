@@ -161,6 +161,29 @@ body {
   }
 }
 
+@media (max-width:420px){
+
+  .login-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px #987FDB;
+  border-radius: 10px;
+}
+.c {
+
+ 
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+}
 </style>
 
 
@@ -176,7 +199,10 @@ body {
               <input type="email"  class=" " name="cli_email" value="" placeholder="Digite seu email cadastrado" required autocomplete="off">        
         
           </div>
-          <button type="submit" class="button-85"> Recuperar </button>
+          <div class="c">
+
+            <button type="submit" class="button-85"> Recuperar </button>
+          </div>
 
          
         </section>

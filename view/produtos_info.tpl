@@ -10,6 +10,165 @@
 
 <style>
 
+.t{
+    font-size: 20px;
+  }
+
+@media (max-width:1000px){
+
+
+
+  .d{
+    font-size: 15px;
+  }
+
+  .wrapper img{
+      width: 90px;
+      height: 90px;
+      margin-left: 14px;
+      transition: 0.3s;
+      
+    }
+
+    .wrapper{
+
+      margin-left: -90px;
+
+
+    
+    }
+
+  
+
+ 
+
+
+
+}
+@media (max-width:800px){
+
+  .wrapper{
+      width: 130%;
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+      margin-left: -90px;
+
+
+    }
+
+    .wrapper img{
+      width: 100px;
+      height: 90px;
+      margin-left: 14px;
+      transition: 0.3s;
+      
+    }
+
+    .c {
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.s{
+    flex-direction: column;
+  }
+
+  .t{
+    font-size: 20px;
+  }
+
+  .d{
+    font-size: 18px;
+  }
+ 
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+  .wrapper{
+      width: 70%;
+      height: 10%;
+      margin-left: 1%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+    .wrapper img{
+      width: 90px;
+      height: 80px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+}
+@media (max-width:500px){
+
+  .wrapper{
+      width: 60%;
+      height: 10%;
+      margin-left: 3%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+
+    .wrapper img{
+      width: 90px;
+      height: 70px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+}
+@media (max-width:400px){
+
+  .wrapper{
+      width: 60%;
+      height: 10%;
+      margin-left: 3%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+
+    .wrapper img{
+      width: 60px;
+      height: 50px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+}
+
+
+
+
+
+
+
+}
 .button-85 {
   text-decoration:none;
   padding: 0.5em 2em;
@@ -98,9 +257,7 @@
         margin-bottom: 90px;
     }
  
-    .text{
-        font-size: 30px;
-    }
+   
     .text-color{
         color: #9949E7;
 ;
@@ -150,7 +307,10 @@
     .img{
       border-radius: 10px;
       cursor: pointer;
+   
     }
+
+    
 
 
 
@@ -165,9 +325,9 @@
 </style>
 <body>
     {foreach from=$PRO item=P}
-    <section class="py-5 " >
+    <section class="py-5  " >
        <div class="container px-4 px-lg-3 my-1 ">
-           <div class="row gx-4 gx-lg-5 align-items-center ">
+           <div class="s row gx-4 gx-lg-5 align-items-center ">
                <div class="col-md-6 body">
               
                 <section class="wrapper">
@@ -195,12 +355,18 @@
             
                 </div>
                <div class="col-md-6 info">
+                <div class="in">
+
+                
                    <div class="small mb-1">Ref: {$P.pro_ref}</div>
-                   <h1 class="display-5 fw-bolder text">{$P.pro_nome} </h1>
+                   <h1 class="t">{$P.pro_nome} </h1>
                    <div class="fs-5 mb-5 text-color">
                        <span>R$ {$P.pro_valor}</span>
                    </div>
-                   <p class="lead">{$P.pro_desc}</p>
+                  <div class="in2">
+                 
+                   <h6><b>Descrição</b></h6>
+                   <p class="lead d">{$P.pro_desc}</p>
                    <br>
                    <br>
                   
@@ -208,7 +374,10 @@
                        <form name="carrinho" method="post" action="{$PAG_COMPRAR}">
                            <input type="hidden" name="pro_id" value="{$P.pro_id}">
                            <input type="hidden" name="acao" value="add">
-                       <button  class="button-85">Comprar</button>
+                           <div class="c">
+
+                             <button  class="button-85">Comprar</button>
+                           </div>
                            </form> 
                        
                    </div>   
@@ -228,7 +397,7 @@
   
    
 
-
+<div class="in3">
 
    <h4 class="text-center">Informações Adicionais</h4>
    <br>
@@ -290,4 +459,4 @@
 </body>
 </html>
 
- 
+</div>

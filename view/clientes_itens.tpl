@@ -3,7 +3,65 @@
     .table{
     
     background-color:#DFD5FB;
+    align-items: center;
     }
+
+    @media (max-width:840px){
+
+        .table{
+            font-size: 15px;
+        }
+
+        .h{
+            font-size: 13px;
+        }
+
+        .i1{
+            width: 30%;
+             height: auto;
+        }
+    }
+    @media (max-width:790px){
+
+        .table{
+            font-size: 13px;
+        }
+    }
+    @media (max-width:710px){
+
+        .table{
+            font-size: 11px;
+        }
+    }
+    @media (max-width:620px){
+
+        .table{
+            font-size: 10px;
+        }
+
+        .b1{
+            width: 75px;
+            height: 25px;
+            font-size: 2px;
+        }
+
+      
+
+        
+    }
+    @media (max-width:550px){
+
+        .table{
+            font-size: 9px;
+        }
+    }
+    @media (max-width:522px){
+
+        .table{
+            font-size: 8px;
+        }
+    }
+ 
     </style>
     
     
@@ -11,7 +69,7 @@
     
     <section class="" >
         
-        <div class="container h-100">
+        <div class=" h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
              
@@ -36,7 +94,6 @@
                     </table>
                     </center>
                     
-                </section>
               <div class="card mb-4">
                 <div class=" p-4">
                    
@@ -47,7 +104,7 @@
                             <tr class="">
                                 <td></td>
                                 <td><b>Item</b></td>
-                                <td><b>Valor Uni</b></td>
+                                <td><b>Valor </b></td>
                                 <td><b>Quantidade</b></td>
                                 <td><b>Total</b></td>
                             </tr>
@@ -73,6 +130,7 @@
                         
                         
                     </section>
+                    </section>
                             
                             
                             <section class="" id="resumo">
@@ -80,8 +138,8 @@
                                 
                     
                                 <center>
-                                    <table class="table " style="width: 85%">
-                                        <tr>
+                                    <table class="table  " style="text-align: center;">
+                                        <tr >
                     
                                             <td class=""> <b>Frete:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor)}</td><p>
                                                 
@@ -99,15 +157,21 @@
                                 <center>
      
                 </div>
+                
              {if $ITENS.1.ped_pag_status =='Aguardando Pagamento'} 
             </div>
+            <section class="sec">
+
+          
             <div class="card mb-4">
                   <h6 class="text-danger">(Seu pagamento ainda não foi realizado!)</h6>
                 <div class="card-body p-4">
                     <!-- botao de pagamento  -->
                 <div class="col-md-4">
-    
-                <button class="'btn btn-danger btn-lg
+                <div class="b1">
+                    
+                </div>
+                <button class="'b1 btn btn-danger btn-lg
                 btn-block" onclick="PagSeguroLightbox({
                 code: '{$PS_COD}'
                 }, {
@@ -121,7 +185,7 @@
                 }
                 });     
     
-                "> Pague com Pagseguro</button>
+                "> <h6 class="h">Pague com Pagseguro</h6></button>
     
     
                 
@@ -135,7 +199,7 @@
       
             {/if}
     
-            <img src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
+            <img class="i1" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
                 <script type="text/javascript" src="{$PS_SCRIPT}"></script>
     
       
@@ -144,6 +208,7 @@
             </div>
           </div>
         </div>
+    </section>
        
       </section>
     

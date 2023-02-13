@@ -35,6 +35,15 @@
             margin-left: 25px;
         }
 
+        .pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
      
         .carrinho h6{
             display: none;

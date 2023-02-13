@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-02 14:45:14
+/* Smarty version 4.1.1, created on 2023-02-12 20:37:12
   from 'C:\wamp\www\loja\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63dbf6aab00632_42493908',
+  'unifunc' => 'content_63e9782871bf24_70095408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '81225fbac96088f71a21dbf452dbbd7631917fd2' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos_info.tpl',
-      1 => 1675272673,
+      1 => 1676244369,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63dbf6aab00632_42493908 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,165 @@ function content_63dbf6aab00632_42493908 (Smarty_Internal_Template $_smarty_tpl)
 
 <style>
 
+.t{
+    font-size: 20px;
+  }
+
+@media (max-width:1000px){
+
+
+
+  .d{
+    font-size: 15px;
+  }
+
+  .wrapper img{
+      width: 90px;
+      height: 90px;
+      margin-left: 14px;
+      transition: 0.3s;
+      
+    }
+
+    .wrapper{
+
+      margin-left: -90px;
+
+
+    
+    }
+
+  
+
+ 
+
+
+
+}
+@media (max-width:800px){
+
+  .wrapper{
+      width: 130%;
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+      margin-left: -90px;
+
+
+    }
+
+    .wrapper img{
+      width: 100px;
+      height: 90px;
+      margin-left: 14px;
+      transition: 0.3s;
+      
+    }
+
+    .c {
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.s{
+    flex-direction: column;
+  }
+
+  .t{
+    font-size: 20px;
+  }
+
+  .d{
+    font-size: 18px;
+  }
+ 
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+  .wrapper{
+      width: 70%;
+      height: 10%;
+      margin-left: 1%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+    .wrapper img{
+      width: 90px;
+      height: 80px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+}
+@media (max-width:500px){
+
+  .wrapper{
+      width: 60%;
+      height: 10%;
+      margin-left: 3%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+
+    .wrapper img{
+      width: 90px;
+      height: 70px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+}
+@media (max-width:400px){
+
+  .wrapper{
+      width: 60%;
+      height: 10%;
+      margin-left: 3%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      display: flex;
+
+    }
+
+    .wrapper img{
+      width: 60px;
+      height: 50px;
+      margin-left: 20px;
+      transition: 0.3s;
+      
+    }
+
+
+
+}
+
+
+
+
+
+
+
+}
 .button-85 {
   text-decoration:none;
   padding: 0.5em 2em;
@@ -121,9 +280,7 @@ function content_63dbf6aab00632_42493908 (Smarty_Internal_Template $_smarty_tpl)
         margin-bottom: 90px;
     }
  
-    .text{
-        font-size: 30px;
-    }
+   
     .text-color{
         color: #9949E7;
 ;
@@ -173,7 +330,10 @@ function content_63dbf6aab00632_42493908 (Smarty_Internal_Template $_smarty_tpl)
     .img{
       border-radius: 10px;
       cursor: pointer;
+   
     }
+
+    
 
 
 
@@ -193,9 +353,9 @@ $_smarty_tpl->tpl_vars['P']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
 $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
-    <section class="py-5 " >
+    <section class="py-5  " >
        <div class="container px-4 px-lg-3 my-1 ">
-           <div class="row gx-4 gx-lg-5 align-items-center ">
+           <div class="s row gx-4 gx-lg-5 align-items-center ">
                <div class="col-md-6 body">
               
                 <section class="wrapper">
@@ -235,15 +395,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             
                 </div>
                <div class="col-md-6 info">
+                <div class="in">
+
+                
                    <div class="small mb-1">Ref: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_ref'];?>
 </div>
-                   <h1 class="display-5 fw-bolder text"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+                   <h1 class="t"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
  </h1>
                    <div class="fs-5 mb-5 text-color">
                        <span>R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
 </span>
                    </div>
-                   <p class="lead"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
+                  <div class="in2">
+                 
+                   <h6><b>Descrição</b></h6>
+                   <p class="lead d"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
 </p>
                    <br>
                    <br>
@@ -254,7 +420,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                            <input type="hidden" name="pro_id" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
 ">
                            <input type="hidden" name="acao" value="add">
-                       <button  class="button-85">Comprar</button>
+                           <div class="c">
+
+                             <button  class="button-85">Comprar</button>
+                           </div>
                            </form> 
                        
                    </div>   
@@ -273,7 +442,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   
    
 
-
+<div class="in3">
 
    <h4 class="text-center">Informações Adicionais</h4>
    <br>
@@ -343,5 +512,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </body>
 </html>
 
- <?php }
+</div><?php }
 }

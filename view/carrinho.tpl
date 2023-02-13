@@ -17,7 +17,7 @@
             } else {
          
            
-            $('#frete').html('<img src="view/images/loader.gif"> <b>Carregando...</b>');
+            $('#frete').html('<img class="loa " src="view/images/loader.gif"> <b></b>');
             $('#frete').addClass(' text-center text-danger');
           
             // carrego o combo com os bairros
@@ -43,6 +43,22 @@
   .frete{
    margin-top: -100px;
   }
+
+  
+  .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loa{
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+}
 }
 
 @media (max-width:769px){
@@ -75,6 +91,21 @@
    height: 65px;
   }
 
+  .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loa{
+  width: 50%;
+  display: block;
+        margin: 0 auto;
+}
+
 
 
 }
@@ -103,6 +134,7 @@
     width: 70px;
    height: 65px;
   }
+
 
   
 
@@ -138,7 +170,9 @@
    height: 55px;
   }
 
-
+  section h7{
+    font-size: 55px;
+  }
 
 
 
@@ -368,9 +402,12 @@
                             <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
         
                             <span id="frete"></span>
+                            <div class="c">
+                              <br>
+                              <br>
                             
                             <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
-        
+                          </div>
         
         
                             </form>

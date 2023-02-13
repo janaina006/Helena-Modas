@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-07 20:39:24
+/* Smarty version 4.1.1, created on 2023-02-12 13:34:56
   from 'C:\wamp\www\loja\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e2e12c0df597_34794368',
+  'unifunc' => 'content_63e91530ae0212_24993280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70e1d804ea3e53221dba9b5a4027cb26a7d50ac7' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\index.tpl',
-      1 => 1675813114,
+      1 => 1676219691,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e2e12c0df597_34794368 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e91530ae0212_24993280 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt"> 
@@ -64,6 +64,15 @@ function content_63e2e12c0df597_34794368 (Smarty_Internal_Template $_smarty_tpl)
         .form form{
             margin-left: 25px;
         }
+
+        .pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
      
         .carrinho h6{

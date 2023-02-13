@@ -14,9 +14,9 @@ Class Pedidos extends Conexao{
 
         $retorno = FALSE;
         $query  = "INSERT INTO ".$this->prefix."pedido";   
-        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_frete_tipo, ped_pag_status)"; 
+        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status)"; 
         $query .= " VALUES ";
-        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :frete_tipo, :ped_pag_status)";
+        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status)";
         
         $params = array(
             
@@ -26,7 +26,6 @@ Class Pedidos extends Conexao{
             ':cod' => $cod,
             ':ref' => $ref,
             ':frete_valor'=>$freteValor,
-            ':frete_tipo' =>$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)',
             ':ped_pag_status' =>'Aguardando Pagamento'  
         );
 
@@ -79,7 +78,6 @@ Class Pedidos extends Conexao{
               'ped_pag_tipo'    => $lista['ped_pag_tipo'],
               'ped_pag_codigo'   => $lista['ped_pag_codigo'],
               'ped_frete_valor' => $lista['ped_frete_valor'],
-              'ped_frete_tipo'  => $lista['ped_frete_tipo'],
               'cli_nome'  => $lista['cli_nome'],
               'cli_sobrenome'  => $lista['cli_sobrenome'],
           );

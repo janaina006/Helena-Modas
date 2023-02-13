@@ -179,14 +179,14 @@
 /* //////////////////////// */
 
 
-.pagination{
-    list-style: none;
+.pagina {
     display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    color: #fff;
-    left:500px;
-}
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
 .text-color{
     color: #9949E7;

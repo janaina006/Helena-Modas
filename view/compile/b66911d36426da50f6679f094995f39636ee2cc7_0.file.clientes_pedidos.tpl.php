@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-10 20:15:30
+/* Smarty version 4.1.1, created on 2023-02-12 13:43:33
   from 'C:\wamp\www\loja\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63bdf192b4e7a0_92289102',
+  'unifunc' => 'content_63e917353e75e4_51468151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b66911d36426da50f6679f094995f39636ee2cc7' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\clientes_pedidos.tpl',
-      1 => 1673392530,
+      1 => 1676220212,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63bdf192b4e7a0_92289102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e917353e75e4_51468151 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .table{
 
   background-color:#DFD5FB;
 }
+
+.pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
 .table- {
   letter-spacing: 1px;
@@ -35,10 +44,32 @@ function content_63bdf192b4e7a0_92289102 (Smarty_Internal_Template $_smarty_tpl)
 
 
 }
+
+@media (max-width:600px){
+
+    .table-{
+      font-size: 12px;
+
+
+    }
+
+    .pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+
+}
+
+
 </style>
 
 <br>
-<br>
+
 <section class="table- " id="pedidos" >
     
     <h4 class="text-center">Meus Pedidos</h4>
@@ -65,6 +96,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
 
           <tr>
+            
          
             <td>
               <p class="fw-normal mb-1"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_data'];?>
@@ -99,14 +131,14 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
               </span> </button></td>
               
             </form> 
-            
           </tr>
           <tr>
             
-          
-          <?php
+            
+            <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            
         </tbody>
         
       </table>
@@ -117,13 +149,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
   
 </section>
-<br>
+<hr>
+
+
    <!-- paginaçao inferior -->
-   <section id="pagincao" class="pagination">
+   <section id="pagincao" class="pagina">
     <center>
         <?php echo $_smarty_tpl->tpl_vars['PAGINAS']->value;?>
 
     </center>
 </section>
+   <br>   
    <br>   <?php }
 }

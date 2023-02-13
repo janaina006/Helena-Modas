@@ -34,6 +34,7 @@ if(isset($_SESSION['PRO'])) {
 
 
 
+    $smarty->assign('FRETE', Sistema::MoedaBR($_SESSION['PED']['frete']));
     
     $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
     $smarty->assign('PAG_CARRINHO_ALTERAR', Rotas::pag_CarrinhoAlterar());

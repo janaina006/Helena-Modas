@@ -1,5 +1,13 @@
 
+<style>
+    @media (max-width:990px){
 
+        .n{
+            font-size: 12px;
+        }
+    }
+
+</style>
 
 
 
@@ -24,7 +32,7 @@
                     <img class="card-img-top" src="{$P.pro_img}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
-                        <div class="card-title">
+                        <div class="n card-title">
                             <!-- Product name-->
                             {$P.pro_nome}
                             <br>

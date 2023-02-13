@@ -1,9 +1,48 @@
 <style>
 
+@media (max-width:700px){
+
+  .table{
+    font-size: 13px;
+  }
+
+  .t3{
+    font-size: 13px;
+    
+  }
+
+}
+@media (max-width:500px){
+
+  .table{
+    font-size: 10px;
+  }
+
+  .t3{
+    font-size: 10px;
+    
+  }
+
+  .im{
+    width: 50%;
+  height: auto;
+  }
+
+}
+
     .table{
     
     background-color:#DFD5FB;
     }
+
+    .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
     .button-85 {
   text-decoration:none;
@@ -87,7 +126,7 @@
 }
     </style>
 <br>
- <h4 class="container nav1 text-center card-title">Confirmar Pedido</h4>
+ <h4 style="height: 35px;" class=" nav1 text-center card-title">Confirmar Pedido</h4>
 
 <!-- botoes e opções de cima -->
 
@@ -96,7 +135,7 @@
 <!--  table listagem de itens -->
 <section class="" >
         
-    <div class="container h-100">
+    <div class=" h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
          
@@ -107,12 +146,12 @@
                
   
                 <center>
-                    <table class=" " style="width: 100%">
+                    <table class="t3 " style="width: 100%">
                         
                         <tr class="">
                             <td></td>
                             <td><b>Item</b></td>
-                                <td><b>Valor Uni</b></td>
+                                <td><b>Valor</b></td>
                                 <td><b>Quantidade</b></td>
                                 <td><b>Total</b></td>
                             </tr>
@@ -122,7 +161,7 @@
                         {foreach from=$PRO item=P}
                         <tr>
                             
-                            <td> <img src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
+                            <td> <img class="im" src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
                             <td>  {$P.pro_nome} </td>
                             <td>  {$P.pro_valor} </td>
                             <td> {$P.pro_qtd}  </td>
@@ -146,13 +185,13 @@
                                 
                     
             <center>
-                <table class="table " style="width: 85%">
+                <table class="table " style="text-align: center;">
                     <tr>
 
                         <td class=""> <b> Total :</b> R$ {$TOTAL}</td><p>
                           
                     
-                            <!-- <td class=""> <b>Frete :</b> R$ {$FRETE}</td> -->
+                            <td class=""> <b>Frete :</b> R$ {$FRETE}</td>
                             
                             <td class=""> <b>Tipo Frete :</b> {$TIPOFRETE}</td>
 
@@ -171,9 +210,12 @@
                     <br>
                     
                     <div class="col-md-4 ">
+                      <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
+                        <div class="c">
 
-                        <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
-                         <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+                          <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
+                        </div>
+                        
                      </form>
     
                 </div>

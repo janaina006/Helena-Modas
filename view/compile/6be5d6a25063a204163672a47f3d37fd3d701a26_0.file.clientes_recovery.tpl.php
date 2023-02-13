@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-17 19:37:03
+/* Smarty version 4.1.1, created on 2023-02-12 13:56:35
   from 'C:\wamp\www\loja\view\clientes_recovery.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63c7230fd141d5_07223477',
+  'unifunc' => 'content_63e91a43629563_78219203',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6be5d6a25063a204163672a47f3d37fd3d701a26' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\clientes_recovery.tpl',
-      1 => 1673995009,
+      1 => 1676220994,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63c7230fd141d5_07223477 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e91a43629563_78219203 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 body {
@@ -184,6 +184,29 @@ body {
   }
 }
 
+@media (max-width:420px){
+
+  .login-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px #987FDB;
+  border-radius: 10px;
+}
+.c {
+
+ 
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+}
 </style>
 
 
@@ -199,7 +222,10 @@ body {
               <input type="email"  class=" " name="cli_email" value="" placeholder="Digite seu email cadastrado" required autocomplete="off">        
         
           </div>
-          <button type="submit" class="button-85"> Recuperar </button>
+          <div class="c">
+
+            <button type="submit" class="button-85"> Recuperar </button>
+          </div>
 
          
         </section>

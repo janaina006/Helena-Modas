@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-07 20:39:24
+/* Smarty version 4.1.1, created on 2023-02-12 15:15:22
   from 'C:\wamp\www\loja\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e2e12cefbdc4_13230918',
+  'unifunc' => 'content_63e92cba8e55a8_23373525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba4594c388acc2fe279b9c6fb804dcdccd74edc4' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos.tpl',
-      1 => 1675813114,
+      1 => 1676225721,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,17 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e2e12cefbdc4_13230918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e92cba8e55a8_23373525 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
+<style>
+    @media (max-width:990px){
 
+        .n{
+            font-size: 12px;
+        }
+    }
+
+</style>
 
 
 
@@ -57,7 +65,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 " alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
-                        <div class="card-title">
+                        <div class="n card-title">
                             <!-- Product name-->
                             <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 

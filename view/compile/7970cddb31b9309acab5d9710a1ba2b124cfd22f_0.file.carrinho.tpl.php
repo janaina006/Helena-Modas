@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 11:42:57
+/* Smarty version 4.1.1, created on 2023-02-12 14:29:44
   from 'C:\wamp\www\loja\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e8faf1301ba8_61070489',
+  'unifunc' => 'content_63e9220825c533_66973368',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7970cddb31b9309acab5d9710a1ba2b124cfd22f' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\carrinho.tpl',
-      1 => 1676212970,
+      1 => 1676222983,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e8faf1301ba8_61070489 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e9220825c533_66973368 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://code.jquery.com/jquery-1.9.1.js"><?php echo '</script'; ?>
 >
@@ -45,7 +45,7 @@ echo '<script'; ?>
             } else {
          
            
-            $('#frete').html('<img src="view/images/loader.gif"> <b>Carregando...</b>');
+            $('#frete').html('<img class="loa " src="view/images/loader.gif"> <b></b>');
             $('#frete').addClass(' text-center text-danger');
           
             // carrego o combo com os bairros
@@ -72,6 +72,22 @@ echo '<script'; ?>
   .frete{
    margin-top: -100px;
   }
+
+  
+  .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loa{
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+}
 }
 
 @media (max-width:769px){
@@ -104,6 +120,21 @@ echo '<script'; ?>
    height: 65px;
   }
 
+  .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loa{
+  width: 50%;
+  display: block;
+        margin: 0 auto;
+}
+
 
 
 }
@@ -132,6 +163,7 @@ echo '<script'; ?>
     width: 70px;
    height: 65px;
   }
+
 
   
 
@@ -167,7 +199,9 @@ echo '<script'; ?>
    height: 55px;
   }
 
-
+  section h7{
+    font-size: 55px;
+  }
 
 
 
@@ -418,9 +452,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 ">
         
                             <span id="frete"></span>
+                            <div class="c">
+                              <br>
+                              <br>
                             
                             <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
-        
+                          </div>
         
         
                             </form>

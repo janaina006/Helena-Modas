@@ -4,6 +4,15 @@
   background-color:#DFD5FB;
 }
 
+.pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
 .table- {
   letter-spacing: 1px;
   margin-left: 0.2rem;
@@ -12,10 +21,32 @@
 
 
 }
+
+@media (max-width:600px){
+
+    .table-{
+      font-size: 12px;
+
+
+    }
+
+    .pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+
+}
+
+
 </style>
 
 <br>
-<br>
+
 <section class="table- " id="pedidos" >
     
     <h4 class="text-center">Meus Pedidos</h4>
@@ -37,6 +68,7 @@
         {foreach from=$PEDIDOS item=P}
 
           <tr>
+            
          
             <td>
               <p class="fw-normal mb-1">{$P.ped_data}</p>
@@ -64,12 +96,12 @@
               </span> </button></td>
               
             </form> 
-            
           </tr>
           <tr>
             
-          
-          {/foreach}
+            
+            {/foreach}
+            
         </tbody>
         
       </table>
@@ -80,11 +112,14 @@
     
   
 </section>
-<br>
+<hr>
+
+
    <!-- paginaçao inferior -->
-   <section id="pagincao" class="pagination">
+   <section id="pagincao" class="pagina">
     <center>
         {$PAGINAS}
     </center>
 </section>
+   <br>   
    <br>   

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 20:35:04
+/* Smarty version 4.1.1, created on 2023-02-12 20:27:13
   from 'C:\wamp\www\loja\view\menu_cliente.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e977a826a9d4_48405029',
+  'unifunc' => 'content_63e975d1396646_91854343',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30ea10304cbf8c83b808088ef606e4c92a372550' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\menu_cliente.tpl',
-      1 => 1676244903,
+      1 => 1676244432,
       2 => 'file',
     ),
   ),
@@ -20,16 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e977a826a9d4_48405029 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63e975d1396646_91854343 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
-.pagination{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    color: #fff;
-    left:504px;
-}
+
 /* CSS */
 .button-17 {
 
@@ -116,7 +109,7 @@ function content_63e977a826a9d4_48405029 (Smarty_Internal_Template $_smarty_tpl)
     grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
     grid-gap: 20px;
     margin: auto;
-    align-items: center;
+    position: absolute;
     
 }
 
