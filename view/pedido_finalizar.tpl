@@ -1,4 +1,122 @@
 <style>
+
+body {
+    overflow: hidden;
+  }
+
+  .colun{
+    margin: 0;
+  }
+
+  .x{
+    display: none;
+  }
+
+  @media (max-width:1200px){
+    .pag{
+      width: 80%;
+      height: 80%;
+    }
+        .im{
+    width: 40%;
+  height: auto;
+  }
+    
+  }
+
+  @media (max-width:991px){
+
+    .pag{
+      width: 60%;
+      height: 60%;
+    }
+
+    .im{
+    width: 40%;
+  height: auto;
+  }
+
+  .infopag{
+    margin-top: -65px;
+  }
+
+  }
+@media (max-width:900px){
+
+  
+  .im{
+    width: 50%;
+  height: auto;
+  }
+
+}
+
+@media (max-width:700px){
+
+  .table{
+    font-size: 13px;
+  }
+
+  .t3{
+    font-size: 13px;
+    
+  }
+
+  .im{
+    width: 30%;
+  height: auto;
+  }
+
+  .x{
+    display: block;
+  }
+
+  .q{
+    display: none;
+  }
+
+}
+.nome{
+    display: none;
+  }
+  .td{
+    display: none;
+
+  }
+
+@media (max-width:500px){
+
+  .table{
+    font-size: 10px;
+  }
+
+
+
+  .t3{
+    font-size: 10px;
+    
+  }
+
+  .im{
+    width: 30%;
+  height: auto;
+  }
+
+}
+
+    .table{
+    
+    background-color:#DFD5FB;
+    }
+
+    .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
   .button-85 {
 text-decoration:none;
 padding: 0.5em 2em;
@@ -93,9 +211,9 @@ border-radius: 10px;
                           
                           <center>
                              
-                              <table class=" " style="width: 100%">
+                              <table class="table"  style="width: 100%">
                                   
-                                  <tr class="">
+                                  <tr class="colun">
                                       <td></td>
                                       <td class=""> <b> Total :</b> R$ {$TOTAL}</td><p>
                   
@@ -114,20 +232,23 @@ border-radius: 10px;
                           <center>
                               <table class=" " style="width: 100%">
                                   
-                                  <tr class="">
-                                      <td></td>
-                                      <td><b>Item</b></td>
-                                          <td><b>Valor Uni</b></td>
-                                          <td><b>Quantidade</b></td>
-                                          <td><b>Total</b></td>
-                                      </tr>
-                                     
-                                  </tr>
+                                <tr class="">
+                                  <td class="td"></td>
+        
+        
+                                    <td><b>Item</b></td>
+                                        <td><b>Valor</b></td>
+                                        <td class="x"><b>X</b></td>
+                                        <td class="q"><b>Quantidade</b></td>
+                                        <td><b>Total</b></td>
+                                    </tr>
+                                   
+                                </tr>
                                   
                                   {foreach from=$PRO item=P}
                                   <tr>
                                       
-                                      <td> <img src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
+                                      <td> <img class="im" src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
                                       <td class="nome">  {$P.pro_nome} </td>
                                       <td>  {$P.pro_valor} </td>
                                       <td> {$P.pro_qtd}  </td>
@@ -139,11 +260,12 @@ border-radius: 10px;
                                   
                               </table>
                               </center>
+                          <hr class="my-4">
+
                             
                         
 
-                           <br>
-                           <br>
+                        
 
 
                       
@@ -157,7 +279,7 @@ border-radius: 10px;
                         </div>
                       </div>
                       
-                      <div class="col-lg-4 bg-grey">
+                      <div class="infopag col-lg-4 bg-grey">
                         <div class="p-5">
                           <h3 class="">Formas de pagamento</h3>
                           <hr class="my-4">
@@ -186,7 +308,7 @@ border-radius: 10px;
                               ">Pague com Pagseguro</button>
                               <hr>
                               <script type="text/javascript" src="{$PS_SCRIPT}"></script>
-                              <img src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
+                              <img class="pag" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
                             
                                   
                               </div>

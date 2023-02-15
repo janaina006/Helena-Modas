@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-15 13:20:24
+/* Smarty version 4.1.1, created on 2023-02-15 15:15:00
   from 'C:\wamp\www\loja\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63ed0648aa6269_93495080',
+  'unifunc' => 'content_63ed21245d79a8_45598117',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d6c53a2cd1fa031ff9b205c6b93f4c0ac4a8528' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_finalizar.tpl',
-      1 => 1676477677,
+      1 => 1676484865,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,126 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ed0648aa6269_93495080 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ed21245d79a8_45598117 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+
+body {
+    overflow: hidden;
+  }
+
+  .colun{
+    margin: 0;
+  }
+
+  .x{
+    display: none;
+  }
+
+  @media (max-width:1200px){
+    .pag{
+      width: 80%;
+      height: 80%;
+    }
+        .im{
+    width: 40%;
+  height: auto;
+  }
+    
+  }
+
+  @media (max-width:991px){
+
+    .pag{
+      width: 60%;
+      height: 60%;
+    }
+
+    .im{
+    width: 40%;
+  height: auto;
+  }
+
+  .infopag{
+    margin-top: -65px;
+  }
+
+  }
+@media (max-width:900px){
+
+  
+  .im{
+    width: 50%;
+  height: auto;
+  }
+
+}
+
+@media (max-width:700px){
+
+  .table{
+    font-size: 13px;
+  }
+
+  .t3{
+    font-size: 13px;
+    
+  }
+
+  .im{
+    width: 30%;
+  height: auto;
+  }
+
+  .x{
+    display: block;
+  }
+
+  .q{
+    display: none;
+  }
+
+}
+.nome{
+    display: none;
+  }
+  .td{
+    display: none;
+
+  }
+
+@media (max-width:500px){
+
+  .table{
+    font-size: 10px;
+  }
+
+
+
+  .t3{
+    font-size: 10px;
+    
+  }
+
+  .im{
+    width: 30%;
+  height: auto;
+  }
+
+}
+
+    .table{
+    
+    background-color:#DFD5FB;
+    }
+
+    .c {
+
+ 
+display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
   .button-85 {
 text-decoration:none;
 padding: 0.5em 2em;
@@ -116,9 +234,9 @@ border-radius: 10px;
                           
                           <center>
                              
-                              <table class=" " style="width: 100%">
+                              <table class="table"  style="width: 100%">
                                   
-                                  <tr class="">
+                                  <tr class="colun">
                                       <td></td>
                                       <td class=""> <b> Total :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
 </td><p>
@@ -140,15 +258,18 @@ border-radius: 10px;
                           <center>
                               <table class=" " style="width: 100%">
                                   
-                                  <tr class="">
-                                      <td></td>
-                                      <td><b>Item</b></td>
-                                          <td><b>Valor Uni</b></td>
-                                          <td><b>Quantidade</b></td>
-                                          <td><b>Total</b></td>
-                                      </tr>
-                                     
-                                  </tr>
+                                <tr class="">
+                                  <td class="td"></td>
+        
+        
+                                    <td><b>Item</b></td>
+                                        <td><b>Valor</b></td>
+                                        <td class="x"><b>X</b></td>
+                                        <td class="q"><b>Quantidade</b></td>
+                                        <td><b>Total</b></td>
+                                    </tr>
+                                   
+                                </tr>
                                   
                                   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
@@ -158,7 +279,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
                                   <tr>
                                       
-                                      <td> <img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+                                      <td> <img class="im" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 "> </td>
                                       <td class="nome">  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
@@ -178,11 +299,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                   
                               </table>
                               </center>
+                          <hr class="my-4">
+
                             
                         
 
-                           <br>
-                           <br>
+                        
 
 
                       
@@ -196,7 +318,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </div>
                       </div>
                       
-                      <div class="col-lg-4 bg-grey">
+                      <div class="infopag col-lg-4 bg-grey">
                         <div class="p-5">
                           <h3 class="">Formas de pagamento</h3>
                           <hr class="my-4">
@@ -233,7 +355,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['PS_SCRIPT']->value;?>
 "><?php echo '</script'; ?>
 >
-                              <img src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
+                              <img class="pag" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /images/logo-pagseguro.png"  alt=""> 
                             
                                   
