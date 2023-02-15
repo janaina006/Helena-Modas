@@ -38,6 +38,7 @@ function GetItensPedido($pedido, $cliente=null){
 
             
         $this->itens[$i] = array(
+			    'pro_id' => $lista['pro_id'],
                 
                  'ped_id'    => $lista['ped_id'],
                 'ped_data'  => Sistema::Fdata($lista['ped_data']),

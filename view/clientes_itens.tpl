@@ -1,62 +1,54 @@
 <style>
-
     .table{
     
     background-color:#DFD5FB;
     align-items: center;
     }
 
+    .im{
+    width: 70px;
+   height: 65px;
+  }
     @media (max-width:840px){
-
         .table{
             font-size: 15px;
         }
-
         .h{
             font-size: 13px;
         }
-
         .i1{
             width: 30%;
              height: auto;
         }
     }
     @media (max-width:790px){
-
         .table{
             font-size: 13px;
         }
     }
     @media (max-width:710px){
-
         .table{
             font-size: 11px;
         }
     }
     @media (max-width:620px){
-
         .table{
             font-size: 10px;
         }
-
         .b1{
             width: 75px;
             height: 25px;
             font-size: 2px;
         }
-
       
-
         
     }
     @media (max-width:550px){
-
         .table{
             font-size: 9px;
         }
     }
     @media (max-width:522px){
-
         .table{
             font-size: 8px;
         }
@@ -113,7 +105,10 @@
                             {foreach from=$ITENS item=P}
                             <tr>
                                 
-                                <td><img src="{$P.item_img}" alt=""> </td>
+                                <td>  <a class="card-title" href="{$PRO_INFO}/{$P.pro_id}">
+                                    <!-- Product image-->
+                                    <img class="im card-img-top" src="{$P.item_img}" alt="..." /></td>
+                                
                                 <td> {$P.item_nome}</td>
                                 <td class="text-right">R$ {$P.item_valor}</td>
                                 <td class="text-right"> {$P.item_qtd}</td>
@@ -134,7 +129,6 @@
                             
                             
                             <section class="" id="resumo">
-
                                 
                     
                                 <center>
@@ -161,7 +155,6 @@
              {if $ITENS.1.ped_pag_status =='Aguardando Pagamento'} 
             </div>
             <section class="sec">
-
           
             <div class="card mb-4">
                   <h6 class="text-danger">(Seu pagamento ainda não foi realizado!)</h6>

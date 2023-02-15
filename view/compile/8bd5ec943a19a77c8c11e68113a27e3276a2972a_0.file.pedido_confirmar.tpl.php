@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 21:37:44
+/* Smarty version 4.1.1, created on 2023-02-15 13:22:58
   from 'C:\wamp\www\loja\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e98658a92883_33371696',
+  'unifunc' => 'content_63ed06e27a92a4_34186448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8bd5ec943a19a77c8c11e68113a27e3276a2972a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_confirmar.tpl',
-      1 => 1676248662,
+      1 => 1676478176,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e98658a92883_33371696 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ed06e27a92a4_34186448 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+  body {
+    overflow: hidden;
+  }
 
+  .x{
+    display: none;
+  }
 @media (max-width:700px){
 
   .table{
@@ -34,12 +40,35 @@ function content_63e98658a92883_33371696 (Smarty_Internal_Template $_smarty_tpl)
     
   }
 
+  .im{
+    width: 30%;
+  height: auto;
+  }
+
+  .x{
+    display: block;
+  }
+
+  .q{
+    display: none;
+  }
+
 }
+.nome{
+    display: none;
+  }
+  .td{
+    display: none;
+
+  }
+
 @media (max-width:500px){
 
   .table{
     font-size: 10px;
   }
+
+
 
   .t3{
     font-size: 10px;
@@ -47,7 +76,7 @@ function content_63e98658a92883_33371696 (Smarty_Internal_Template $_smarty_tpl)
   }
 
   .im{
-    width: 50%;
+    width: 30%;
   height: auto;
   }
 
@@ -172,10 +201,13 @@ display: flex;
                     <table class="t3 " style="width: 100%">
                         
                         <tr class="">
-                            <td></td>
+                          <td class="td"></td>
+
+
                             <td><b>Item</b></td>
                                 <td><b>Valor</b></td>
-                                <td><b>Quantidade</b></td>
+                                <td class="x"><b>X</b></td>
+                                <td class="q"><b>Quantidade</b></td>
                                 <td><b>Total</b></td>
                             </tr>
                            
@@ -192,7 +224,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
                             <td> <img class="im" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
 "> </td>
-                            <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+                            <td  class="nome">  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
  </td>
                             <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
  </td>

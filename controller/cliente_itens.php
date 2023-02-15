@@ -15,6 +15,8 @@ $pedido = filter_var($_POST['cod_pedido'], FILTER_SANITIZE_STRING);
 $itens->GetItensPedido($pedido);
 $smarty->assign('ITENS', $itens->GetItens());
 $smarty->assign('TOTAL', $itens->GetTotal());
+$smarty->assign('PRO_INFO', Rotas::pag_ProdutosInfo());
+
 
 // caso o status do pagamento for NAO, mostra novamente o botão de pagar 
 if($itens->GetItens()[1]['ped_pag_status']=='Aguardando Pagamento'):

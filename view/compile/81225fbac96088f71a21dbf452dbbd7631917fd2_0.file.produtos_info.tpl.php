@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 20:37:12
+/* Smarty version 4.1.1, created on 2023-02-15 13:11:18
   from 'C:\wamp\www\loja\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e9782871bf24_70095408',
+  'unifunc' => 'content_63ed0426873074_96030451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '81225fbac96088f71a21dbf452dbbd7631917fd2' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos_info.tpl',
-      1 => 1676244369,
+      1 => 1676477477,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +46,8 @@ function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl)
   }
 
   .wrapper img{
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       margin-left: 14px;
       transition: 0.3s;
       
@@ -79,7 +79,14 @@ function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl)
       margin-left: -90px;
 
 
+
     }
+
+    .in3{
+      margin-top:-15%;
+    }
+
+
 
     .wrapper img{
       width: 100px;
@@ -137,6 +144,11 @@ function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl)
       
     }
 
+    
+    .in3{
+      margin-top:-19%;
+    }
+
 }
 @media (max-width:500px){
 
@@ -151,8 +163,8 @@ function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl)
     }
 
     .wrapper img{
-      width: 90px;
-      height: 70px;
+      width: 80px;
+      height: 60px;
       margin-left: 20px;
       transition: 0.3s;
       
@@ -174,8 +186,8 @@ function content_63e9782871bf24_70095408 (Smarty_Internal_Template $_smarty_tpl)
     }
 
     .wrapper img{
-      width: 60px;
-      height: 50px;
+      width: 50px;
+      height: 40px;
       margin-left: 20px;
       transition: 0.3s;
       
@@ -397,7 +409,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                <div class="col-md-6 info">
                 <div class="in">
 
-                
+              <hr>
                    <div class="small mb-1">Ref: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_ref'];?>
 </div>
                    <h1 class="t"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
@@ -411,8 +423,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                    <h6><b>Descrição</b></h6>
                    <p class="lead d"><?php echo $_smarty_tpl->tpl_vars['P']->value['pro_desc'];?>
 </p>
+              <hr>
+
                    <br>
                    <br>
+
                   
                    <div class="col-md-6 ">
                        <form name="carrinho" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_COMPRAR']->value;?>
@@ -487,10 +502,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 
 <div class="text-center">
+  <br>
+  <br>
     
     <a href="https://wa.me/55359997217065">
     <button  class="button-85">Encomendar</button>
     </a>
+  <br>
+  <br>
     
 </div>   
 <br>

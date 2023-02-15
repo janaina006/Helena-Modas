@@ -1,10 +1,29 @@
-<style>
+<?php
+/* Smarty version 4.1.1, created on 2023-02-13 21:44:47
+  from 'C:\wamp\www\loja\view\pedido_confirmar.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.1',
+  'unifunc' => 'content_63ead97f537b39_08109168',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8bd5ec943a19a77c8c11e68113a27e3276a2972a' => 
+    array (
+      0 => 'C:\\wamp\\www\\loja\\view\\pedido_confirmar.tpl',
+      1 => 1676335482,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63ead97f537b39_08109168 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
   body {
     overflow: hidden;
-  }
-
-  .x{
-    display: none;
   }
 @media (max-width:700px){
 
@@ -17,35 +36,12 @@
     
   }
 
-  .im{
-    width: 30%;
-  height: auto;
-  }
-
-  .x{
-    display: block;
-  }
-
-  .q{
-    display: none;
-  }
-
 }
-.nome{
-    display: none;
-  }
-  .td{
-    display: none;
-
-  }
-
 @media (max-width:500px){
 
   .table{
     font-size: 10px;
   }
-
-
 
   .t3{
     font-size: 10px;
@@ -53,7 +49,7 @@
   }
 
   .im{
-    width: 30%;
+    width: 50%;
   height: auto;
   }
 
@@ -178,9 +174,7 @@ display: flex;
                     <table class="t3 " style="width: 100%">
                         
                         <tr class="">
-                          <td class="td"></td>
-
-
+                            <td></td>
                             <td><b>Item</b></td>
                                 <td><b>Valor</b></td>
                                 <td class="x"><b>X</b></td>
@@ -190,17 +184,30 @@ display: flex;
                            
                         </tr>
                         
-                        {foreach from=$PRO item=P}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['PRO']->value, 'P');
+$_smarty_tpl->tpl_vars['P']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
+$_smarty_tpl->tpl_vars['P']->do_else = false;
+?>
                         <tr>
                             
-                            <td> <img class="im" src="{$P.pro_img}" alt="{$P.pro_nome}"> </td>
-                            <td  class="nome">  {$P.pro_nome} </td>
-                            <td>  {$P.pro_valor} </td>
-                            <td> {$P.pro_qtd}  </td>
-                            <td>  {$P.pro_subTotal} </td>
+                            <td> <img class="im" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+"> </td>
+                            <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_nome'];?>
+ </td>
+                            <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_valor'];?>
+ </td>
+                            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_qtd'];?>
+  </td>
+                            <td>  <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_subTotal'];?>
+ </td>
                         </tr>
                         
-                        {/foreach}
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         
                         
                     </table>
@@ -220,15 +227,19 @@ display: flex;
                 <table class="table " style="text-align: center;">
                     <tr>
 
-                        <td class=""> <b> Total :</b> R$ {$TOTAL}</td><p>
+                        <td class=""> <b> Total :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL']->value;?>
+</td><p>
                           
                     
-                            <td class=""> <b>Frete :</b> R$ {$FRETE}</td>
+                            <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
+</td>
                             
-                            <td class=""> <b>Tipo Frete :</b> {$TIPOFRETE}</td>
+                            <td class=""> <b>Tipo Frete :</b> <?php echo $_smarty_tpl->tpl_vars['TIPOFRETE']->value;?>
+</td>
 
                             
-                            <!-- <td class=""> <b>Total com Frete :</b> R$ {$TOTAL_FRETE}</td> -->
+                            <!-- <td class=""> <b>Total com Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
+</td> -->
 
                          
                         
@@ -242,7 +253,8 @@ display: flex;
                     <br>
                     
                     <div class="col-md-4 ">
-                      <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="{$PAG_FINALIZAR}">
+                      <form name="pedido_finalizar" id="pedido_finalizar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_FINALIZAR']->value;?>
+">
                         <div class="c">
 
                           <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Finalizar Pedido </button>
@@ -266,4 +278,5 @@ display: flex;
        <br>
        <br>
        <br>
-       <br>
+       <br><?php }
+}

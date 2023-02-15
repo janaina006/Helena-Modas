@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 21:21:55
+/* Smarty version 4.1.1, created on 2023-02-15 12:50:10
   from 'C:\wamp\www\loja\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e982a3a34d61_55138771',
+  'unifunc' => 'content_63ecff323766b3_78053600',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '790c60dd875731272a22f37bd592e0e2d9e0af00' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\clientes_itens.tpl',
-      1 => 1676247712,
+      1 => 1676476206,
       2 => 'file',
     ),
   ),
@@ -20,66 +20,58 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e982a3a34d61_55138771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63ecff323766b3_78053600 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
-
     .table{
     
     background-color:#DFD5FB;
     align-items: center;
     }
 
+    .im{
+    width: 70px;
+   height: 65px;
+  }
     @media (max-width:840px){
-
         .table{
             font-size: 15px;
         }
-
         .h{
             font-size: 13px;
         }
-
         .i1{
             width: 30%;
              height: auto;
         }
     }
     @media (max-width:790px){
-
         .table{
             font-size: 13px;
         }
     }
     @media (max-width:710px){
-
         .table{
             font-size: 11px;
         }
     }
     @media (max-width:620px){
-
         .table{
             font-size: 10px;
         }
-
         .b1{
             width: 75px;
             height: 25px;
             font-size: 2px;
         }
-
       
-
         
     }
     @media (max-width:550px){
-
         .table{
             font-size: 9px;
         }
     }
     @media (max-width:522px){
-
         .table{
             font-size: 8px;
         }
@@ -145,8 +137,13 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 ?>
                             <tr>
                                 
-                                <td><img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['item_img'];?>
-" alt=""> </td>
+                                <td>  <a class="card-title" href="<?php echo $_smarty_tpl->tpl_vars['PRO_INFO']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_id'];?>
+">
+                                    <!-- Product image-->
+                                    <img class="im card-img-top" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['item_img'];?>
+" alt="..." /></td>
+                                
                                 <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_nome'];?>
 </td>
                                 <td class="text-right">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['item_valor'];?>
@@ -173,7 +170,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             
                             
                             <section class="" id="resumo">
-
                                 
                     
                                 <center>
@@ -204,7 +200,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
              <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Aguardando Pagamento') {?> 
             </div>
             <section class="sec">
-
           
             <div class="card mb-4">
                   <h6 class="text-danger">(Seu pagamento ainda não foi realizado!)</h6>
@@ -273,5 +268,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
     
     
-    <?php }
+    
+<?php }
 }

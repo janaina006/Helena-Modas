@@ -23,8 +23,8 @@
   }
 
   .wrapper img{
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       margin-left: 14px;
       transition: 0.3s;
       
@@ -56,7 +56,14 @@
       margin-left: -90px;
 
 
+
     }
+
+    .in3{
+      margin-top:-15%;
+    }
+
+
 
     .wrapper img{
       width: 100px;
@@ -114,6 +121,11 @@
       
     }
 
+    
+    .in3{
+      margin-top:-19%;
+    }
+
 }
 @media (max-width:500px){
 
@@ -128,8 +140,8 @@
     }
 
     .wrapper img{
-      width: 90px;
-      height: 70px;
+      width: 80px;
+      height: 60px;
       margin-left: 20px;
       transition: 0.3s;
       
@@ -151,8 +163,8 @@
     }
 
     .wrapper img{
-      width: 60px;
-      height: 50px;
+      width: 50px;
+      height: 40px;
       margin-left: 20px;
       transition: 0.3s;
       
@@ -357,7 +369,7 @@
                <div class="col-md-6 info">
                 <div class="in">
 
-                
+              <hr>
                    <div class="small mb-1">Ref: {$P.pro_ref}</div>
                    <h1 class="t">{$P.pro_nome} </h1>
                    <div class="fs-5 mb-5 text-color">
@@ -367,8 +379,11 @@
                  
                    <h6><b>Descrição</b></h6>
                    <p class="lead d">{$P.pro_desc}</p>
+              <hr>
+
                    <br>
                    <br>
+
                   
                    <div class="col-md-6 ">
                        <form name="carrinho" method="post" action="{$PAG_COMPRAR}">
@@ -436,10 +451,14 @@
 </div>
 
 <div class="text-center">
+  <br>
+  <br>
     
     <a href="https://wa.me/55359997217065">
     <button  class="button-85">Encomendar</button>
     </a>
+  <br>
+  <br>
     
 </div>   
 <br>
