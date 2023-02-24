@@ -23,11 +23,10 @@ if(isset($_SESSION['PRO'])) {
 
     $smarty->assign('PRO', $carrinho->GetCarrinho());
     
-    // $_SESSION['PED']['frete'] = $_POST['frete_radio'];
-    $frete_tipo = $_SESSION['PED']['frete_tipo'];
+    $_SESSION['PED']['frete'] = $_POST['frete_radio'];
     
-    // $_SESSION['PED']['total_com_frete'] = ($_POST['frete_radio'] +
-    // $carrinho->GetTotal());
+    $_SESSION['PED']['total_com_frete'] = ($_POST['frete_radio'] +
+    $carrinho->GetTotal());
 
     
     
@@ -42,9 +41,8 @@ if(isset($_SESSION['PRO'])) {
     $smarty->assign('PAG_PRODUTOS', Rotas::pag_Produtos());
     $smarty->assign('PAG_CARRINHO', Rotas::pag_Carrinho());
     $smarty->assign('PAG_FINALIZAR', Rotas::pag_PedidoFinalizar());
-    // $smarty->assign('FRETE', Sistema::MoedaBR($_SESSION['PED']['frete']));
-    $smarty->assign('TIPOFRETE',($frete_tipo));
-    // $smarty->assign('TOTAL_FRETE', Sistema::MoedaBR($_SESSION['PED']['total_com_frete']));
+    $smarty->assign('FRETE', Sistema::MoedaBR($_SESSION['PED']['frete']));
+    $smarty->assign('TOTAL_FRETE', Sistema::MoedaBR($_SESSION['PED']['total_com_frete']));
     $smarty->assign('PEDIDOS', $pedidos->GetItens());
 
 

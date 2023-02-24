@@ -5,10 +5,10 @@ class Config{
 
     	// INFORMÃÇÕES BÁSICAS DO SITE
 	const SITE_URL = "http://localhost";
-	const SITE_PASTA = "loja";
+	const SITE_PASTA = "loja editando";
 	const SITE_NOME = "Helena Modas";
 	const SITE_EMAIL_ADM = "lojavirtualfreitas@gmail.com";
-	const BD_LIMIT_POR_PAG = 6;
+	const BD_LIMIT_POR_PAG = 8;
 	const SITE_CEP = '13733518';
 
 
@@ -20,7 +20,7 @@ class Config{
 		  BD_PREFIX = "lv_";
 
     // //INFORMAÇÕES BÁSICAS DO SITE HOSPEDADO
-    // const SITE_URL = "http://helenamodas-com.umbler.net";
+    // const SITE_URL = "http://helena0-com.umbler.net";
     // const SITE_PASTA = "";
     // const SITE_NOME = "Helena Modas";
     // const SITE_EMAIL_ADM = "janaaraujo2190@gmail.com";
@@ -30,10 +30,10 @@ class Config{
 
 
     // //INFORMAÇÕES DO BANCO DE DADOS HOSPEDADO
-    // const BD_HOST = 'mysql247.umbler.com',
-    //       BD_USER = "janainaaraujo",
+    // const BD_HOST = 'mysql670.umbler.com',
+    //       BD_USER = "janaina2023",
     //       BD_SENHA = "janaina9021",
-    //       BD_BANCO = "lojajanaina",
+    //       BD_BANCO = "lojajanaina2023",
     //       BD_PREFIX = "lv_";
 
     //INFORMAÇÕES PARA PHP MAILLER

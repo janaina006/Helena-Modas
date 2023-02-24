@@ -10,3 +10,4 @@ RewriteRule ^(.*)$ index.php?pag=$1 [L,QSA]
     Order deny,allow
     Deny from All
 </Files>
+

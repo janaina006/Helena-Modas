@@ -88,6 +88,9 @@ Class Rotas{
     static function get_ImagePasta(){
         return 'media/images/';
     }
+    static function get_ImageBanner(){
+        return 'media\images';
+    }
     static function get_ImageURL(){
         return self::get_SiteHOME(). '/' .self::get_ImagePasta();
     }
@@ -139,11 +142,11 @@ Class Rotas{
   
    
     static function  ImageLink($img, $Largura, $altura){
-        $imagem = self::get_ImageURL() ."thumb.php?src={$img}
-        &w={$Largura}&h={$altura}&zc=1";
+        $imagem = self::get_ImageURL() ."thumb.php?src={$img}&w={$Largura}&h={$altura}&zc=1";
 
         return $imagem;
     }
+
     
     static function get_Pasta_Controller(){
         return self::$pasta_controller;

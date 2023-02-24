@@ -137,7 +137,6 @@
                     
                                             <td class=""> <b>Frete:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor)}</td><p>
                                                 
-                                            <td class=""> <b>Tipo Frete:</b> {($ITENS.1.ped_frete_tipo)}</td><p>
                     
                                             <td class=""> <b>Total:</b> {Sistema::MoedaBR($TOTAL)}</td>
                     

@@ -5,12 +5,9 @@
   <title>CodePen - Login Form with floating placeholder and light button</title>
   <style>
 
-html {
-  height: 100%;
-}
+
 body {
-  margin:0;
-  padding:0;
+
   font-family: sans-serif;
   background: linear-gradient(#DFD5FB, #DFD5FB);
 }
@@ -28,6 +25,69 @@ body {
   border-radius: 10px;
 }
 
+.formlo {
+  flex-direction: column;
+
+
+}
+
+section{
+  margin-bottom: 40%;
+}
+
+@media screen and (min-width:2000px){
+
+  section{
+  margin-bottom: 50%;
+}
+
+.login-box {
+  top: 55%;
+  
+}
+
+
+
+}
+
+
+
+@media screen and (min-width:767px) and (max-width:1023px){
+
+  section{
+  margin-bottom: 90%;
+}
+
+.login-box {
+  top: 40%;
+  
+}
+
+}
+@media screen and (max-width:767px){
+
+section{
+margin-bottom: 100%;
+}
+
+.login-box {
+  top: 40%;
+  
+}
+
+}
+@media screen and (max-width:700px){
+
+section{
+margin-bottom: 110%;
+}
+
+
+
+}
+
+
+
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
@@ -37,6 +97,7 @@ body {
 
 .login-box .user-box {
   position: relative;
+
 }
 
 .login-box .user-box input {
@@ -52,6 +113,7 @@ body {
 }
 .login-box .user-box label {
   position: absolute;
+  flex-direction: column;
   top:0;
   left: 0;
   padding: 10px 0;
@@ -194,7 +256,8 @@ body {
 
 <div class="login-box">
   <h2>Login</h2>
-  <form class="form" name="cliente_login" method="post" action="">
+  <form class="formlo" name="cliente_login" method="post" action="">
+    
     <div class="form-group user-box"> 
       <label></i> </label>
       <input type="email"  class=" " name="txt_email" value="" placeholder="Digite seu email" required autocomplete="off">        
@@ -223,25 +286,7 @@ body {
 {/if}
 </section>
   
-<!-- partial -->
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
- <br> 
+
   <hr>
 </body>
 </html>

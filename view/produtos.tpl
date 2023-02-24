@@ -7,6 +7,9 @@
         }
     }
 
+
+
+
 </style>
 
 
@@ -29,7 +32,7 @@
                 <div class="card h-100">
                     <a class="card-title" href="{$PRO_INFO}/{$P.pro_id}/{$P.pro_slug}">
                     <!-- Product image-->
-                    <img class="card-img-top" src="{$P.pro_img}" alt="..." />
+                    <img class="imgstyle card-img-top" src="{$P.pro_img}"alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="n card-title">

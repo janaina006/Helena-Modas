@@ -10,6 +10,7 @@ $smarty->assign('BANNER', Rotas::ImageLink('Banner.jpg', 750,230
     ));
 $smarty-> assign ('CATEGORIAS', $categorias->GetItens());
 $smarty-> assign ('GET_TEMA', Rotas::get_SiteTEMA());
+$smarty-> assign ('GET_HOME', Rotas::get_SiteHOME());
 
 
 $smarty-> display('home.tpl');

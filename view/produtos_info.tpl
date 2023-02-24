@@ -130,20 +130,22 @@
 @media (max-width:500px){
 
   .wrapper{
-      width: 60%;
+      width: 90%;
       height: 10%;
-      margin-left: 3%;
+      margin-left: 20px;
       object-fit: cover;
       margin-bottom: 10px;
       display: flex;
+      justify-content: space-around;
 
     }
 
     .wrapper img{
       width: 80px;
-      height: 60px;
-      margin-left: 20px;
+      height: 82px;
+      margin-left: 5px;
       transition: 0.3s;
+      padding: 5px;
       
     }
 
@@ -159,6 +161,7 @@
       object-fit: cover;
       margin-bottom: 10px;
       display: flex;
+      margin:0;
 
     }
 
@@ -167,8 +170,11 @@
       height: 40px;
       margin-left: 20px;
       transition: 0.3s;
+     
       
     }
+
+  
 
 
 

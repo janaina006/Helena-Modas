@@ -35,6 +35,10 @@
             margin-left: 25px;
         }
 
+        body{
+            overflow: initial;
+        }
+
         .pagina {
     display: flex;
     justify-content: center;

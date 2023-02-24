@@ -207,10 +207,11 @@ img{
             <div class="container-">
 
                 <div class="wrapper">
-                    <img src="media\images\banner1" alt="">
-                    <img src="media\images\banner2" alt="">
-                    <img src="media\images\banner3" alt="">
-                    <img src="media\images\banner4" alt="">
+                    <img src="/media/images/banner1.png" alt="">
+                    <img src="/media/images/banner2.png" alt="">
+                    <img src="/media/images/banner3.png" alt="">
+                    <img src="/media/images/banner4.png" alt="">
+                   
                 </div>
                </div>
 
