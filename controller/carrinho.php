@@ -7,6 +7,8 @@ if(isset($_SESSION['PRO'])) {
 
     $carrinho = new Carrinho();
 
+   
+
 
 
 

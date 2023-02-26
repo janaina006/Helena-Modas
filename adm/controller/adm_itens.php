@@ -1,5 +1,7 @@
 <?php
 
+
+
 $smarty = new Tamplate();
 
 if(!isset($_POST['cod_pedido'])){
@@ -19,6 +21,7 @@ $pedido = filter_var($_POST['cod_pedido'], FILTER_SANITIZE_STRING);
 $itens->GetItensPedido($pedido);
 $smarty->assign('ITENS', $itens->GetItens());
 $smarty->assign('TOTAL', $itens->GetTotal());
+$smarty->assign('CEP', $destino = $_SESSION['PED']['cep']);
 
 
 $smarty-> display('adm_itens.tpl');

@@ -23,6 +23,9 @@
             .nav-a:hover{
                 color:#AB4DB5;
             }
+            body{
+            overflow: initial;
+        }
     
     
     

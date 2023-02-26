@@ -53,6 +53,7 @@ function GetItensPedido($pedido, $cliente=null){
                 'ped_pag_codigo'   => $lista['ped_pag_codigo'],
                 'ped_frete_valor' => $lista['ped_frete_valor'],
                 'ped_frete_tipo'  => $lista['ped_frete_tipo'],
+                'ped_destino'  => $lista['ped_destino'],
                 'item_id'  => $lista['item_id'],
                 'item_nome'  => $lista['pro_nome'],
                 'item_valor'  => Sistema::MoedaBR($lista['item_valor']),

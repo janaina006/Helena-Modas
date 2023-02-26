@@ -5,7 +5,7 @@ class Config{
 
     	// INFORMÃÇÕES BÁSICAS DO SITE
 	const SITE_URL = "http://localhost";
-	const SITE_PASTA = "loja editando";
+	const SITE_PASTA = "lojaeditando";
 	const SITE_NOME = "Helena Modas";
 	const SITE_EMAIL_ADM = "lojavirtualfreitas@gmail.com";
 	const BD_LIMIT_POR_PAG = 8;

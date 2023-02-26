@@ -1,4 +1,27 @@
-<style>
+<?php
+/* Smarty version 4.1.1, created on 2023-02-25 21:00:36
+  from 'C:\wamp\www\lojaeditando\adm\view\adm_itens.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.1.1',
+  'unifunc' => 'content_63faa124d58c10_95240986',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '03be3002ab1fff8cfdbda6d204328fdc4720c4cb' => 
+    array (
+      0 => 'C:\\wamp\\www\\lojaeditando\\adm\\view\\adm_itens.tpl',
+      1 => 1677369618,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63faa124d58c10_95240986 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
      .table{
     
     background-color:#DFD5FB;
@@ -36,13 +59,17 @@
                 <table class="table " style="width: 80%">
                     <tr class="">
                         
-                        <td><b>Data:</b> {$ITENS.1.ped_data}</td>
+                        <td><b>Data:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_data'];?>
+</td>
                         
-                        <td><b>Hora:</b> {$ITENS.1.ped_hora}</td>
+                        <td><b>Hora:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_hora'];?>
+</td>
                         
-                        <td><b>Ref:</b> {$ITENS.1.ped_ref}</td>
+                        <td><b>Ref:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_ref'];?>
+</td>
                         
-                        <td><b>Status:</b> {$ITENS.1.ped_pag_status}</td>
+                        <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
+</td>
                         
                     </tr>  
                     
@@ -53,7 +80,8 @@
                 <table class="table " style="width: 80%">
                     <tr class="">
                         
-                        <td><b>Cep:</b> {$ITENS.1.ped_destino}</td>
+                        <td><b>Cep:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_destino'];?>
+</td>
                         
                         
                     </tr>  
@@ -79,18 +107,30 @@
                         </tr>
                         </tr>
                         
-                        {foreach from=$ITENS item=P}
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['ITENS']->value, 'P');
+$_smarty_tpl->tpl_vars['P']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['P']->value) {
+$_smarty_tpl->tpl_vars['P']->do_else = false;
+?>
                         <tr>
                             
-                            <td><img src="{$P.item_img}" alt=""> </td>
-                            <td> {$P.item_nome}</td>
-                            <td class="text-right">R$ {$P.item_valor}</td>
-                            <td class="text-right"> {$P.item_qtd}</td>
-                            <td class="text-right">R$ {$P.item_sub}</td>
+                            <td><img src="<?php echo $_smarty_tpl->tpl_vars['P']->value['item_img'];?>
+" alt=""> </td>
+                            <td> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_nome'];?>
+</td>
+                            <td class="text-right">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['item_valor'];?>
+</td>
+                            <td class="text-right"> <?php echo $_smarty_tpl->tpl_vars['P']->value['item_qtd'];?>
+</td>
+                            <td class="text-right">R$ <?php echo $_smarty_tpl->tpl_vars['P']->value['item_sub'];?>
+</td>
                             
                         </tr>
                         
-                        {/foreach}
+                        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         
                         
                     </table>
@@ -109,14 +149,17 @@
                                 <table class="table " style="width: 85%">
                                     <tr>
                 
-                                        <td class=""> <b>Frete:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor)}</td><p>
+                                        <td class=""> <b>Frete:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']);?>
+</td><p>
 
                                             
 
                 
-                                        <td class=""> <b>Total:</b> {Sistema::MoedaBR($TOTAL)}</td>
+                                        <td class=""> <b>Total:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['TOTAL']->value);?>
+</td>
                 
-                                        <td class=""> <b>Valor Final:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor+$TOTAL)}</td>
+                                        <td class=""> <b>Valor Final:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value);?>
+</td>
                 
                                     </tr>  
                 
@@ -154,14 +197,16 @@
         
                             <div class="col-md-4">
                                 <label>Nome:</label>
-                                <input type="text" value="{$CLI_NOME}" name="cli_nome" class="form-control" minlength="3" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_NOME']->value;?>
+" name="cli_nome" class="form-control" minlength="3" required readonly>
                                 
                                 
                             </div>
                             
                             <div class="col-md-4">
                                 <label>Sobrenome:</label>
-                                <input type="text" value="{$CLI_SOBRENOME}" name="cli_sobrenome" class="form-control"  minlength="3" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_SOBRENOME']->value;?>
+" name="cli_sobrenome" class="form-control"  minlength="3" required readonly>
                                 
                                 
                             </div>
@@ -169,7 +214,8 @@
                           
                             <div class="col-md-3">
                                 <label>Data Nasc:</label>
-                                <input type="date" value="{$CLI_DATA_NASC}" name="cli_data_nasc" class="form-control" required readonly>
+                                <input type="date" value="<?php echo $_smarty_tpl->tpl_vars['CLI_DATA_NASC']->value;?>
+" name="cli_data_nasc" class="form-control" required readonly>
                                 
                                 
                             </div>
@@ -177,7 +223,8 @@
                           
                             <div class="col-md-2">
                                 <label>RG:</label>
-                                <input type="text" value="{$CLI_RG}" name="cli_rg" class="form-control" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_RG']->value;?>
+" name="cli_rg" class="form-control" required readonly>
                                 
                                 
                             </div>
@@ -186,7 +233,8 @@
                             
                             <div class="col-md-2">
                                 <label>CPF:</label>
-                                <input type="text" value="{$CLI_CPF}" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required readonly readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CPF']->value;?>
+" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required readonly readonly>
                                 
                                 
                             </div>
@@ -195,7 +243,8 @@
                             
                             <div class="col-md-2">
                                 <label>DDD:</label>
-                                <input type="number" value="{$CLI_DDD}" name="cli_ddd" class="form-control"  min="10" max="99" required readonly>
+                                <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_DDD']->value;?>
+" name="cli_ddd" class="form-control"  min="10" max="99" required readonly>
                                 
                                 
                             </div>
@@ -208,7 +257,8 @@
                             
                             <div class="col-md-3">
                                 <label>Celular:</label>
-                                <input type="number" value="{$CLI_CELULAR}" name="cli_celular" class="form-control" required readonly>
+                                <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
+" name="cli_celular" class="form-control" required readonly>
                                 
                                 
                             </div>
@@ -217,7 +267,8 @@
                             
                             <div class="col-md-6">
                                 <label>Endereço:</label>
-                                <input type="text" value="{$CLI_ENDERECO}" name="cli_endereco" class="form-control"  minlength="3" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_ENDERECO']->value;?>
+" name="cli_endereco" class="form-control"  minlength="3" required readonly>
                                 
                                 
                             </div>
@@ -226,7 +277,8 @@
                             
                             <div class="col-md-2">
                                 <label>Numero:</label>
-                                <input type="text" value="{$CLI_NUMERO}" name="cli_numero" class="form-control" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_NUMERO']->value;?>
+" name="cli_numero" class="form-control" required readonly>
                                 
                                 
                             </div>
@@ -234,7 +286,8 @@
                             
                             <div class="col-md-4">
                                 <label>Bairro:</label>
-                                <input type="text" value="{$CLI_BAIRRO}" name="cli_bairro" class="form-control" minlength="3" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_BAIRRO']->value;?>
+" name="cli_bairro" class="form-control" minlength="3" required readonly>
                                 
                                 
                             </div>
@@ -242,7 +295,8 @@
                             
                             <div class="col-md-4">
                                 <label>Cidade:</label>
-                                <input type="text" value="{$CLI_CIDADE}" name="cli_cidade" class="form-control" minlength="3" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CIDADE']->value;?>
+" name="cli_cidade" class="form-control" minlength="3" required readonly>
                                 
                                 
                             </div>
@@ -251,7 +305,8 @@
                             <div class="col-md-2">
                                 <label>UF:</label>
                                
-                                <input type="text" value="{$CLI_UF}"name="cli_uf" class="form-control" maxlength="2" minlength="2" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_UF']->value;?>
+"name="cli_uf" class="form-control" maxlength="2" minlength="2" required readonly>
                                 
                                 
                             </div>
@@ -260,7 +315,8 @@
                             <div class="col-md-2">
                                 <label>Cep:</label>
                                
-                                <input type="text" value="{$CLI_CEP}" name="cli_cep" class="form-control" minlength="8" maxlength="8" required readonly>
+                                <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
+" name="cli_cep" class="form-control" minlength="8" maxlength="8" required readonly>
                                 
                                 
                             </div>
@@ -269,7 +325,8 @@
                             <div class="col-md-4">
                                 <label>Email:</label>
                                
-                                <input type="email" value="{$CLI_EMAIL}" name="cli_email" class="form-control" required readonly>
+                                <input type="email" value="<?php echo $_smarty_tpl->tpl_vars['CLI_EMAIL']->value;?>
+" name="cli_email" class="form-control" required readonly>
                                 
                                 
                             </div>
@@ -292,4 +349,5 @@
 
 
 
-        
+        <?php }
+}

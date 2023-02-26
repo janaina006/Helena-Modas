@@ -8,15 +8,15 @@ Class Pedidos extends Conexao{
     }
 
     function PedidoGravar($cliente, $cod, $ref, $freteValor=null,
-     $frete=null){
+     $frete=null, $destino=null){
         
         
 
         $retorno = FALSE;
         $query  = "INSERT INTO ".$this->prefix."pedido";   
-        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status)"; 
+        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status, ped_destino)"; 
         $query .= " VALUES ";
-        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status)";
+        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status, :ped_destino)";
         
         $params = array(
             
@@ -26,7 +26,9 @@ Class Pedidos extends Conexao{
             ':cod' => $cod,
             ':ref' => $ref,
             ':frete_valor'=>$freteValor,
-            ':ped_pag_status' =>'Aguardando Pagamento'  
+            ':ped_pag_status' =>'Aguardando Pagamento',
+            ':ped_destino'=>$_SESSION['PED']['cep']
+
         );
 
         $this->ExecuteSQL($query, $params);

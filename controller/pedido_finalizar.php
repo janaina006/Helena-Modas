@@ -32,6 +32,7 @@ if(!Login::Logado()){
     $cod = $_SESSION['PED']['pedido'];
     $ref = $_SESSION['PED']['ref'];
     $frete = $_SESSION['PED']['frete'];
+    $destino = $_SESSION['PED']['cep'];
 
     $smarty->assign('PRO', $carrinho->GetCarrinho());
     $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
@@ -60,7 +61,7 @@ if(!Login::Logado()){
 
     $email->Enviar($assunto, $msg, $destinatarios);
 
-    if($pedido->PedidoGravar($cliente, $cod, $ref, $frete)){
+    if($pedido->PedidoGravar($cliente, $cod, $ref, $frete, $destino)){
         $pag = new PagamentoPS();
       
         $pag->Pagamento($_SESSION['CLI'], $_SESSION['PED'], $carrinho->GetCarrinho());

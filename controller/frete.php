@@ -5,7 +5,6 @@ require_once '../lib/autoload.php';
         //instancio a classe correios
         $destino = $_GET['cepcliente'];
         $peso    = $_GET['pesofrete'];
-        
 
 	// chamando a classe Correios
         $frete = new Correios($destino, $peso);
@@ -41,8 +40,12 @@ require_once '../lib/autoload.php';
                           echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].'</br>';
                           echo '<value="'.'" > '.$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)'. '</br>';
 
-                         $_SESSION['frete_tipo'] = $frete['tipo'];
-                          
+                           $_SESSION['PED']['cep'] = $destino;
+
+
+                         
+
+                        
                          
 
 

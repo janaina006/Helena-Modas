@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 15:49:58
-  from 'C:\wamp\www\loja editando\view\carrinho.tpl' */
+/* Smarty version 4.1.1, created on 2023-02-25 18:33:14
+  from 'C:\wamp\www\lojaeditando\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa5856e57bd8_00595398',
+  'unifunc' => 'content_63fa7e9a81cd73_13286482',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '86b2450bd2200e63075136a77d2165adfefd0f60' => 
+    '576e1479a4666e4d3713c5fa078e7639ff59fca6' => 
     array (
-      0 => 'C:\\wamp\\www\\loja editando\\view\\carrinho.tpl',
+      0 => 'C:\\wamp\\www\\lojaeditando\\view\\carrinho.tpl',
       1 => 1677350977,
       2 => 'file',
     ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa5856e57bd8_00595398 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63fa7e9a81cd73_13286482 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://code.jquery.com/jquery-1.9.1.js"><?php echo '</script'; ?>
 >

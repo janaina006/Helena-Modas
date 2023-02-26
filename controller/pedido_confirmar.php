@@ -28,6 +28,13 @@ if(isset($_SESSION['PRO'])) {
     $_SESSION['PED']['total_com_frete'] = ($_POST['frete_radio'] +
     $carrinho->GetTotal());
 
+    $destino = $_SESSION['PED']['cep'];
+
+   
+
+
+   
+
     
     
 
