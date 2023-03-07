@@ -1,4 +1,5 @@
 <?php
+
 if(!Login::Logado()){
     Login::AcessoNegado();
     Rotas::Redirecionar(2, Rotas::pag_ClienteLogin());
@@ -25,11 +26,13 @@ if(isset($_SESSION['PRO'])) {
     
     $_SESSION['PED']['frete'] = $_POST['frete_radio'];
     
+    
     $_SESSION['PED']['total_com_frete'] = ($_POST['frete_radio'] +
     $carrinho->GetTotal());
 
-    $destino = $_SESSION['PED']['cep'];
+    // $destino = $_SESSION['PED']['cep'];
 
+    echo  $_SESSION['PED']['frete_tipo'];
    
 
 

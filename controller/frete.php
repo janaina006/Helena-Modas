@@ -37,12 +37,26 @@ require_once '../lib/autoload.php';
 
                         else:
 
-                          echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].'</br>';
-                          echo '<value="'.'" > '.$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)'. '</br>';
 
-                           $_SESSION['PED']['cep'] = $destino;
+                        
 
 
+
+                          // echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].' : ' .$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)</b>';
+
+
+                          echo '<br> <input type="radio"  required id="frete_radio" name="frete_radio" value="'.str_replace(',','.',$frete['valor']).'" > '.$frete['valor'].' : ' .$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)</b><br>  <br>
+                          
+                    ';
+
+                          
+                          // echo '<value="'.'" > '.$frete['tipo'].' - Prazo: ' .$frete['Prazo'].' dia(s)'. '</br>';
+
+                         $_SESSION['PED']['cep'] = $destino;
+
+                         
+
+                         
                          
 
                         
@@ -60,6 +74,9 @@ require_once '../lib/autoload.php';
             echo '</span><br>';
       
 	  endif;
+
+
+    
  
 
    
@@ -144,3 +161,7 @@ require_once '../lib/autoload.php';
  
  *  /
  */
+
+ ?>
+
+ 

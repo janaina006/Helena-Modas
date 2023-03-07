@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:33:08
+/* Smarty version 4.1.1, created on 2023-03-04 17:36:59
   from 'C:\wamp\www\lojaeditando\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7e94393473_59616956',
+  'unifunc' => 'content_6403abeb18a2b0_39200774',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d757a239f8638d5e96bcc775045ee4a0d99ef73' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\produtos_info.tpl',
-      1 => 1677029311,
+      1 => 1677955227,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7e94393473_59616956 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6403abeb18a2b0_39200774 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -306,13 +306,15 @@ function content_63fa7e94393473_59616956 (Smarty_Internal_Template $_smarty_tpl)
 
     .information{
         background-color: #DFD5FB;
+        
     }
-    .information li{
-        display: flex;
-        justify-content: space-around ;
-        padding-top: 5px;
-
-    }
+    .information li {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  font-size: 11px;
+  margin: 6px;
+}
 
 
 
@@ -463,11 +465,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   
    
 
-<div class="in3">
+<div class="in3 ">
 
    <h4 class="text-center">Informações Adicionais</h4>
    <br>
-<div class="information">
+<div class="information row">
 
     <ul>
         <li>Peso: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_peso'];?>
@@ -491,7 +493,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <br>
 <h4 class="text-center">Não se preocupe!</h4>
 
-<div class="information">
+<div class="information row text-center">
  <ul>
      <li>Todas as peças do site são modelos prontos, não se preocupe
         se não tiver encontrado uma peça com sua numeração ou cor desejada.
@@ -511,7 +513,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   <br>
   <br>
     
-    <a href="https://wa.me/55359997217065">
+    <a href="https://wa.me/5535997217065">
     <button  class="button-85">Encomendar</button>
     </a>
   <br>

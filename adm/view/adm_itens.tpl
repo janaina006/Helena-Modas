@@ -54,6 +54,13 @@
                     <tr class="">
                         
                         <td><b>Cep:</b> {$ITENS.1.ped_destino}</td>
+                        <td><form method="post" action="">
+                            <label for="cod_rastreo">Código de Rastreio:</label>
+                            <input type="text" id="cod_rastreo" name="cod_rastreo">
+                            <button type="submit">Enviar</button>
+                          </form></td>
+                        <td><b>Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
+
                         
                         
                     </tr>  

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:30:21
+/* Smarty version 4.1.1, created on 2023-03-04 15:31:03
   from 'C:\wamp\www\lojaeditando\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7ded183d89_11071698',
+  'unifunc' => 'content_64038e67000e18_54679619',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d43a765954d4c050d5ead39f70758814eb08035' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\index.tpl',
-      1 => 1676764614,
+      1 => 1677954398,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7ded183d89_11071698 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64038e67000e18_54679619 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt"> 
@@ -417,7 +417,7 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
                     <li><b>ENCONTRE-NOS EM</b></li>
                     <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
+                    <li><a href="https://wa.me/5535997217065"><i class="bi bi-whatsapp"></i></a></li>
                 </ul>
             </div>
             

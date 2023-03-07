@@ -79,6 +79,9 @@
                             <td><b>Ref:</b> {$ITENS.1.ped_ref}</td>
                             
                             <td><b>Status:</b> {$ITENS.1.ped_pag_status}</td>
+
+                             <td><b>Código de Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
+
                             
                         </tr>  
                         

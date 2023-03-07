@@ -283,13 +283,15 @@
 
     .information{
         background-color: #DFD5FB;
+        
     }
-    .information li{
-        display: flex;
-        justify-content: space-around ;
-        padding-top: 5px;
-
-    }
+    .information li {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  font-size: 11px;
+  margin: 6px;
+}
 
 
 
@@ -418,11 +420,11 @@
   
    
 
-<div class="in3">
+<div class="in3 ">
 
    <h4 class="text-center">Informações Adicionais</h4>
    <br>
-<div class="information">
+<div class="information row">
 
     <ul>
         <li>Peso: {$P.pro_peso}</li>
@@ -440,7 +442,7 @@
 <br>
 <h4 class="text-center">Não se preocupe!</h4>
 
-<div class="information">
+<div class="information row text-center">
  <ul>
      <li>Todas as peças do site são modelos prontos, não se preocupe
         se não tiver encontrado uma peça com sua numeração ou cor desejada.
@@ -460,7 +462,7 @@
   <br>
   <br>
     
-    <a href="https://wa.me/55359997217065">
+    <a href="https://wa.me/5535997217065">
     <button  class="button-85">Encomendar</button>
     </a>
   <br>

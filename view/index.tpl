@@ -370,7 +370,7 @@
                     <li><b>ENCONTRE-NOS EM</b></li>
                     <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
+                    <li><a href="https://wa.me/5535997217065"><i class="bi bi-whatsapp"></i></a></li>
                 </ul>
             </div>
             

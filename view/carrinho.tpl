@@ -33,6 +33,9 @@
     } ); // fim do ready
     
     </script>
+    
+
+    
     <style>
 
       .x{
@@ -192,6 +195,7 @@ display: flex;
   outline: none;
   color: rgb(255, 255, 255);
   background:#C1B3FB;
+  
   
 ;
   cursor: pointer;
@@ -399,12 +403,12 @@ display: flex;
                         
           
                             </form>
+                          
                             <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="{$PAG_CONFIRMAR}">
         
                             <span id="frete"></span>
                             <div class="c">
-                              <br>
-                              <br>
+                              
                             
                             <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
                           </div>

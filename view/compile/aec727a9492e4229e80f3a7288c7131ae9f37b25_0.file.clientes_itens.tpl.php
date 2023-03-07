@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:32:27
+/* Smarty version 4.1.1, created on 2023-03-07 17:48:08
   from 'C:\wamp\www\lojaeditando\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7e6bf1ed40_36895649',
+  'unifunc' => 'content_6407a3082fe3c6_27229131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aec727a9492e4229e80f3a7288c7131ae9f37b25' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\clientes_itens.tpl',
-      1 => 1677260651,
+      1 => 1678222085,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7e6bf1ed40_36895649 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6407a3082fe3c6_27229131 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
     .table{
     
@@ -106,6 +106,10 @@ function content_63fa7e6bf1ed40_36895649 (Smarty_Internal_Template $_smarty_tpl)
                             
                             <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
 </td>
+
+                             <td><b>Código de Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
+</td>
+
                             
                         </tr>  
                         

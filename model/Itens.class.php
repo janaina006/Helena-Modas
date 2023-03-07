@@ -5,6 +5,9 @@ Class Itens extends Conexao{
 
     private $total_valor;
 
+    
+
+
     function __construct(){
         parent::__construct();
     }
@@ -28,6 +31,7 @@ function GetItensPedido($pedido, $cliente=null){
 
 
     private function GetLista(){
+   
         
         $i = 1;
         while ($lista = $this->ListarDados()):
@@ -72,6 +76,8 @@ function GetItensPedido($pedido, $cliente=null){
         
         
     }
+
+    
 
 
     function GetTotal(){

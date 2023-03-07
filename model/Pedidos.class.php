@@ -2,24 +2,27 @@
 
 Class Pedidos extends Conexao{
 
+    
+
+
 
     function __construct(){
         parent::__construct();
     }
 
-    function PedidoGravar($cliente, $cod, $ref, $freteValor=null,
-     $frete=null, $destino=null){
-        
-        
+    function PedidoGravar($cliente, $cod, $ref, $freteValor=null, $frete=null, $destino=null, $ped_pag_codigo=null){
+
+        $ped_pag_codigo = "Código ainda não disponível";
+
 
         $retorno = FALSE;
         $query  = "INSERT INTO ".$this->prefix."pedido";   
-        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status, ped_destino)"; 
+        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status, ped_destino, ped_pag_codigo)"; 
         $query .= " VALUES ";
-        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status, :ped_destino)";
+        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status, :ped_destino, :ped_pag_codigo)";
         
+
         $params = array(
-            
             ':data' => Sistema::DataAtualUS(),
             ':hora' => Sistema::HoraAtual(),
             ':cliente'=> (int)$cliente,
@@ -27,18 +30,46 @@ Class Pedidos extends Conexao{
             ':ref' => $ref,
             ':frete_valor'=>$freteValor,
             ':ped_pag_status' =>'Aguardando Pagamento',
-            ':ped_destino'=>$_SESSION['PED']['cep']
-
+            ':ped_destino'=>$_SESSION['PED']['cep'],
+            ':ped_pag_codigo'=>$ped_pag_codigo
         );
-
+    
         $this->ExecuteSQL($query, $params);
+    
         //gravar os itens do pedido
         $this->ItensGravar($cod);
 
+
+
+
+    
         $retorno = TRUE;
         return $retorno;
         
      }
+
+     function AtualizarCodigoPagamento($cod, $ped_pag_codigo) {
+        echo $cod;
+
+        $retorno = FALSE;
+        $query  = "UPDATE " . $this->prefix . "pedido ";
+        $query .= "SET ped_pag_codigo = :ped_pag_codigo ";
+        $query .= "WHERE ped_ref = :cod";
+    
+        $params = array(
+            ':ped_pag_codigo' => $ped_pag_codigo,
+            ':cod' => $cod
+
+        );
+
+    
+        $this->ExecuteSQL($query, $params);
+    
+        $retorno = TRUE;
+        return $retorno;
+    }
+    
+    
 
      function GetPedidosCliente($cliente=null){
         $query = "SELECT * FROM {$this->prefix}pedido p 

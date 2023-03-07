@@ -34,6 +34,9 @@ if(!Login::Logado()){
     $frete = $_SESSION['PED']['frete'];
     $destino = $_SESSION['PED']['cep'];
 
+
+
+
     $smarty->assign('PRO', $carrinho->GetCarrinho());
     $smarty->assign('TOTAL', Sistema::MoedaBR($carrinho->GetTotal()));
     $smarty->assign('PAG_CONFIRMAR', Rotas::pag_PedidoConfirmar());

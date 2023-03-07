@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:33:29
+/* Smarty version 4.1.1, created on 2023-03-04 17:34:43
   from 'C:\wamp\www\lojaeditando\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7ea985aca0_34670067',
+  'unifunc' => 'content_6403ab639fc2e7_74415721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46943d825cb28d4a0576c08a258bbf79cefc4af4' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\pedido_confirmar.tpl',
-      1 => 1677259748,
+      1 => 1677954105,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7ea985aca0_34670067 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6403ab639fc2e7_74415721 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
   body {
     overflow: hidden;
