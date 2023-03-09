@@ -1,4 +1,10 @@
 <style>
+    #rastreioninja {
+	
+    width: auto;
+    margin: 60px auto;
+	  
+  }
     .table{
     
     background-color:#DFD5FB;
@@ -80,7 +86,6 @@
                             
                             <td><b>Status:</b> {$ITENS.1.ped_pag_status}</td>
 
-                             <td><b>Código de Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
 
                             
                         </tr>  
@@ -144,6 +149,9 @@
                                             <td class=""> <b>Total:</b> {Sistema::MoedaBR($TOTAL)}</td>
                     
                                             <td class=""> <b>Valor Final:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor+$TOTAL)}</td>
+
+                                          <td><b>Código de Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
+
                     
                                         </tr>  
                     
@@ -151,6 +159,7 @@
                                     <br>
                                     
                                 <center>
+                               
      
                 </div>
                 
@@ -195,7 +204,11 @@
             {/if}
     
             <img class="i1" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
+            <br>
+            <br>
+            <br>
                 <script type="text/javascript" src="{$PS_SCRIPT}"></script>
+                <script>var a = document.createElement("script"); a.src = "https://rastreio.ninja/w/app.js?v=" + Date.now(); document.head.appendChild(a);</script>
     
       
       
@@ -203,7 +216,28 @@
             </div>
           </div>
         </div>
+    
     </section>
+    <center>
+        <table class="table  " style="text-align: center;">
+            <tr >
+
+                <td class=""> <div id="rastreioninja">
+                    <div id="rastreio"></div>
+                    <br>
+                    <p>Use seu codigo a seguir: </p>
+                    <b>{$ITENS.1.ped_pag_codigo}</b>
+                    
+                    </div></td><p>
+                    
+
+              
+            </tr>  
+
+        </table>
+        <br>
+        
+    <center>
        
       </section>
     

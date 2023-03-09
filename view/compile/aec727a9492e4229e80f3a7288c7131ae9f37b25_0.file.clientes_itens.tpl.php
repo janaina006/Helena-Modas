@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-03-07 17:48:08
+/* Smarty version 4.1.1, created on 2023-03-09 14:49:21
   from 'C:\wamp\www\lojaeditando\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_6407a3082fe3c6_27229131',
+  'unifunc' => 'content_640a1c21aa73e3_25233040',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aec727a9492e4229e80f3a7288c7131ae9f37b25' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\clientes_itens.tpl',
-      1 => 1678222085,
+      1 => 1678384158,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6407a3082fe3c6_27229131 (Smarty_Internal_Template $_smarty_tpl) {
+function content_640a1c21aa73e3_25233040 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+    #rastreioninja {
+	
+    width: auto;
+    margin: 60px auto;
+	  
+  }
     .table{
     
     background-color:#DFD5FB;
@@ -107,8 +113,6 @@ function content_6407a3082fe3c6_27229131 (Smarty_Internal_Template $_smarty_tpl)
                             <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
 </td>
 
-                             <td><b>Código de Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
-</td>
 
                             
                         </tr>  
@@ -189,6 +193,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     
                                             <td class=""> <b>Valor Final:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value);?>
 </td>
+
+                                          <td><b>Código de Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
+</td>
+
                     
                                         </tr>  
                     
@@ -196,6 +204,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <br>
                                     
                                 <center>
+                               
      
                 </div>
                 
@@ -246,9 +255,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
             <img class="i1" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /images/logo-pagseguro.png"  alt=""> 
+            <br>
+            <br>
+            <br>
                 <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['PS_SCRIPT']->value;?>
 "><?php echo '</script'; ?>
+>
+                <?php echo '<script'; ?>
+>var a = document.createElement("script"); a.src = "https://rastreio.ninja/w/app.js?v=" + Date.now(); document.head.appendChild(a);<?php echo '</script'; ?>
 >
     
       
@@ -257,7 +272,29 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
           </div>
         </div>
+    
     </section>
+    <center>
+        <table class="table  " style="text-align: center;">
+            <tr >
+
+                <td class=""> <div id="rastreioninja">
+                    <div id="rastreio"></div>
+                    <br>
+                    <p>Use seu codigo a seguir: </p>
+                    <b><?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
+</b>
+                    
+                    </div></td><p>
+                    
+
+              
+            </tr>  
+
+        </table>
+        <br>
+        
+    <center>
        
       </section>
     
