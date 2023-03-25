@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 13:34:56
+/* Smarty version 4.1.1, created on 2023-03-18 14:30:01
   from 'C:\wamp\www\loja\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e91530ae0212_24993280',
+  'unifunc' => 'content_6415f519a25fe6_85226177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70e1d804ea3e53221dba9b5a4027cb26a7d50ac7' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\index.tpl',
-      1 => 1676219691,
+      1 => 1678817992,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e91530ae0212_24993280 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6415f519a25fe6_85226177 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt"> 
@@ -63,6 +63,10 @@ function content_63e91530ae0212_24993280 (Smarty_Internal_Template $_smarty_tpl)
         }
         .form form{
             margin-left: 25px;
+        }
+
+        body{
+            overflow: initial;
         }
 
         .pagina {
@@ -330,6 +334,7 @@ function content_63e91530ae0212_24993280 (Smarty_Internal_Template $_smarty_tpl)
 ">Início</a></li>
                 <li><a class="nav-a" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 ">Minha Conta</a></li>
+
                 <li><a class="nav-a" href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
 ">Contato</a></li>
 
@@ -413,7 +418,7 @@ array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
                     <li><b>ENCONTRE-NOS EM</b></li>
                     <li><a href="https://www.facebook.com/helenamodas00/"><i class="bi bi-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/helenamodas00/"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="https://wa.me/55359997217065"><i class="bi bi-whatsapp"></i></a></li>
+                    <li><a href="https://wa.me/5535997217065"><i class="bi bi-whatsapp"></i></a></li>
                 </ul>
             </div>
             

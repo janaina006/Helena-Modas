@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-03-23 21:50:02
-  from 'C:\wamp\www\loja\view\pedido_retorno.tpl' */
+/* Smarty version 4.1.1, created on 2023-03-14 12:41:54
+  from 'C:\wamp\www\lojaeditando\view\pedido_retorno.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_641cf3ba626e11_95128464',
+  'unifunc' => 'content_641095c2142f38_56413208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'f98ea3f295d4da6656e4deb6f4db8b7a25175ccc' => 
+    '8358c6a4f4778902a4249deb9ccec4065fe1ca5d' => 
     array (
-      0 => 'C:\\wamp\\www\\loja\\view\\pedido_retorno.tpl',
-      1 => 1679619000,
+      0 => 'C:\\wamp\\www\\lojaeditando\\view\\pedido_retorno.tpl',
+      1 => 1678807663,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641cf3ba626e11_95128464 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641095c2142f38_56413208 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h3 class="text-center text-success"> Obrigado pelo seu pedido </h3>
 <hr>
 <section class="row">
@@ -42,11 +42,24 @@ function content_641cf3ba626e11_95128464 (Smarty_Internal_Template $_smarty_tpl)
             
             
          
+            <form name="pagamento" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>
+">
+                <input type="hidden" name="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['REF']->value;?>
+">  
+                <button class="btn btn-success btn-block btn-lg "> Detalhes deste Pedido</button>
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+            </form>        
+
         
     </div> 
     <div class="col-md-3"></div> 
     
-    <hr>
     
    
     

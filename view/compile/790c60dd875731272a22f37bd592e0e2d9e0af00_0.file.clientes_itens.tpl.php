@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-15 12:50:10
+/* Smarty version 4.1.1, created on 2023-03-24 17:05:17
   from 'C:\wamp\www\loja\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63ecff323766b3_78053600',
+  'unifunc' => 'content_641e027d358b37_72484863',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '790c60dd875731272a22f37bd592e0e2d9e0af00' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\clientes_itens.tpl',
-      1 => 1676476206,
+      1 => 1679688313,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,87 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ecff323766b3_78053600 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641e027d358b37_72484863 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
+    .button-17 {
+
+align-items: center;
+text-decoration:none;
+appearance: none;
+background-color: #C1B3FB;
+border-radius: 50px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+box-sizing: border-box;
+color: #3c4043;
+cursor: pointer;
+display: inline-flex;
+fill: currentcolor;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: #fff;
+font-size: 14px;
+font-weight: 500;
+height: 48px;
+justify-content: center;
+letter-spacing: .15px;
+line-height: normal;
+max-width: 100%;
+overflow: visible;
+padding: 2px 24px;
+position: relative;
+text-align: center;
+text-transform: none;
+transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: auto;
+will-change: transform,opacity;
+z-index: 0;
+
+}
+
+.button-17:hover {
+background: #F6F9FE;
+color: #222;
+
+}
+
+.button-17:active {
+box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+outline: none;
+}
+
+.button-17:focus {
+outline: none;
+border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+    #rastreioninja {
+	
+    width: auto;
+    margin: 60px auto;
+	  
+  }
     .table{
     
     background-color:#DFD5FB;
@@ -87,6 +166,7 @@ function content_63ecff323766b3_78053600 (Smarty_Internal_Template $_smarty_tpl)
         <div class=" h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
+                
              
                 
                 <section class="table ">
@@ -104,8 +184,10 @@ function content_63ecff323766b3_78053600 (Smarty_Internal_Template $_smarty_tpl)
                             <td><b>Ref:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_ref'];?>
 </td>
                             
-                            <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
+                            <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['PAGO']->value;?>
 </td>
+
+
                             
                         </tr>  
                         
@@ -176,17 +258,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <table class="table  " style="text-align: center;">
                                         <tr >
                     
-                                            <td class=""> <b>Frete:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']);?>
+                                            <td class=""> <b>Frete:</b> R$<?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']);?>
 </td><p>
                                                 
-                                            <td class=""> <b>Tipo Frete:</b> <?php echo ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_tipo']);?>
-</td><p>
                     
-                                            <td class=""> <b>Total:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['TOTAL']->value);?>
+                                            <td class=""> <b>Total:</b> R$<?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['TOTAL']->value);?>
 </td>
                     
-                                            <td class=""> <b>Valor Final:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value);?>
+                                            <td class=""> <b>Valor Final:</b> R$<?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value);?>
 </td>
+
+                                          <!-- <td><b>ID Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_rastreo'];?>
+</td> -->
+
                     
                                         </tr>  
                     
@@ -194,15 +278,37 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <br>
                                     
                                 <center>
+                                  
+                                    <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Pago') {?> 
+                                    <form name="rastreo" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_RASTREO']->value;?>
+">
+                                        <input type="hidden" name="rastreo" id="rastreo" value="<?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_rastreo'];?>
+">
+                                        <td style="width: 10%"><button class="button-17" role="button"><i class="glyphicon glyphicon-barcode"></i>  Rastrear Pedido</button></td>
+                                    </form>
+                                    <?php }?>
+                                    <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Aguardando Pagamento') {?> 
+                                    <div style="background-color: rgb(186, 247, 170);">
+
+                                        <p >(Seu pagamento pode levar alguns dias para mudar de status, aguarde!)</p>
+                                    </div>
+                                    <?php }?>
+                                
+                                   <br>
+                                   <br>
+                                   <br>
+
+                               
      
                 </div>
                 
-             <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Aguardando Pagamento') {?> 
+             <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Realize o pagamento') {?> 
             </div>
             <section class="sec">
           
             <div class="card mb-4">
                   <h6 class="text-danger">(Seu pagamento ainda não foi realizado!)</h6>
+
                 <div class="card-body p-4">
                     <!-- botao de pagamento  -->
                 <div class="col-md-4">
@@ -234,28 +340,32 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 
                 </div>
                 
+                
     
             
             
                 </div>
             </div>
-      
-            <?php }?>
-    
-            <img class="i1" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
-/images/logo-pagseguro.png"  alt=""> 
-                <?php echo '<script'; ?>
+            <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['PS_SCRIPT']->value;?>
 "><?php echo '</script'; ?>
 >
+      
+            <img class="i1" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
+/images/logo-pagseguro.png"  alt=""> 
+            <?php }?>
     
+           
       
       
       
             </div>
           </div>
         </div>
+    
     </section>
+
+
        
       </section>
     

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:31:58
+/* Smarty version 4.1.1, created on 2023-03-09 16:36:04
   from 'C:\wamp\www\lojaeditando\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7e4e01dc26_41052763',
+  'unifunc' => 'content_640a3524bd3e45_27331405',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '67b81ccf85b87e51b926eaf90d8dc55eb1398c5f' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\cliente_dados.tpl',
-      1 => 1676213215,
+      1 => 1678390534,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7e4e01dc26_41052763 (Smarty_Internal_Template $_smarty_tpl) {
+function content_640a3524bd3e45_27331405 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -191,7 +191,7 @@ function content_63fa7e4e01dc26_41052763 (Smarty_Internal_Template $_smarty_tpl)
           
           <div class="col-md-3">
               <label>Celular:</label>
-              <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
+              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
 " name="cli_celular" class="form-control" required>
               
               

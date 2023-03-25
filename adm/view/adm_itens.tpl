@@ -59,7 +59,7 @@
                             <input type="text" id="cod_rastreo" name="cod_rastreo">
                             <button type="submit">Enviar</button>
                           </form></td>
-                        <td><b>Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
+                        <td><b>Rastreo:</b>  {$ITENS.1.ped_frete_rastreo}</td>
 
                         
                         

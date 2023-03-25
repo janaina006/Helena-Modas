@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 11:45:48
+/* Smarty version 4.1.1, created on 2023-03-25 14:12:14
   from 'C:\wamp\www\loja\view\cadastro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e8fb9cd05853_64923231',
+  'unifunc' => 'content_641f2b6e089405_73480674',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '96b63fb116a76f7b3c504fe9d7958985c24ef79c' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\cadastro.tpl',
-      1 => 1676213147,
+      1 => 1679764325,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641f2b6e089405_73480674 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
   body {
     margin: 10px;
@@ -131,14 +131,14 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
           
           <div class="col-md-4">
               <label>Nome:</label>
-              <input type="text" name="cli_nome" class="form-control" minlength="3" required>
+              <input placeholder="Juliana" type="text" name="cli_nome" class="form-control"  required>
               
               
           </div>
           
           <div class="col-md-4">
               <label>Sobrenome:</label>
-              <input type="text" name="cli_sobrenome" class="form-control"  minlength="3" required>
+              <input placeholder="Santos" type="text" name="cli_sobrenome" class="form-control"   required>
               
               
           </div>
@@ -154,7 +154,7 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
         
           <div class="col-md-2">
               <label>RG:</label>
-              <input placeholder="8 dígitos" type="text" name="cli_rg" class="form-control" required>
+              <input placeholder="8 dígitos" type="text" name="cli_rg" class="form-control" minlength="8" maxlength="8" required>
               
               
           </div>
@@ -172,7 +172,7 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
           
           <div class="col-md-2">
               <label>DDD:</label>
-              <input type="number" name="cli_ddd" class="form-control"  min="10" max="99" required>
+              <input  placeholder="11" type="number" name="cli_ddd" class="form-control"  min="2" max="2" required>
               
               
           </div>
@@ -182,7 +182,7 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
           
           <div class="col-md-3">
               <label>Celular:</label>
-              <input placeholder="9 dígitos" type="text" name="cli_celular" class="form-control" required>
+              <input placeholder="987654321" type="text" name="cli_celular"  min="9" max="9" class="form-control" required>
               
               
           </div>
@@ -225,7 +225,7 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-2">
               <label>UF:</label>
              
-              <input type="text" name="cli_uf" class="form-control" maxlength="2" minlength="2" required>
+              <input type="text" name="cli_uf" class="form-control"  placeholder="SP" maxlength="2" minlength="2" required>
               
               
           </div>
@@ -234,7 +234,7 @@ function content_63e8fb9cd05853_64923231 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-2">
               <label>Cep:</label>
              
-              <input type="text" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+              <input placeholder="8 dígitos" type="text" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
               
               
           </div>

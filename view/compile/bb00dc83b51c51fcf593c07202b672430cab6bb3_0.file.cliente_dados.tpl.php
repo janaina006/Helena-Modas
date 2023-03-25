@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 11:46:56
+/* Smarty version 4.1.1, created on 2023-03-25 14:15:20
   from 'C:\wamp\www\loja\view\cliente_dados.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e8fbe0d1eda6_13305524',
+  'unifunc' => 'content_641f2c28c1f359_73051227',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bb00dc83b51c51fcf593c07202b672430cab6bb3' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\cliente_dados.tpl',
-      1 => 1676213215,
+      1 => 1679764515,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641f2c28c1f359_73051227 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 
@@ -132,7 +132,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-4">
               <label>Nome:</label>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_NOME']->value;?>
-" name="cli_nome" class="form-control" minlength="3" required>
+" name="cli_nome" class="form-control" placeholder="Juliana" required>
               
               
           </div>
@@ -140,7 +140,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-4">
               <label>Sobrenome:</label>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_SOBRENOME']->value;?>
-" name="cli_sobrenome" class="form-control"  minlength="3" required>
+" name="cli_sobrenome" class="form-control" placeholder="Santos" required>
               
               
           </div>
@@ -158,7 +158,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-2">
               <label>RG:</label>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_RG']->value;?>
-" name="cli_rg" class="form-control" required>
+" name="cli_rg" class="form-control"  placeholder="8 dígitos"  minlength="8" maxlength="8" required>
               
               
           </div>
@@ -168,7 +168,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-2">
               <label>CPF:</label>
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CPF']->value;?>
-" name="cli_cpf" class="form-control" minlength="11" maxlength="11" required readonly>
+" name="cli_cpf" class="form-control" placeholder="11 dígitos"  minlength="11" maxlength="11" required readonly>
               
               
           </div>
@@ -178,7 +178,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           <div class="col-md-2">
               <label>DDD:</label>
               <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_DDD']->value;?>
-" name="cli_ddd" class="form-control"  min="10" max="99" required>
+" name="cli_ddd" class="form-control" placeholder="11"    minlength="2" maxlength="2" required>
               
               
           </div>
@@ -191,8 +191,8 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
           
           <div class="col-md-3">
               <label>Celular:</label>
-              <input type="number" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
-" name="cli_celular" class="form-control" required>
+              <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CELULAR']->value;?>
+" name="cli_celular" class="form-control" placeholder="987654321"  min="9" max="9" required>
               
               
           </div>
@@ -240,7 +240,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
               <label>UF:</label>
              
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_UF']->value;?>
-"name="cli_uf" class="form-control" maxlength="2" minlength="2" required>
+"name="cli_uf" class="form-control" placeholder="SP" maxlength="2" minlength="2" required>
               
               
           </div>
@@ -250,7 +250,7 @@ function content_63e8fbe0d1eda6_13305524 (Smarty_Internal_Template $_smarty_tpl)
               <label>Cep:</label>
              
               <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['CLI_CEP']->value;?>
-" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+" name="cli_cep" class="form-control"  placeholder="8 dígitos" minlength="8" maxlength="8" required>
               
               
           </div>

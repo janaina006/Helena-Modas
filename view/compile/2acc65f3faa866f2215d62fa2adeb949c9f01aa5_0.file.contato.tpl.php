@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 11:36:43
+/* Smarty version 4.1.1, created on 2023-03-22 11:32:08
   from 'C:\wamp\www\loja\view\contato.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e8f97b3e72c8_71065668',
+  'unifunc' => 'content_641b1168acf9c2_12299952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2acc65f3faa866f2215d62fa2adeb949c9f01aa5' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\contato.tpl',
-      1 => 1676212596,
+      1 => 1678385230,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e8f97b3e72c8_71065668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b1168acf9c2_12299952 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
   .button-85 {
    text-decoration:none;

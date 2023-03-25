@@ -300,6 +300,7 @@
 
                 <li><a class="nav-a" href="{$GET_SITE_HOME}">Início</a></li>
                 <li><a class="nav-a" href="{$PAG_MINHACONTA}">Minha Conta</a></li>
+
                 <li><a class="nav-a" href="{$PAG_CONTATO}">Contato</a></li>
 
             </ul>

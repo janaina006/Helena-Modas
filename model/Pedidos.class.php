@@ -10,16 +10,16 @@ Class Pedidos extends Conexao{
         parent::__construct();
     }
 
-    function PedidoGravar($cliente, $cod, $ref, $freteValor=null, $frete=null, $destino=null, $ped_pag_codigo=null){
+    function PedidoGravar($cliente, $cod, $ref, $freteValor=null, $frete=null, $destino=null, $ped_frete_rastreo=null){
 
-        $ped_pag_codigo = "Código ainda não disponível";
+        $ped_frete_rastreo = "O vendedor está preparando seu pedido!";
 
 
         $retorno = FALSE;
         $query  = "INSERT INTO ".$this->prefix."pedido";   
-        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status, ped_destino, ped_pag_codigo)"; 
+        $query .= "(ped_data, ped_hora, ped_cliente, ped_cod, ped_ref, ped_frete_valor, ped_pag_status, ped_destino, ped_frete_rastreo)"; 
         $query .= " VALUES ";
-        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status, :ped_destino, :ped_pag_codigo)";
+        $query .= "(:data, :hora, :cliente, :cod, :ref, :frete_valor, :ped_pag_status, :ped_destino, :ped_frete_rastreo)";
         
 
         $params = array(
@@ -29,9 +29,9 @@ Class Pedidos extends Conexao{
             ':cod' => $cod,
             ':ref' => $ref,
             ':frete_valor'=>$freteValor,
-            ':ped_pag_status' =>'Aguardando Pagamento',
+            ':ped_pag_status' =>'Realize o pagamento',
             ':ped_destino'=>$_SESSION['PED']['cep'],
-            ':ped_pag_codigo'=>$ped_pag_codigo
+            ':ped_frete_rastreo'=>$ped_frete_rastreo
         );
     
         $this->ExecuteSQL($query, $params);
@@ -48,16 +48,16 @@ Class Pedidos extends Conexao{
         
      }
 
-     function AtualizarCodigoPagamento($cod, $ped_pag_codigo) {
+     function AtualizarCodigoPagamento($cod, $ped_frete_rastreo) {
         echo $cod;
 
         $retorno = FALSE;
         $query  = "UPDATE " . $this->prefix . "pedido ";
-        $query .= "SET ped_pag_codigo = :ped_pag_codigo ";
+        $query .= "SET ped_frete_rastreo = :ped_frete_rastreo ";
         $query .= "WHERE ped_ref = :cod";
     
         $params = array(
-            ':ped_pag_codigo' => $ped_pag_codigo,
+            ':ped_frete_rastreo' => $ped_frete_rastreo,
             ':cod' => $cod
 
         );

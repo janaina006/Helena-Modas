@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-25 18:32:25
+/* Smarty version 4.1.1, created on 2023-03-14 13:36:23
   from 'C:\wamp\www\lojaeditando\view\clientes_pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63fa7e69a059f0_99304017',
+  'unifunc' => 'content_6410a28739f891_33194960',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '781c65dc693294d2dfa23c64c8d025a247b1e47e' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\clientes_pedidos.tpl',
-      1 => 1676220212,
+      1 => 1678811782,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63fa7e69a059f0_99304017 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6410a28739f891_33194960 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 .table{
 
@@ -110,7 +110,7 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
             
          
               
-            <?php if ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'Aguardando Pagamento') {?> 
+            <?php if ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'Aguardando') {?> 
              <td style="width: 15%"><span class="label label-info"><?php echo $_smarty_tpl->tpl_vars['P']->value['ped_pag_status'];?>
 </span></td>
             <?php } elseif ($_smarty_tpl->tpl_vars['P']->value['ped_pag_status'] == 'Pago') {?>
@@ -121,16 +121,14 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 </td>
             <?php }?>
             
-                <form name="itens" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>
+            <form name="itens" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_ITENS']->value;?>
 ">
             
-             <input type="hidden" name="cod_pedido" id="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['ped_cod'];?>
+              <input type="hidden" name="cod_pedido" id="cod_pedido" value="<?php echo $_smarty_tpl->tpl_vars['P']->value['ped_cod'];?>
 ">
-             <td style="width: 10%"><button class="btn btn-default"><span class="material-symbols-outlined">
-              visibility
-              </span> </button></td>
-              
-            </form> 
+              <td style="width: 10%"><button class="btn btn-default"><i class="glyphicon glyphicon-menu-hamburger"></i> Detalhes</button></td>
+        
+         </form>  
           </tr>
           <tr>
             

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-25 19:25:13
+/* Smarty version 4.1.1, created on 2023-03-22 11:08:30
   from 'C:\wamp\www\loja\adm\view\adm_index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63d1ac496bd1f7_08386831',
+  'unifunc' => 'content_641b0bde46fa97_82400531',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '01d0d3d46641527cffaff1436b5ba0c08c7497be' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\adm\\view\\adm_index.tpl',
-      1 => 1674685493,
+      1 => 1677283775,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d1ac496bd1f7_08386831 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b0bde46fa97_82400531 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
@@ -50,6 +50,9 @@ function content_63d1ac496bd1f7_08386831 (Smarty_Internal_Template $_smarty_tpl)
             .nav-a:hover{
                 color:#AB4DB5;
             }
+            body{
+            overflow: initial;
+        }
     
     
     

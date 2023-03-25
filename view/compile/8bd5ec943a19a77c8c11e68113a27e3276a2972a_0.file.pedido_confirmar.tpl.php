@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-15 13:22:58
+/* Smarty version 4.1.1, created on 2023-03-24 21:45:59
   from 'C:\wamp\www\loja\view\pedido_confirmar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63ed06e27a92a4_34186448',
+  'unifunc' => 'content_641e4447826de8_58629452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8bd5ec943a19a77c8c11e68113a27e3276a2972a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_confirmar.tpl',
-      1 => 1676478176,
+      1 => 1679689341,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ed06e27a92a4_34186448 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641e4447826de8_58629452 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
   body {
     overflow: hidden;
@@ -263,7 +263,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <td class=""> <b>Frete :</b> R$ <?php echo $_smarty_tpl->tpl_vars['FRETE']->value;?>
 </td>
                             
-                            <td class=""> <b>Tipo Frete :</b> <?php echo $_smarty_tpl->tpl_vars['TIPOFRETE']->value;?>
+                            <td class=""> <b>Total com Frete :</b> <?php echo $_smarty_tpl->tpl_vars['TOTAL_FRETE']->value;?>
 </td>
 
                             

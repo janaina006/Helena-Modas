@@ -4,7 +4,7 @@
     
     <div class="col-md-3"></div> 
    
-    <div class="col-md-6 thumbnail">
+    <div class="col-md-6 ">
         
         
          <h4> Informações do pagamento </h4>
@@ -15,18 +15,11 @@
             
             
          
-            <form name="pagamento" method="post" action="{$PAG_ITENS}">
-                <input type="hidden" name="cod_pedido" value="{$REF}">  
-                <button class="btn btn-success btn-block btn-lg"> Detalhes deste Pedido</button>
-
-
-
-            </form>        
-
         
     </div> 
     <div class="col-md-3"></div> 
     
+    <hr>
     
    
     

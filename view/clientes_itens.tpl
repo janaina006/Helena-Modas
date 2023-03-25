@@ -1,4 +1,77 @@
 <style>
+    .button-17 {
+
+align-items: center;
+text-decoration:none;
+appearance: none;
+background-color: #C1B3FB;
+border-radius: 50px;
+border-style: none;
+box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+box-sizing: border-box;
+color: #3c4043;
+cursor: pointer;
+display: inline-flex;
+fill: currentcolor;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: #fff;
+font-size: 14px;
+font-weight: 500;
+height: 48px;
+justify-content: center;
+letter-spacing: .15px;
+line-height: normal;
+max-width: 100%;
+overflow: visible;
+padding: 2px 24px;
+position: relative;
+text-align: center;
+text-transform: none;
+transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: auto;
+will-change: transform,opacity;
+z-index: 0;
+
+}
+
+.button-17:hover {
+background: #F6F9FE;
+color: #222;
+
+}
+
+.button-17:active {
+box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+outline: none;
+}
+
+.button-17:focus {
+outline: none;
+border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
     #rastreioninja {
 	
     width: auto;
@@ -70,6 +143,7 @@
         <div class=" h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
+                
              
                 
                 <section class="table ">
@@ -84,7 +158,7 @@
                             
                             <td><b>Ref:</b> {$ITENS.1.ped_ref}</td>
                             
-                            <td><b>Status:</b> {$ITENS.1.ped_pag_status}</td>
+                            <td><b>Status:</b> {$PAGO}</td>
 
 
                             
@@ -143,14 +217,14 @@
                                     <table class="table  " style="text-align: center;">
                                         <tr >
                     
-                                            <td class=""> <b>Frete:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor)}</td><p>
+                                            <td class=""> <b>Frete:</b> R${Sistema::MoedaBR($ITENS.1.ped_frete_valor)}</td><p>
                                                 
                     
-                                            <td class=""> <b>Total:</b> {Sistema::MoedaBR($TOTAL)}</td>
+                                            <td class=""> <b>Total:</b> R${Sistema::MoedaBR($TOTAL)}</td>
                     
-                                            <td class=""> <b>Valor Final:</b> {Sistema::MoedaBR($ITENS.1.ped_frete_valor+$TOTAL)}</td>
+                                            <td class=""> <b>Valor Final:</b> R${Sistema::MoedaBR($ITENS.1.ped_frete_valor+$TOTAL)}</td>
 
-                                          <td><b>Código de Rastreo:</b>  {$ITENS.1.ped_pag_codigo}</td>
+                                          <!-- <td><b>ID Rastreo:</b>  {$ITENS.1.ped_frete_rastreo}</td> -->
 
                     
                                         </tr>  
@@ -159,16 +233,35 @@
                                     <br>
                                     
                                 <center>
+                                  
+                                    {if $ITENS.1.ped_pag_status =='Pago'} 
+                                    <form name="rastreo" method="post" action="{$PAG_RASTREO}">
+                                        <input type="hidden" name="rastreo" id="rastreo" value="{$ITENS.1.ped_frete_rastreo}">
+                                        <td style="width: 10%"><button class="button-17" role="button"><i class="glyphicon glyphicon-barcode"></i>  Rastrear Pedido</button></td>
+                                    </form>
+                                    {/if}
+                                    {if $ITENS.1.ped_pag_status =='Aguardando Pagamento'} 
+                                    <div style="background-color: rgb(186, 247, 170);">
+
+                                        <p >(Seu pagamento pode levar alguns dias para mudar de status, aguarde!)</p>
+                                    </div>
+                                    {/if}
+                                
+                                   <br>
+                                   <br>
+                                   <br>
+
                                
      
                 </div>
                 
-             {if $ITENS.1.ped_pag_status =='Aguardando Pagamento'} 
+             {if $ITENS.1.ped_pag_status =='Realize o pagamento'} 
             </div>
             <section class="sec">
           
             <div class="card mb-4">
                   <h6 class="text-danger">(Seu pagamento ainda não foi realizado!)</h6>
+
                 <div class="card-body p-4">
                     <!-- botao de pagamento  -->
                 <div class="col-md-4">
@@ -195,21 +288,18 @@
                 
                 </div>
                 
+                
     
             
             
                 </div>
             </div>
+            <script type="text/javascript" src="{$PS_SCRIPT}"></script>
       
+            <img class="i1" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
             {/if}
     
-            <img class="i1" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
-            <br>
-            <br>
-            <br>
-                <script type="text/javascript" src="{$PS_SCRIPT}"></script>
-                <script>var a = document.createElement("script"); a.src = "https://rastreio.ninja/w/app.js?v=" + Date.now(); document.head.appendChild(a);</script>
-    
+           
       
       
       
@@ -218,26 +308,8 @@
         </div>
     
     </section>
-    <center>
-        <table class="table  " style="text-align: center;">
-            <tr >
 
-                <td class=""> <div id="rastreioninja">
-                    <div id="rastreio"></div>
-                    <br>
-                    <p>Use seu codigo a seguir: </p>
-                    <b>{$ITENS.1.ped_pag_codigo}</b>
-                    
-                    </div></td><p>
-                    
 
-              
-            </tr>  
-
-        </table>
-        <br>
-        
-    <center>
        
       </section>
     

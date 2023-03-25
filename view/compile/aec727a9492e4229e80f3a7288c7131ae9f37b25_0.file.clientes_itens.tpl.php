@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-03-09 14:49:21
+/* Smarty version 4.1.1, created on 2023-03-14 13:50:08
   from 'C:\wamp\www\lojaeditando\view\clientes_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_640a1c21aa73e3_25233040',
+  'unifunc' => 'content_6410a5c019e5b4_37792674',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aec727a9492e4229e80f3a7288c7131ae9f37b25' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\clientes_itens.tpl',
-      1 => 1678384158,
+      1 => 1678812605,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_640a1c21aa73e3_25233040 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6410a5c019e5b4_37792674 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
     #rastreioninja {
 	
@@ -93,6 +93,7 @@ function content_640a1c21aa73e3_25233040 (Smarty_Internal_Template $_smarty_tpl)
         <div class=" h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col">
+                
              
                 
                 <section class="table ">
@@ -194,7 +195,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                             <td class=""> <b>Valor Final:</b> <?php echo Sistema::MoedaBR($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_valor']+$_smarty_tpl->tpl_vars['TOTAL']->value);?>
 </td>
 
-                                          <td><b>Código de Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
+                                          <td><b>ID Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_rastreo'];?>
 </td>
 
                     
@@ -208,7 +209,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
      
                 </div>
                 
-             <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Aguardando Pagamento') {?> 
+             <?php if ($_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'] == 'Aguardando') {?> 
             </div>
             <section class="sec">
           
@@ -251,10 +252,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
             </div>
       
-            <?php }?>
-    
             <img class="i1" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /images/logo-pagseguro.png"  alt=""> 
+            <?php }?>
+    
             <br>
             <br>
             <br>
@@ -282,7 +283,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <div id="rastreio"></div>
                     <br>
                     <p>Use seu codigo a seguir: </p>
-                    <b><?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_codigo'];?>
+                    <b><?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_rastreo'];?>
 </b>
                     
                     </div></td><p>

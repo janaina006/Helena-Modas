@@ -260,7 +260,9 @@ border-radius: 10px;
                                   
                               </table>
                               </center>
-                          <hr class="my-4">
+                              
+                              <hr class="my-4">
+                              <p style="color:red ;"> (Os dados inseridos na hora do pagamento devem ser os mesmos cadastrados no site!)</p>
 
                             
                         
@@ -307,15 +309,19 @@ border-radius: 10px;
                               
                               ">Pague com Pagseguro</button>
                               <hr>
-                              <script type="text/javascript" src="{$PS_SCRIPT}"></script>
                               <img class="pag" src="{$TEMA}/images/logo-pagseguro.png"  alt=""> 
                             
                                   
                               </div>
+                              <script type="text/javascript" src="{$PS_SCRIPT}"></script>
+
       
                           </form>
+
+
           
                         </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -324,6 +330,7 @@ border-radius: 10px;
             </div>
           </div>
         </section>
+
 
         
   

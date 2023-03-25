@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-07 20:39:24
+/* Smarty version 4.1.1, created on 2023-03-18 14:30:01
   from 'C:\wamp\www\loja\view\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e2e12c569128_72869609',
+  'unifunc' => 'content_6415f519b56ae3_58877219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0e0c12ffbe6218f4a7a39ce3176d92708863251a' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\home.tpl',
-      1 => 1675813114,
+      1 => 1677021091,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e2e12c569128_72869609 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6415f519b56ae3_58877219 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -230,10 +230,11 @@ img{
             <div class="container-">
 
                 <div class="wrapper">
-                    <img src="media\images\banner1" alt="">
-                    <img src="media\images\banner2" alt="">
-                    <img src="media\images\banner3" alt="">
-                    <img src="media\images\banner4" alt="">
+                    <img src="/media/images/banner1.png" alt="">
+                    <img src="/media/images/banner2.png" alt="">
+                    <img src="/media/images/banner3.png" alt="">
+                    <img src="/media/images/banner4.png" alt="">
+                   
                 </div>
                </div>
 

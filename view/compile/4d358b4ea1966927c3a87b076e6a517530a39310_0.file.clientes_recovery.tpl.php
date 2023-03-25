@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-03-24 14:58:36
-  from 'C:\wamp\www\loja\view\login.tpl' */
+/* Smarty version 4.1.1, created on 2023-03-12 22:40:10
+  from 'C:\wamp\www\lojaeditando\view\clientes_recovery.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_641de4ccb6c152_70286319',
+  'unifunc' => 'content_640e7efa50a2e4_66239935',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9b80d6761aa11afc9de40c6a2e7fc2a8ad3b06c8' => 
+    '4d358b4ea1966927c3a87b076e6a517530a39310' => 
     array (
-      0 => 'C:\\wamp\\www\\loja\\view\\login.tpl',
-      1 => 1676838139,
+      0 => 'C:\\wamp\\www\\lojaeditando\\view\\clientes_recovery.tpl',
+      1 => 1676220994,
       2 => 'file',
     ),
   ),
@@ -20,24 +20,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641de4ccb6c152_70286319 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Login Form with floating placeholder and light button</title>
-  <style>
-
+function content_640e7efa50a2e4_66239935 (Smarty_Internal_Template $_smarty_tpl) {
+?><style>
 
 body {
-
+  margin:0;
+  padding:0;
   font-family: sans-serif;
   background: linear-gradient(#DFD5FB, #DFD5FB);
 }
 
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -48,79 +43,15 @@ body {
   border-radius: 10px;
 }
 
-.formlo {
-  flex-direction: column;
-
-
-}
-
-section{
-  margin-bottom: 40%;
-}
-
-@media screen and (min-width:2000px){
-
-  section{
-  margin-bottom: 50%;
-}
-
-.login-box {
-  top: 55%;
-  
-}
-
-
-
-}
-
-
-
-@media screen and (min-width:767px) and (max-width:1023px){
-
-  section{
-  margin-bottom: 90%;
-}
-
-.login-box {
-  top: 40%;
-  
-}
-
-}
-@media screen and (max-width:767px){
-
-section{
-margin-bottom: 100%;
-}
-
-.login-box {
-  top: 40%;
-  
-}
-
-}
-@media screen and (max-width:700px){
-
-section{
-margin-bottom: 110%;
-}
-
-
-
-}
-
-
-
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
-  color: #666666;
+  color: #fff;
   text-align: center;
 }
 
 .login-box .user-box {
   position: relative;
-
 }
 
 .login-box .user-box input {
@@ -136,7 +67,6 @@ margin-bottom: 110%;
 }
 .login-box .user-box label {
   position: absolute;
-  flex-direction: column;
   top:0;
   left: 0;
   padding: 10px 0;
@@ -146,13 +76,7 @@ margin-bottom: 110%;
   transition: .5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-}
+
 
 .login-box form a {
   position: relative;
@@ -174,22 +98,19 @@ margin-bottom: 110%;
     margin-left: 20px;
     padding-top: 50px;
     padding-left: 15px;
-    color: #666666;
+    color: #fff;
     text-decoration: none;
-
-}
-.login-btn:hover{
-  color:#AB4DB5;
 
 }
 
 .button-85 {
   text-decoration:none;
-  padding: 0.6em 2em;
+  padding: 0.3em 2em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  background:#C1B3FB,
+  background:#C1B3FB;
+  
 ;
   cursor: pointer;
   position: relative;
@@ -262,58 +183,75 @@ margin-bottom: 110%;
     bottom: 100%;
   }
 }
-  </style>
+
+@media (max-width:420px){
+
+  .login-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 350px;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px #987FDB;
+  border-radius: 10px;
+}
+.c {
+
+ 
+  display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+}
+</style>
 
 
-</head>
-<body>
-  <hr>
-<?php if ($_smarty_tpl->tpl_vars['LOGADO']->value == true) {?>
-  
-  
-  
-<?php } else { ?>
-
-<!-- partial:index.partial.html -->
-<section class="row" id="fazerlogin">
-
-<div class="login-box">
-  <h2>Login</h2>
-  <form class="formlo" name="cliente_login" method="post" action="">
+<hr>
+<form  name="recuperarsenha" method="post" action="">
     
-    <div class="form-group user-box"> 
-      <label></i> </label>
-      <input type="email"  class=" " name="txt_email" value="" placeholder="Digite seu email" required autocomplete="off">        
+    <section class="row" id="fazerlogin">
 
-  </div>
-  <div class="form-group user-box"> 
-    <label>  </label>
-    <input type="password"  class="" name="txt_senha" value="" placeholder="Digite sua senha" required>        
+        <div class="login-box">
+          <form class="form" name="cliente_login" method="post" action="">
+            <div class="form-group user-box"> 
+              <label></i> </label>
+              <input type="email"  class=" " name="cli_email" value="" placeholder="Digite seu email cadastrado" required autocomplete="off">        
+        
+          </div>
+          <div class="c">
 
-</div>
+            <button type="submit" class="button-85"> Recuperar </button>
+          </div>
 
-    <a  class="form-group" href="#">
-   
-      <button class="button-85"><i class="glyphicon glyphicon-log-in"></i> Entrar </button>
+         
+        </section>
 
-    </a>
+  
     
-  </form>
-  <br>
-  <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_CADASTRO']->value;?>
-" class="login-btn"><i class=""></i> Me Cadastrar</a>
-               
-                  
-  <a href="<?php echo $_smarty_tpl->tpl_vars['PAG_RECOVERY']->value;?>
-" class="login-btn"><i class=""></i> Esqueci a Senha</a>
-</div>
-  
-<?php }?>
-</section>
-  
+</form>
 
-  <hr>
-</body>
-</html>
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+<br> 
+
+
+ 
+<hr>
+
+
+
 <?php }
 }

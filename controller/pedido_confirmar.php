@@ -32,7 +32,7 @@ if(isset($_SESSION['PRO'])) {
 
     // $destino = $_SESSION['PED']['cep'];
 
-    echo  $_SESSION['PED']['frete_tipo'];
+    // echo  $_SESSION['PED']['frete_tipo'];
    
 
 

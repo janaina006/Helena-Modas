@@ -5,7 +5,7 @@ class Config{
 
     // INFORMÃÇÕES BÁSICAS DO SITE
 	const SITE_URL = "http://localhost";
-	const SITE_PASTA = "lojaeditando";
+	const SITE_PASTA = "loja";
 	const SITE_NOME = "Helena Modas";
 	const SITE_EMAIL_ADM = "lojavirtualfreitas@gmail.com";
 	const BD_LIMIT_POR_PAG = 8;
@@ -20,7 +20,7 @@ class Config{
 		  BD_PREFIX = "lv_"; 
 
     // //INFORMAÇÕES BÁSICAS DO SITE HOSPEDADO
-    // const SITE_URL = "http://teste0-com.umbler.net";
+    // const SITE_URL = "http://helena0-com.umbler.net";
     // const SITE_PASTA = "";
     // const SITE_NOME = "Helena Modas";
     // const SITE_EMAIL_ADM = "janaaraujo2190@gmail.com";
@@ -30,10 +30,10 @@ class Config{
 
 
     // //INFORMAÇÕES DO BANCO DE DADOS HOSPEDADO
-    // const BD_HOST = 'mysql831.umbler.com',
-    //       BD_USER = "janaina0",
+    // const BD_HOST = 'mysql246.umbler.com',
+    //       BD_USER = "janaina00",
     //       BD_SENHA = "janaina9021",
-    //       BD_BANCO = "helenamodas",
+    //       BD_BANCO = "helenamodas0",
     //       BD_PREFIX = "lv_";
 
     //INFORMAÇÕES PARA PHP MAILLER
@@ -52,7 +52,7 @@ class Config{
     const PS_EMAIL  = "janaaraujo2190@gmail.com"; // email pagseguro
     const PS_TOKEN  = "a0309f1a-f967-4295-b360-72eaffb86c2847829a6b4989a3e0203dc1db259df8022ae1-9512-49b9-aa99-c293e1794284"; // token produção
     const PS_TOKEN_SBX = "7872F5D177934DC39F20078C98F3087A";  // token do sandbox
-    const PS_AMBIENTE = "production"; // production   /  sandbox
+    const PS_AMBIENTE = "sandbox"; // production   /  sandbox
 
 
 

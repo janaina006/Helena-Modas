@@ -15,10 +15,10 @@ if(!isset($_SESSION)){
 
 require '../lib/autoload.php';
 
-if(!Login::LogadoADM()){
-    Rotas::Redirecionar(1, 'login.php');
-    exit('<h2> Erro! Acesso negado </h2>');
-}
+// if(!Login::LogadoADM()){
+//     Rotas::Redirecionar(1, 'login.php');
+//     exit('<h2> Erro! Acesso negado </h2>');
+// }
 
 
 $smarty = new Tamplate();

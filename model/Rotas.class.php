@@ -44,6 +44,9 @@ Class Rotas{
     static function pag_CLienteItens(){
         return self::get_SiteHOME(). '/cliente_itens';
     }
+    static function pag_Rastreo(){
+        return self::get_SiteHOME(). '/pedido_rastreo';
+    }
     static function pag_ClienteLogin(){
         return self::get_SiteHOME(). '/login';
     }

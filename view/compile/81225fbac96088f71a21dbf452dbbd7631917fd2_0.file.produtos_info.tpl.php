@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-15 13:11:18
+/* Smarty version 4.1.1, created on 2023-03-18 14:43:12
   from 'C:\wamp\www\loja\view\produtos_info.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63ed0426873074_96030451',
+  'unifunc' => 'content_6415f8307d48f5_37216181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '81225fbac96088f71a21dbf452dbbd7631917fd2' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos_info.tpl',
-      1 => 1676477477,
+      1 => 1677955227,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6415f8307d48f5_37216181 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -153,20 +153,22 @@ function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl)
 @media (max-width:500px){
 
   .wrapper{
-      width: 60%;
+      width: 90%;
       height: 10%;
-      margin-left: 3%;
+      margin-left: 20px;
       object-fit: cover;
       margin-bottom: 10px;
       display: flex;
+      justify-content: space-around;
 
     }
 
     .wrapper img{
       width: 80px;
-      height: 60px;
-      margin-left: 20px;
+      height: 82px;
+      margin-left: 5px;
       transition: 0.3s;
+      padding: 5px;
       
     }
 
@@ -182,6 +184,7 @@ function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl)
       object-fit: cover;
       margin-bottom: 10px;
       display: flex;
+      margin:0;
 
     }
 
@@ -190,8 +193,11 @@ function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl)
       height: 40px;
       margin-left: 20px;
       transition: 0.3s;
+     
       
     }
+
+  
 
 
 
@@ -300,13 +306,15 @@ function content_63ed0426873074_96030451 (Smarty_Internal_Template $_smarty_tpl)
 
     .information{
         background-color: #DFD5FB;
+        
     }
-    .information li{
-        display: flex;
-        justify-content: space-around ;
-        padding-top: 5px;
-
-    }
+    .information li {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  font-size: 11px;
+  margin: 6px;
+}
 
 
 
@@ -457,11 +465,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   
    
 
-<div class="in3">
+<div class="in3 ">
 
    <h4 class="text-center">Informações Adicionais</h4>
    <br>
-<div class="information">
+<div class="information row">
 
     <ul>
         <li>Peso: <?php echo $_smarty_tpl->tpl_vars['P']->value['pro_peso'];?>
@@ -485,7 +493,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <br>
 <h4 class="text-center">Não se preocupe!</h4>
 
-<div class="information">
+<div class="information row text-center">
  <ul>
      <li>Todas as peças do site são modelos prontos, não se preocupe
         se não tiver encontrado uma peça com sua numeração ou cor desejada.
@@ -505,7 +513,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   <br>
   <br>
     
-    <a href="https://wa.me/55359997217065">
+    <a href="https://wa.me/5535997217065">
     <button  class="button-85">Encomendar</button>
     </a>
   <br>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 15:15:22
+/* Smarty version 4.1.1, created on 2023-03-18 14:30:02
   from 'C:\wamp\www\loja\view\produtos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e92cba8e55a8_23373525',
+  'unifunc' => 'content_6415f51a2ff873_53504264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba4594c388acc2fe279b9c6fb804dcdccd74edc4' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\produtos.tpl',
-      1 => 1676225721,
+      1 => 1676849114,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e92cba8e55a8_23373525 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6415f51a2ff873_53504264 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <style>
     @media (max-width:990px){
@@ -29,6 +29,9 @@ function content_63e92cba8e55a8_23373525 (Smarty_Internal_Template $_smarty_tpl)
             font-size: 12px;
         }
     }
+
+
+
 
 </style>
 
@@ -61,8 +64,8 @@ $_smarty_tpl->tpl_vars['P']->do_else = false;
 /<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_slug'];?>
 ">
                     <!-- Product image-->
-                    <img class="card-img-top" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
-" alt="..." />
+                    <img class="imgstyle card-img-top" src="<?php echo $_smarty_tpl->tpl_vars['P']->value['pro_img'];?>
+"alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="n card-title">

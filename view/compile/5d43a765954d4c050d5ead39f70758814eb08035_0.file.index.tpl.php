@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-03-04 15:31:03
+/* Smarty version 4.1.1, created on 2023-03-14 15:20:30
   from 'C:\wamp\www\lojaeditando\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_64038e67000e18_54679619',
+  'unifunc' => 'content_6410baeeeb9896_49936785',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d43a765954d4c050d5ead39f70758814eb08035' => 
     array (
       0 => 'C:\\wamp\\www\\lojaeditando\\view\\index.tpl',
-      1 => 1677954398,
+      1 => 1678817992,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64038e67000e18_54679619 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6410baeeeb9896_49936785 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="pt"> 
@@ -334,6 +334,7 @@ function content_64038e67000e18_54679619 (Smarty_Internal_Template $_smarty_tpl)
 ">Início</a></li>
                 <li><a class="nav-a" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 ">Minha Conta</a></li>
+
                 <li><a class="nav-a" href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
 ">Contato</a></li>
 

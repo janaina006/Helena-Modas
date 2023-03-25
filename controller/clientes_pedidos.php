@@ -4,12 +4,6 @@ $smarty = new Tamplate();
 
 
 
-
-
-
-
-
-
 $pedidos = new Pedidos();
 
 $pedidos->GetPedidosCliente($_SESSION['CLI']['cli_id']);

@@ -108,14 +108,14 @@
           
           <div class="col-md-4">
               <label>Nome:</label>
-              <input type="text" name="cli_nome" class="form-control" minlength="3" required>
+              <input placeholder="Juliana" type="text" name="cli_nome" class="form-control"  required>
               
               
           </div>
           
           <div class="col-md-4">
               <label>Sobrenome:</label>
-              <input type="text" name="cli_sobrenome" class="form-control"  minlength="3" required>
+              <input placeholder="Santos" type="text" name="cli_sobrenome" class="form-control"   required>
               
               
           </div>
@@ -131,7 +131,7 @@
         
           <div class="col-md-2">
               <label>RG:</label>
-              <input placeholder="8 dígitos" type="text" name="cli_rg" class="form-control" required>
+              <input placeholder="8 dígitos" type="text" name="cli_rg" class="form-control" minlength="8" maxlength="8" required>
               
               
           </div>
@@ -149,7 +149,7 @@
           
           <div class="col-md-2">
               <label>DDD:</label>
-              <input type="number" name="cli_ddd" class="form-control"  min="10" max="99" required>
+              <input  placeholder="11" type="number" name="cli_ddd" class="form-control"  minlength="2" maxlength="2" required>
               
               
           </div>
@@ -159,7 +159,7 @@
           
           <div class="col-md-3">
               <label>Celular:</label>
-              <input placeholder="9 dígitos" type="text" name="cli_celular" class="form-control" required>
+              <input placeholder="987654321" type="text" name="cli_celular"  min="9" max="9" class="form-control" required>
               
               
           </div>
@@ -202,7 +202,7 @@
           <div class="col-md-2">
               <label>UF:</label>
              
-              <input type="text" name="cli_uf" class="form-control" maxlength="2" minlength="2" required>
+              <input type="text" name="cli_uf" class="form-control"  placeholder="SP" maxlength="2" minlength="2" required>
               
               
           </div>
@@ -211,7 +211,7 @@
           <div class="col-md-2">
               <label>Cep:</label>
              
-              <input type="text" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
+              <input placeholder="8 dígitos" type="text" name="cli_cep" class="form-control" minlength="8" maxlength="8" required>
               
               
           </div>

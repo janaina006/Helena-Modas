@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-01-25 22:27:41
+/* Smarty version 4.1.1, created on 2023-03-22 11:15:25
   from 'C:\wamp\www\loja\adm\view\adm_itens.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63d1d70d3ab603_10315785',
+  'unifunc' => 'content_641b0d7d0f46c7_66814893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0001a5415fe7d509e93702a7a4ec56054686d62e' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\adm\\view\\adm_itens.tpl',
-      1 => 1674696456,
+      1 => 1679494519,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63d1d70d3ab603_10315785 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b0d7d0f46c7_66814893 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
      .table{
     
@@ -70,6 +70,27 @@ function content_63d1d70d3ab603_10315785 (Smarty_Internal_Template $_smarty_tpl)
                         
                         <td><b>Status:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_pag_status'];?>
 </td>
+                        
+                    </tr>  
+                    
+                    
+                </table>
+                </center>
+                <center>
+                <table class="table " style="width: 80%">
+                    <tr class="">
+                        
+                        <td><b>Cep:</b> <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_destino'];?>
+</td>
+                        <td><form method="post" action="">
+                            <label for="cod_rastreo">Código de Rastreio:</label>
+                            <input type="text" id="cod_rastreo" name="cod_rastreo">
+                            <button type="submit">Enviar</button>
+                          </form></td>
+                        <td><b>Rastreo:</b>  <?php echo $_smarty_tpl->tpl_vars['ITENS']->value[1]['ped_frete_rastreo'];?>
+</td>
+
+                        
                         
                     </tr>  
                     

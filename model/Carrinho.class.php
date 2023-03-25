@@ -124,8 +124,8 @@ class Carrinho{
 							
 
 						if ($QTD_CARRINHO >= $ESTOQUE) {
-							echo '<h4 class="alert alert-danger"> Você atingiu a quantidade máxima disponível para esse produto! </h4>';
-							Rotas::Redirecionar(2, Rotas::pag_Produtos());
+							echo '<h4 class="alert alert-danger"> Este produto está esgotado no momento. Por favor, confira outras opções disponívies! </h4>';
+							Rotas::Redirecionar(5, Rotas::pag_Produtos());
 							exit();
 
 							

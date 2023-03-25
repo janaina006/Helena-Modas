@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-15 15:15:00
+/* Smarty version 4.1.1, created on 2023-03-23 22:39:32
   from 'C:\wamp\www\loja\view\pedido_finalizar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63ed21245d79a8_45598117',
+  'unifunc' => 'content_641cff548ffce9_11990124',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d6c53a2cd1fa031ff9b205c6b93f4c0ac4a8528' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_finalizar.tpl',
-      1 => 1676484865,
+      1 => 1679621826,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63ed21245d79a8_45598117 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cff548ffce9_11990124 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 body {
@@ -299,7 +299,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                   
                               </table>
                               </center>
-                          <hr class="my-4">
+                              
+                              <hr class="my-4">
+                              <p style="color:red ;"> (Os dados inseridos na hora do pagamento devem ser os mesmos cadastrados no site!)</p>
 
                             
                         
@@ -351,19 +353,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                               
                               ">Pague com Pagseguro</button>
                               <hr>
-                              <?php echo '<script'; ?>
- type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['PS_SCRIPT']->value;?>
-"><?php echo '</script'; ?>
->
                               <img class="pag" src="<?php echo $_smarty_tpl->tpl_vars['TEMA']->value;?>
 /images/logo-pagseguro.png"  alt=""> 
                             
                                   
                               </div>
+                              <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['PS_SCRIPT']->value;?>
+"><?php echo '</script'; ?>
+>
+
       
                           </form>
+
+
           
                         </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -372,6 +378,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
           </div>
         </section>
+
 
         
   

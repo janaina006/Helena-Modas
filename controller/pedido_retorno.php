@@ -27,6 +27,9 @@ $smarty->assign('REF',       $pag->info['referencia']);
 $smarty->assign('FORMA_PAG', $pag->info['forma_pag']);
 $smarty->assign('PAG_ITENS', Rotas::pag_CLienteItens());
 
+
+
+
 // 'pago' => $pago,
 //             'codigo'=>$codigo,
 //             'referencia'=> $referencia,

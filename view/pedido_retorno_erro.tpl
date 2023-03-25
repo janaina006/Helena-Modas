@@ -101,6 +101,8 @@
         </p>  
         
          <p> Para ir a tela do pedido e efetivar o pagamento, clique no botão.</p>  
+<p style="color:red ;"> (Os dados inseridos na hora do pagamento devem ser os mesmos cadastrados no site!)</p>
+
          <p>
         <br>
         <hr>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 15:09:25
+/* Smarty version 4.1.1, created on 2023-03-23 22:26:43
   from 'C:\wamp\www\loja\view\pedido_retorno_erro.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e92b5564fb37_30993455',
+  'unifunc' => 'content_641cfc53326293_82816434',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6b55a11e267a5a3ff06b9c70f66f61364e800c0' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\pedido_retorno_erro.tpl',
-      1 => 1676225364,
+      1 => 1679621202,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e92b5564fb37_30993455 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cfc53326293_82816434 (Smarty_Internal_Template $_smarty_tpl) {
 ?><style>
 
 @media (max-width:900px){
@@ -125,6 +125,8 @@ function content_63e92b5564fb37_30993455 (Smarty_Internal_Template $_smarty_tpl)
         </p>  
         
          <p> Para ir a tela do pedido e efetivar o pagamento, clique no botão.</p>  
+<p style="color:red ;"> (Os dados inseridos na hora do pagamento devem ser os mesmos cadastrados no site!)</p>
+
          <p>
         <br>
         <hr>

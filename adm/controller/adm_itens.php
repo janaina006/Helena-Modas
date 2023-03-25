@@ -17,10 +17,10 @@ $_SESSION['PED']['rastreo'] = $_POST['cod_rastreo'];
 
 
 
-$ped_pag_codigo = $_SESSION['PED']['rastreo'];
+$ped_frete_rastreo = $_SESSION['PED']['rastreo'];
 $cod = $_SESSION['PED']['cod_para_rastreo'];
 
-$pedido->AtualizarCodigoPagamento($cod, $ped_pag_codigo);
+$pedido->AtualizarCodigoPagamento($cod, $ped_frete_rastreo);
 
 
 
@@ -28,7 +28,7 @@ $pedido->AtualizarCodigoPagamento($cod, $ped_pag_codigo);
 
 if(!isset($_POST['cod_pedido'])){
     
-    Rotas::Redirecionar(1, Rotas::pag_PedidosADM());
+    Rotas::Redirecionar(15, Rotas::pag_PedidosADM());
     exit();
 }
 

@@ -73,9 +73,9 @@ class PagamentoPS extends Conexao{
         $dados['token']    = $this->token;
         $dados['currency']   = 'BRL';               
         $dados['reference']    = $pedido['ref']; // referencia pedido 
-        $dados['redirectURL']    = Rotas::pag_PedidoRetorno();
-        $dados['notificationURL'] = Rotas::pag_PedidoRetorno();          
-        $dados['senderName']    = $cliente['cli_nome'] .' ' . $cliente['cli_sobrenome'];
+        $dados['redirectURL']    = Rotas::pag_CLienteItens();
+        $dados['notificationURL'] = Rotas::pag_CLienteItens();          
+        $dados['senderName']    = ucwords($cliente['cli_nome']) .' ' . ucwords($cliente['cli_sobrenome']);
         $dados['senderAreaCode']  = $cliente['cli_ddd'];
         $dados['senderPhone']    = $cliente['cli_celular'];
         $dados['senderEmail']    = $cliente['cli_email'];
@@ -180,9 +180,9 @@ class PagamentoPS extends Conexao{
         $dados['token']    = $this->token;
         $dados['currency']   = 'BRL';               
         $dados['reference']    = $pedido['ped_ref']; // referencia pedido 
-        $dados['redirectURL']    = Rotas::pag_PedidoRetorno();
-        $dados['notificationURL'] = Rotas::pag_PedidoRetorno();          
-        $dados['senderName']    = $cliente['cli_nome'] .' ' . $cliente['cli_sobrenome'];
+        $dados['redirectURL']    = Rotas::pag_CLienteItens();
+        $dados['notificationURL'] = Rotas::pag_CLienteItens();          
+        $dados['senderName']    = ucwords($cliente['cli_nome']) .' ' . ucwords($cliente['cli_sobrenome']);
         $dados['senderAreaCode']  = $cliente['cli_ddd'];
         $dados['senderPhone']    = $cliente['cli_celular'];
         $dados['senderEmail']    = $cliente['cli_email'];
@@ -416,7 +416,7 @@ class PagamentoPS extends Conexao{
               //--------tratando o status do pagamento
             switch ($this->xml->status):
                 
-                case 1 : $this->status = "Processando";
+                case 1 : $this->status = "Aguardando Pagamento";
                     break;
                 case 2 : $this->status = "Analise";
                     break;

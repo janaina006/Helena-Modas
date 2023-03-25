@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.1, created on 2023-02-12 14:29:44
+/* Smarty version 4.1.1, created on 2023-03-24 21:20:11
   from 'C:\wamp\www\loja\view\carrinho.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.1',
-  'unifunc' => 'content_63e9220825c533_66973368',
+  'unifunc' => 'content_641e3e3b320969_16578827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7970cddb31b9309acab5d9710a1ba2b124cfd22f' => 
     array (
       0 => 'C:\\wamp\\www\\loja\\view\\carrinho.tpl',
-      1 => 1676222983,
+      1 => 1679689292,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63e9220825c533_66973368 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641e3e3b320969_16578827 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  src="https://code.jquery.com/jquery-1.9.1.js"><?php echo '</script'; ?>
 >
@@ -62,6 +62,9 @@ echo '<script'; ?>
     
     <?php echo '</script'; ?>
 >
+    
+
+    
     <style>
 
       .x{
@@ -221,6 +224,7 @@ display: flex;
   outline: none;
   color: rgb(255, 255, 255);
   background:#C1B3FB;
+  
   
 ;
   cursor: pointer;
@@ -448,13 +452,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         
           
                             </form>
+                          
                             <form name="pedido_confirmar" id="pedido_confirmar" method="post" action="<?php echo $_smarty_tpl->tpl_vars['PAG_CONFIRMAR']->value;?>
 ">
         
                             <span id="frete"></span>
                             <div class="c">
-                              <br>
-                              <br>
+                              
                             
                             <button class="button-85" type="submit">  <i class="glyphicon glyphicon-ok"></i> Confirmar Pedido </button>
                           </div>
